@@ -39,3 +39,16 @@ at each milestone before human review.
 - `token-export` tagging uses execution-facing keyword/source-hint rules copied
   from the accepted lab seed taxonomy. There is no LLM fallback yet, so recall
   and precision should be reviewed before promotion to formal M2.
+
+## 2026-06-11 M2 Scaffold Tuning
+
+- Added a local review cap for single-source clusters so HN/community feeds do
+  not dominate the top review list purely by recency. This is a review-surface
+  control, not a final ranking policy.
+- Added limited event-key clustering for obvious launch/event families such as
+  Claude/Fable/Mythos. This improves recall for current data but should be
+  replaced by a broader entity/event layer before formal M2.
+- Tightened `token-export` rules so weak benchmark/evaluation words do not
+  trigger the topic without model/company/channel context.
+- `same_domain` is now emitted only for multi-item clusters, reducing noise in
+  single-item review output.

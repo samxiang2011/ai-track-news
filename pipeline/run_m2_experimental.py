@@ -22,15 +22,55 @@ DEFAULT_SOURCES_CONFIG = ROOT / "config" / "sources.yml"
 DEFAULT_TOPIC_RULES = ROOT / "config" / "topic_rules.json"
 DEFAULT_WINDOW_HOURS = 48.0
 DEFAULT_LIMIT_CLUSTERS = 50
+DEFAULT_MAX_CLUSTERS_PER_SOURCE = 4
 DEFAULT_HALF_LIFE_HOURS = 24.0
 SCHEMA_VERSION = "m2-experimental-v0"
 
 TIER_WEIGHTS = {1: 1.5, 2: 1.0, 3: 1.0, 4: 1.2}
+REPRESENTATIVE_SOURCE_PENALTIES = {"hnrss-ai": 2, "hnrss-llm": 2}
 UNKNOWN_TIER = 99
 TITLE_SIMILARITY_THRESHOLD = 0.5
 TITLE_OVERLAP_THRESHOLD = 0.6
 MIN_SHARED_TITLE_TOKENS = 3
 NEAR_DUPLICATE_THRESHOLD = 0.75
+TOKEN_EXPORT_WEAK_KEYWORDS = {
+    "arena",
+    "benchmark",
+    "evaluation",
+    "leaderboard",
+    "model ranking",
+    "performance ranking",
+    "基准测试",
+    "开源模型排名",
+    "模型榜单",
+    "排行榜",
+    "性能排名",
+}
+
+EVENT_KEY_RULES = (
+    (
+        "anthropic-fable-5",
+        ("fable", "mythos"),
+        (
+            "anthropic",
+            "claude",
+            "guardrail",
+            "guardrails",
+            "filtered",
+            "terms",
+            "impressions",
+            "反蒸馏",
+            "降智",
+        ),
+        ("generated with", "pacman"),
+    ),
+    (
+        "openai-oracle-cloud",
+        ("openai",),
+        ("oracle", "cloud commitment"),
+        (),
+    ),
+)
 
 STOPWORDS = {
     "about",
@@ -102,6 +142,7 @@ class M2Item:
     tier: int
     domain: str
     title_tokens: set[str]
+    event_keys: tuple[str, ...]
 
     def sidecar_dict(self) -> dict[str, object]:
         return {
@@ -127,7 +168,11 @@ def main(argv: list[str] | None = None) -> int:
     raw_items = load_snapshot_items(snapshots, source_meta, topic_rules)
     items = filter_items_for_window(raw_items, now, args.window_hours)
     clusters = build_clusters(items, now=now, half_life_hours=args.half_life_hours)
-    limited_clusters = clusters[: args.limit_clusters]
+    limited_clusters = select_review_clusters(
+        clusters,
+        limit=args.limit_clusters,
+        max_clusters_per_source=args.max_clusters_per_source,
+    )
 
     output = build_output(
         run_id=run_id,
@@ -136,9 +181,11 @@ def main(argv: list[str] | None = None) -> int:
         all_items=raw_items,
         window_items=items,
         clusters=limited_clusters,
+        candidate_cluster_count=len(clusters),
         parameters={
             "window_hours": args.window_hours,
             "limit_clusters": args.limit_clusters,
+            "max_clusters_per_source": args.max_clusters_per_source,
             "half_life_hours": args.half_life_hours,
             "title_similarity_threshold": TITLE_SIMILARITY_THRESHOLD,
             "title_overlap_threshold": TITLE_OVERLAP_THRESHOLD,
@@ -185,6 +232,12 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument("--topic-rules", type=Path, default=DEFAULT_TOPIC_RULES)
     parser.add_argument("--window-hours", type=float, default=DEFAULT_WINDOW_HOURS)
     parser.add_argument("--limit-clusters", type=int, default=DEFAULT_LIMIT_CLUSTERS)
+    parser.add_argument(
+        "--max-clusters-per-source",
+        type=int,
+        default=DEFAULT_MAX_CLUSTERS_PER_SOURCE,
+        help="Cap single-source clusters per source in review output; use 0 to disable.",
+    )
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--now", help="Override current UTC time for deterministic output.")
     parser.add_argument("--half-life-hours", type=float, default=DEFAULT_HALF_LIFE_HOURS)
@@ -280,6 +333,7 @@ def item_from_raw(
         tier=meta.tier,
         domain=domain_from_url(url),
         title_tokens=title_tokens(title),
+        event_keys=tuple(event_keys_for_title(title)),
     )
 
 
@@ -355,7 +409,7 @@ def _cluster_items(items: list[M2Item]) -> list[list[M2Item]]:
 
     for index, left in enumerate(ordered):
         for right in ordered[index + 1 :]:
-            if should_cluster_titles(left, right):
+            if should_cluster_items(left, right):
                 _union(parents, left.id, right.id)
 
     groups: dict[str, list[M2Item]] = {}
@@ -363,6 +417,12 @@ def _cluster_items(items: list[M2Item]) -> list[list[M2Item]]:
         groups.setdefault(_find(parents, item_id), []).append(item)
 
     return [sorted(group, key=lambda item: item.id) for group in groups.values()]
+
+
+def should_cluster_items(left: M2Item, right: M2Item) -> bool:
+    if set(left.event_keys) & set(right.event_keys):
+        return True
+    return should_cluster_titles(left, right)
 
 
 def should_cluster_titles(left: M2Item, right: M2Item) -> bool:
@@ -379,8 +439,52 @@ def should_cluster_titles(left: M2Item, right: M2Item) -> bool:
     )
 
 
+def select_review_clusters(
+    clusters: list[dict[str, object]],
+    limit: int,
+    max_clusters_per_source: int = DEFAULT_MAX_CLUSTERS_PER_SOURCE,
+) -> list[dict[str, object]]:
+    if limit <= 0:
+        return []
+    if max_clusters_per_source <= 0:
+        return clusters[:limit]
+
+    selected: list[dict[str, object]] = []
+    single_source_counts: dict[str, int] = {}
+    for cluster in clusters:
+        source_ids = _string_list(cluster.get("source_ids"))
+        item_ids = _string_list(cluster.get("item_ids"))
+        if len(source_ids) == 1 and len(item_ids) == 1:
+            source_id = source_ids[0]
+            if single_source_counts.get(source_id, 0) >= max_clusters_per_source:
+                continue
+            single_source_counts[source_id] = single_source_counts.get(source_id, 0) + 1
+        selected.append(cluster)
+        if len(selected) >= limit:
+            break
+    return selected
+
+
 def choose_representative(items: list[M2Item]) -> M2Item:
-    return sorted(items, key=lambda item: (item.tier, -item.event_at.timestamp(), item.id))[0]
+    if len(items) == 1:
+        return items[0]
+    return sorted(
+        items,
+        key=lambda item: (
+            -title_centrality(item, items),
+            REPRESENTATIVE_SOURCE_PENALTIES.get(item.source_id, 0),
+            item.tier,
+            -item.event_at.timestamp(),
+            item.id,
+        ),
+    )[0]
+
+
+def title_centrality(item: M2Item, items: list[M2Item]) -> float:
+    others = [other for other in items if other.id != item.id]
+    if not others:
+        return 0.0
+    return sum(title_similarity(item.title_tokens, other.title_tokens) for other in others)
 
 
 def build_tier_mix(items: list[M2Item]) -> dict[str, int]:
@@ -414,8 +518,10 @@ def build_review_flags(items: list[M2Item]) -> list[str]:
     flags = []
     if len({item.source_id for item in items}) == 1:
         flags.append("single_source")
-    if len({item.domain for item in items if item.domain}) == 1:
+    if len(items) > 1 and len({item.domain for item in items if item.domain}) == 1:
         flags.append("same_domain")
+    if len(items) > 1 and shared_event_keys(items):
+        flags.append("event_key_cluster")
     if has_near_duplicate_titles(items):
         flags.append("near_duplicate_titles")
     return flags
@@ -455,15 +561,71 @@ def topic_rule_matches(rule: TopicRule, raw: dict[str, Any], source_id: str) -> 
     ]
     text = "\n".join(text_parts).lower()
     compact = re.sub(r"[\s_-]+", "", text)
+    if rule.id == "token-export":
+        return token_export_rule_matches(rule, text=text, compact=compact)
 
     for keyword in rule.keywords_en:
-        normalized = keyword.lower()
-        if normalized in text or re.sub(r"[\s_-]+", "", normalized) in compact:
+        if keyword_matches(keyword, text=text, compact=compact):
             return True
     for keyword in rule.keywords_zh:
-        if keyword.lower() in text or re.sub(r"\s+", "", keyword.lower()) in compact:
+        if keyword_matches(keyword, text=text, compact=compact):
             return True
     return False
+
+
+def token_export_rule_matches(rule: TopicRule, text: str, compact: str) -> bool:
+    strong_keywords = [
+        keyword
+        for keyword in (*rule.keywords_en, *rule.keywords_zh)
+        if keyword.lower() not in TOKEN_EXPORT_WEAK_KEYWORDS
+    ]
+    if any(keyword_matches(keyword, text=text, compact=compact) for keyword in strong_keywords):
+        return True
+
+    weak_hit = any(
+        keyword_matches(keyword, text=text, compact=compact)
+        for keyword in TOKEN_EXPORT_WEAK_KEYWORDS
+    )
+    company_hit = any(
+        keyword_matches(keyword, text=text, compact=compact)
+        for keyword in rule.company_hints
+    )
+    return weak_hit and company_hit
+
+
+def keyword_matches(keyword: str, text: str, compact: str) -> bool:
+    normalized = keyword.lower()
+    compact_keyword = re.sub(r"[\s_-]+", "", normalized)
+    return normalized in text or compact_keyword in compact
+
+
+def event_keys_for_title(title: str) -> list[str]:
+    lowered = title.lower()
+    compact = re.sub(r"[\s_-]+", "", lowered)
+    keys = []
+    for key, required_any, supporting_any, excluded_any in EVENT_KEY_RULES:
+        if any(keyword_matches(phrase, text=lowered, compact=compact) for phrase in excluded_any):
+            continue
+        required_hit = any(
+            keyword_matches(phrase, text=lowered, compact=compact)
+            for phrase in required_any
+        )
+        supporting_hit = any(
+            keyword_matches(phrase, text=lowered, compact=compact)
+            for phrase in supporting_any
+        )
+        if required_hit and supporting_hit:
+            keys.append(key)
+    return keys
+
+
+def shared_event_keys(items: list[M2Item]) -> set[str]:
+    if len(items) < 2:
+        return set()
+    shared = set(items[0].event_keys)
+    for item in items[1:]:
+        shared &= set(item.event_keys)
+    return shared
 
 
 def title_tokens(title: str) -> set[str]:
@@ -500,6 +662,7 @@ def build_output(
     all_items: list[M2Item],
     window_items: list[M2Item],
     clusters: list[dict[str, object]],
+    candidate_cluster_count: int,
     parameters: dict[str, object],
 ) -> dict[str, object]:
     return {
@@ -515,6 +678,7 @@ def build_output(
         "parameters": parameters,
         "summary": {
             "cluster_count": len(clusters),
+            "candidate_cluster_count": candidate_cluster_count,
             "top_heat_score": clusters[0]["heat_score"] if clusters else None,
             "experimental": True,
             "llm_calls": 0,
@@ -534,6 +698,8 @@ def format_review_markdown(output: dict[str, object]) -> str:
         f"- Generated at: `{output['generated_at']}`",
         f"- Schema: `{output['schema_version']}`",
         "- Status: experimental, deterministic, no LLM calls",
+        f"- Selected clusters: `{len(clusters)}`",
+        f"- Candidate clusters: `{output['summary'].get('candidate_cluster_count')}`",
         "",
         "## Top Clusters",
         "",
@@ -616,6 +782,12 @@ def _strings(value: Any) -> list[str]:
     if not isinstance(value, (list, tuple)):
         return []
     return [item for item in value if isinstance(item, str) and item]
+
+
+def _string_list(value: object) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    return [item for item in value if isinstance(item, str)]
 
 
 def _require_str(value: Any, field: str) -> str:

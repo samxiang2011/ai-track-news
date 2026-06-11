@@ -36,6 +36,10 @@ Run the local-only M2 experimental clustering scaffold:
 python3 -m pipeline.run_m2_experimental --limit-clusters 20
 ```
 
+The review output caps single-source clusters per source by default so one feed
+does not dominate the top list. Pass `--max-clusters-per-source 0` to disable
+that cap while debugging.
+
 Probe sources are excluded by default. Include them explicitly:
 
 ```bash
