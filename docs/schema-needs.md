@@ -8,6 +8,10 @@ at each milestone before human review.
 - Added `source_health` to the run manifest output so M1 can report include
   source health directly. This is an execution extension over the minimal BRIEF
   manifest and should be reviewed at M1.
+- Tightened source health after the first live validation: an include source now
+  counts as healthy only when it fetches successfully and yields at least one
+  normalized item. A feed that returns 200/OK but parses to zero items is not
+  useful for M1 validation.
 - Exact URL dedupe currently keeps one item globally. If the same canonical URL
   appears from several independent sources, M2 may need either mention records,
   `duplicate_source_ids`, or a cluster-level source aggregation step so

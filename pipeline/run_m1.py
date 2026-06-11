@@ -114,7 +114,11 @@ def _build_manifest(
     output_paths: list[str],
 ) -> dict[str, object]:
     include_results = [row for row in source_results if row["m1_action"] == "include"]
-    healthy_include = sum(1 for row in include_results if row["status"] == "success")
+    healthy_include = sum(
+        1
+        for row in include_results
+        if row["status"] == "success" and isinstance(row["item_count"], int) and row["item_count"] > 0
+    )
     include_total = len(include_results)
     health_ratio = healthy_include / include_total if include_total else 0.0
 

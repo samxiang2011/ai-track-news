@@ -63,15 +63,15 @@ sources:
     notes: Primary Meta AI announcements; page parser needed if no feed is found.
 
   - id: microsoft-ai-blog
-    name: Microsoft AI Blog
+    name: Microsoft AI News
     tier: 1
-    url: https://blogs.microsoft.com/ai/feed/
+    url: https://news.microsoft.com/source/topics/ai/feed/
     access_method: rss
     lang: en
     topics: [general-ai, platform]
     tos_risk: low
     m1_action: include
-    notes: Primary Microsoft AI announcements.
+    notes: Replaced deprecated blogs.microsoft.com/ai/feed URL after 2026-06-11 live validation returned HTTP 410.
 
   - id: nvidia-ai-blog
     name: NVIDIA Technical Blog - Artificial Intelligence
@@ -81,8 +81,8 @@ sources:
     lang: en
     topics: [general-ai, infrastructure]
     tos_risk: low
-    m1_action: include
-    notes: Primary infrastructure/model deployment signal.
+    m1_action: probe
+    notes: Live validation on 2026-06-11 returned a feed with zero entries; keep outside the M1 health gate until replaced or repaired.
 
   - id: nvidia-deep-learning-blog
     name: NVIDIA Blog - Deep Learning
@@ -147,8 +147,8 @@ sources:
     lang: zh
     topics: [general-ai, china-tech-media]
     tos_risk: low
-    m1_action: include
-    notes: Chinese technology media with AI channel.
+    m1_action: probe
+    notes: Live validation on 2026-06-11 returned stale 2019 items; keep outside the M1 health gate until a current feed is found.
 
   - id: hnrss-ai
     name: Hacker News - AI Search Feed

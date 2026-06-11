@@ -1,0 +1,199 @@
+{
+  "finished_at": "2026-06-11T05:53:41.267528Z",
+  "git_commit": "fd3aeac4c0739e3046efc67c3dbccc66c271a19b",
+  "llm_usage": {
+    "calls": 0,
+    "completion_tokens": null,
+    "estimated_cost": null,
+    "prompt_tokens": null
+  },
+  "output_paths": [
+    "data/snapshots/2026-06/20260611T055058Z-live.jsonl",
+    "data/manifests/2026-06/20260611T055058Z-live.json"
+  ],
+  "run_id": "20260611T055058Z-live",
+  "source_health": {
+    "gate_passed": false,
+    "gate_threshold": 0.8,
+    "health_ratio": 0.7895,
+    "healthy_include": 15,
+    "include_total": 19
+  },
+  "source_results": [
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:51:00.802073Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "openai-news",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": "URL error: EOF occurred in violation of protocol (_ssl.c:1129)",
+      "fetched_at": "2026-06-11T05:51:31.283920Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "google-deepmind-blog",
+      "status": "failed"
+    },
+    {
+      "access_method": "rss",
+      "error": "URL error: _ssl.c:1112: The handshake operation timed out",
+      "fetched_at": "2026-06-11T05:52:32.962772Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "google-ai-blog",
+      "status": "failed"
+    },
+    {
+      "access_method": "rss",
+      "error": "HTTP 410: Gone",
+      "fetched_at": "2026-06-11T05:52:34.036129Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "microsoft-ai-blog",
+      "status": "failed"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:39.122067Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "nvidia-ai-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:43.594293Z",
+      "item_count": 18,
+      "m1_action": "include",
+      "source_id": "nvidia-deep-learning-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:46.396469Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "github-ai-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:49.096116Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "qbitai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:49.303473Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "infoq-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:55.334476Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "hnrss-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:56.584517Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "hnrss-llm",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:52:58.394386Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "arxiv-cs-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:53:00.443149Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "arxiv-cs-cl",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:53:02.986989Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "simonwillison",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:53:08.803254Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "latent-space",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": "URL error: _ssl.c:1112: The handshake operation timed out",
+      "fetched_at": "2026-06-11T05:53:30.562852Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "ai-news-buttondown",
+      "status": "failed"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:53:32.249970Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "the-decoder",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:53:38.631534Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "techcrunch-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-06-11T05:53:41.252651Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "mit-tech-review-ai",
+      "status": "success"
+    }
+  ],
+  "started_at": "2026-06-11T05:50:58.132374Z",
+  "status": "partial",
+  "total_clusters": null,
+  "total_new_items": 237
+}
