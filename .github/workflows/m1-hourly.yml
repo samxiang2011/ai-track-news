@@ -1,0 +1,40 @@
+name: M1 hourly collection
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+concurrency:
+  group: ai-track-news-hourly
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run M1 collection
+        run: python -m pipeline.run_m1
+
+      - name: Commit new data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots data/manifests
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "data: M1 collection $(date -u +%Y%m%dT%H%M%SZ)"
+            git push
+          fi

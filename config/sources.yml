@@ -1,0 +1,283 @@
+# Running M1 source list transformed from lab ops/source-diet/m1-shortlist.yml.
+# Once this execution repo exists, this file is the runtime source-list truth.
+
+generated_from: /Users/sam/lab/projects/ai_track_news/ops/source-diet/m1-shortlist.yml
+generated_at: 2026-06-11
+health_gate: "M1 should reach >=80% healthy include sources before M2 starts."
+health_denominator: "Only sources with m1_action: include count in the denominator."
+
+sources:
+  - id: openai-news
+    name: OpenAI News
+    tier: 1
+    url: https://openai.com/news/rss.xml
+    access_method: rss
+    lang: en
+    topics: [general-ai]
+    tos_risk: low
+    m1_action: include
+    notes: Primary source for OpenAI announcements.
+
+  - id: google-deepmind-blog
+    name: Google DeepMind Blog
+    tier: 1
+    url: https://deepmind.google/blog/rss.xml
+    access_method: rss
+    lang: en
+    topics: [general-ai, research]
+    tos_risk: low
+    m1_action: include
+    notes: Primary DeepMind research/product announcements.
+
+  - id: google-ai-blog
+    name: Google AI Blog
+    tier: 1
+    url: https://blog.google/technology/ai/rss/
+    access_method: rss
+    lang: en
+    topics: [general-ai, platform]
+    tos_risk: low
+    m1_action: include
+    notes: Primary Google AI and product announcements.
+
+  - id: anthropic-news
+    name: Anthropic News
+    tier: 1
+    url: https://www.anthropic.com/news
+    access_method: public_page
+    lang: en
+    topics: [general-ai]
+    tos_risk: low
+    m1_action: probe
+    notes: Primary Anthropic announcements; no verified RSS found in first pass.
+
+  - id: meta-ai-blog
+    name: Meta AI Blog
+    tier: 1
+    url: https://ai.meta.com/blog/
+    access_method: public_page
+    lang: en
+    topics: [general-ai, open-models]
+    tos_risk: low
+    m1_action: probe
+    notes: Primary Meta AI announcements; page parser needed if no feed is found.
+
+  - id: microsoft-ai-blog
+    name: Microsoft AI Blog
+    tier: 1
+    url: https://blogs.microsoft.com/ai/feed/
+    access_method: rss
+    lang: en
+    topics: [general-ai, platform]
+    tos_risk: low
+    m1_action: include
+    notes: Primary Microsoft AI announcements.
+
+  - id: nvidia-ai-blog
+    name: NVIDIA Technical Blog - Artificial Intelligence
+    tier: 1
+    url: https://developer.nvidia.com/blog/category/artificial-intelligence/feed/
+    access_method: rss
+    lang: en
+    topics: [general-ai, infrastructure]
+    tos_risk: low
+    m1_action: include
+    notes: Primary infrastructure/model deployment signal.
+
+  - id: nvidia-deep-learning-blog
+    name: NVIDIA Blog - Deep Learning
+    tier: 1
+    url: https://blogs.nvidia.com/blog/category/deep-learning/feed/
+    access_method: rss
+    lang: en
+    topics: [general-ai, infrastructure]
+    tos_risk: low
+    m1_action: include
+    notes: Broader NVIDIA AI product and infrastructure signal.
+
+  - id: github-ai-blog
+    name: GitHub Blog - AI and ML
+    tier: 1
+    url: https://github.blog/ai-and-ml/feed/
+    access_method: rss
+    lang: en
+    topics: [developer-tools, coding]
+    tos_risk: low
+    m1_action: include
+    notes: Developer-tooling and coding-agent product signal.
+
+  - id: zhipu-news
+    name: Zhipu News
+    tier: 1
+    url: https://www.zhipuai.cn/news
+    access_method: public_page
+    lang: zh
+    topics: [general-ai, china-models]
+    tos_risk: low
+    m1_action: probe
+    notes: Primary Chinese model provider announcements.
+
+  - id: moonshot-news
+    name: Moonshot AI / Kimi News
+    tier: 1
+    url: https://www.moonshot.cn/news
+    access_method: public_page
+    lang: zh
+    topics: [general-ai, china-models]
+    tos_risk: low
+    m1_action: probe
+    notes: Primary Chinese model provider announcements.
+
+  - id: qbitai
+    name: QbitAI
+    tier: 3
+    url: https://www.qbitai.com/feed
+    access_method: rss
+    lang: zh
+    topics: [general-ai, china-ai-media]
+    tos_risk: low
+    m1_action: include
+    notes: Timely Chinese AI media; also user-nominated WeChat source.
+
+  - id: infoq-ai
+    name: InfoQ AI
+    tier: 3
+    url: https://www.infoq.cn/feed?channel=ai
+    access_method: rss
+    lang: zh
+    topics: [general-ai, china-tech-media]
+    tos_risk: low
+    m1_action: include
+    notes: Chinese technology media with AI channel.
+
+  - id: hnrss-ai
+    name: Hacker News - AI Search Feed
+    tier: 2
+    url: https://hnrss.org/newest?q=AI
+    access_method: rss
+    lang: en
+    topics: [community, general-ai]
+    tos_risk: low
+    m1_action: include
+    notes: Early community signal; keyword-filtered.
+
+  - id: hnrss-llm
+    name: Hacker News - LLM Search Feed
+    tier: 2
+    url: https://hnrss.org/newest?q=LLM
+    access_method: rss
+    lang: en
+    topics: [community, llm]
+    tos_risk: low
+    m1_action: include
+    notes: Early community signal; keyword-filtered.
+
+  - id: arxiv-cs-ai
+    name: arXiv cs.AI
+    tier: 2
+    url: https://export.arxiv.org/rss/cs.AI
+    access_method: rss
+    lang: en
+    topics: [research]
+    tos_risk: low
+    m1_action: include
+    notes: Research signal; may need downstream filtering.
+
+  - id: arxiv-cs-cl
+    name: arXiv cs.CL
+    tier: 2
+    url: https://export.arxiv.org/rss/cs.CL
+    access_method: rss
+    lang: en
+    topics: [research, llm]
+    tos_risk: low
+    m1_action: include
+    notes: LLM/NLP research signal; may need downstream filtering.
+
+  - id: simonwillison
+    name: Simon Willison
+    tier: 2
+    url: https://simonwillison.net/atom/everything/
+    access_method: rss
+    lang: en
+    topics: [developer-tools, llm]
+    tos_risk: low
+    m1_action: include
+    notes: High-quality developer-facing LLM signal and source links.
+
+  - id: geohot-blog
+    name: geohot blog
+    tier: 2
+    url: https://geohot.github.io/blog/feed.xml
+    access_method: rss
+    lang: en
+    topics: [developer-tools, systems, ai-adjacent]
+    tos_risk: low
+    m1_action: probe
+    notes: Sampled from HN Popular Blogs 2025 OPML; sparse but potentially high-signal.
+
+  - id: latent-space
+    name: Latent Space
+    tier: 2
+    url: https://www.latent.space/feed
+    access_method: rss
+    lang: en
+    topics: [industry, developer-tools, llm]
+    tos_risk: low
+    m1_action: include
+    notes: AI engineering/community newsletter feed.
+
+  - id: ai-news-buttondown
+    name: AI News
+    tier: 2
+    url: https://buttondown.com/ainews/rss
+    access_method: rss
+    lang: en
+    topics: [general-ai, developer-tools]
+    tos_risk: low
+    m1_action: include
+    notes: Dense AI developer/news aggregation feed.
+
+  - id: the-decoder
+    name: The Decoder
+    tier: 3
+    url: https://the-decoder.com/feed/
+    access_method: rss
+    lang: en
+    topics: [general-ai, ai-media]
+    tos_risk: low
+    m1_action: include
+    notes: AI-focused media source.
+
+  - id: techcrunch-ai
+    name: TechCrunch AI
+    tier: 3
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    access_method: rss
+    lang: en
+    topics: [general-ai, startup]
+    tos_risk: low
+    m1_action: include
+    notes: Startup/product AI news.
+
+  - id: mit-tech-review-ai
+    name: MIT Technology Review - AI
+    tier: 3
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+    access_method: rss
+    lang: en
+    topics: [general-ai, ai-media]
+    tos_risk: low
+    m1_action: include
+    notes: Major AI media and analysis source.
+
+  - id: artificial-analysis
+    name: Artificial Analysis
+    tier: 4
+    url: https://artificialanalysis.ai/
+    access_method: public_page
+    lang: en
+    topics: [token-export, model-benchmark, model-usage]
+    tos_risk: low-medium
+    m1_action: probe
+    notes: Model performance/pricing/market signal; exact pages need follow-up.

@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+
+.env
+.env.*
+
+# Real snapshots and manifests are intended to be committed after live runs.
+data/dry-runs/
+data/derived/
+*.sqlite
+*.sqlite3
+
+site/
