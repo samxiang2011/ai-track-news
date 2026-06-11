@@ -30,6 +30,12 @@ Report M1 health acceptance status from committed manifests:
 python3 -m pipeline.report_m1_health
 ```
 
+Run the local-only M2 experimental clustering scaffold:
+
+```bash
+python3 -m pipeline.run_m2_experimental --limit-clusters 20
+```
+
 Probe sources are excluded by default. Include them explicitly:
 
 ```bash
@@ -51,10 +57,15 @@ change.
 
 - `data/snapshots/YYYY-MM/<run_id>.jsonl`
 - `data/manifests/YYYY-MM/<run_id>.json`
+- `data/derived/experimental/<run_id>/clusters.json` for local M2 experiments
+- `data/derived/experimental/<run_id>/cluster-review.md` for local M2 review
 
 Each item follows the M1 schema: id, source id, canonical URL, title,
 published/fetched timestamps, language, limited excerpt, topics, and reserved
 cluster/origin fields.
+
+`data/derived/` is ignored by git. M2 experimental outputs are disposable and
+do not affect the M1 acceptance gate or GitHub Actions workflow.
 
 ## Source Health
 

@@ -23,3 +23,19 @@ at each milestone before human review.
 - `public_page` sources are configured but skipped in M1 unless a compliant
   per-source parser is added. This avoids pretending a landing page title is a
   news item.
+
+## 2026-06-11 M2 Experimental Scaffold
+
+- The experimental M2 scaffold is deterministic and local-only: no LLM calls,
+  no GitHub Actions wiring, and outputs are written under gitignored
+  `data/derived/experimental/`.
+- Cluster titles currently use the highest-tier, most recent representative
+  item. This is a placeholder until LLM-generated Chinese titles and summaries
+  are added after the M1 gate.
+- Clustering uses exact item consolidation plus title-token similarity. It does
+  not yet solve origin-story grouping, syndicated echoes, or shared-source
+  duplication. Review flags expose `single_source`, `same_domain`, and
+  `near_duplicate_titles` so top clusters can be manually audited.
+- `token-export` tagging uses execution-facing keyword/source-hint rules copied
+  from the accepted lab seed taxonomy. There is no LLM fallback yet, so recall
+  and precision should be reviewed before promotion to formal M2.
