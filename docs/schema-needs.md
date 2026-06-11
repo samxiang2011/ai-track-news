@@ -12,6 +12,10 @@ at each milestone before human review.
   counts as healthy only when it fetches successfully and yields at least one
   normalized item. A feed that returns 200/OK but parses to zero items is not
   useful for M1 validation.
+- Added non-sensitive `runtime.github_actions` metadata to new manifests so the
+  M1 acceptance report can distinguish future GitHub-hosted runs from local
+  validation runs. Older manifests do not contain this field and report as
+  unknown runner metadata.
 - Exact URL dedupe currently keeps one item globally. If the same canonical URL
   appears from several independent sources, M2 may need either mention records,
   `duplicate_source_ids`, or a cluster-level source aggregation step so

@@ -27,6 +27,9 @@ jobs:
       - name: Run M1 collection
         run: python -m pipeline.run_m1
 
+      - name: Report M1 health
+        run: python -m pipeline.report_m1_health --github-summary
+
       - name: Commit new data
         run: |
           git config user.name "github-actions[bot]"

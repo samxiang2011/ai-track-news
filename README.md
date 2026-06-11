@@ -24,6 +24,12 @@ Run a live M1 collection for include sources:
 python3 -m pipeline.run_m1
 ```
 
+Report M1 health acceptance status from committed manifests:
+
+```bash
+python3 -m pipeline.report_m1_health
+```
+
 Probe sources are excluded by default. Include them explicitly:
 
 ```bash
@@ -37,8 +43,9 @@ workflow.
 ## GitHub Actions
 
 `.github/workflows/m1-hourly.yml` runs the M1 collector hourly and can also be
-started manually. It commits `data/snapshots/` and `data/manifests/` only when
-those outputs change.
+started manually. It writes an M1 health acceptance summary to the Actions run,
+then commits `data/snapshots/` and `data/manifests/` only when those outputs
+change.
 
 ## Outputs
 
@@ -53,3 +60,8 @@ cluster/origin fields.
 
 The M1 gate is at least 80% healthy include sources over the validation window.
 Probe sources are exploratory and excluded from the gate denominator.
+
+The health report uses the latest clean streak across live manifests. It stays
+`pending` until the streak covers the 72-hour evidence window, returns `fail` if
+the latest live run misses the health gate, and returns `pass` only after the
+window is covered without excessive run gaps.

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import sys
 
@@ -84,7 +85,11 @@ def main(argv: list[str] | None = None) -> int:
 def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run M1 fetch-normalize-dedupe pipeline.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
-    parser.add_argument("--dry-run", action="store_true", help="Use synthetic feeds and dry-run output paths.")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Use synthetic feeds and dry-run output paths.",
+    )
     parser.add_argument("--include-probes", action="store_true", help="Also run probe sources.")
     parser.add_argument("--limit-sources", type=int, default=None)
     parser.add_argument("--max-items-per-source", type=int, default=20)
@@ -117,7 +122,11 @@ def _build_manifest(
     healthy_include = sum(
         1
         for row in include_results
-        if row["status"] == "success" and isinstance(row["item_count"], int) and row["item_count"] > 0
+        if (
+            row["status"] == "success"
+            and isinstance(row["item_count"], int)
+            and row["item_count"] > 0
+        )
     )
     include_total = len(include_results)
     health_ratio = healthy_include / include_total if include_total else 0.0
@@ -154,6 +163,7 @@ def _build_manifest(
         },
         "output_paths": output_paths,
         "git_commit": None,
+        "runtime": _runtime_metadata(),
     }
 
 
@@ -180,6 +190,28 @@ def _iso(value: datetime) -> str:
 
 def _relative(path: Path) -> str:
     return str(path.relative_to(ROOT))
+
+
+def _runtime_metadata() -> dict[str, object]:
+    github_actions = os.environ.get("GITHUB_ACTIONS") == "true"
+    metadata: dict[str, object] = {"github_actions": github_actions}
+    if not github_actions:
+        return metadata
+
+    optional_fields = {
+        "github_run_id": "GITHUB_RUN_ID",
+        "github_run_attempt": "GITHUB_RUN_ATTEMPT",
+        "github_workflow": "GITHUB_WORKFLOW",
+        "github_job": "GITHUB_JOB",
+        "github_repository": "GITHUB_REPOSITORY",
+        "github_ref_name": "GITHUB_REF_NAME",
+        "github_sha": "GITHUB_SHA",
+    }
+    for field_name, env_name in optional_fields.items():
+        value = os.environ.get(env_name)
+        if value:
+            metadata[field_name] = value
+    return metadata
 
 
 if __name__ == "__main__":
