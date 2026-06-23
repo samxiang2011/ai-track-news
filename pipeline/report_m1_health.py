@@ -435,8 +435,15 @@ def _run_payload(run: RunRecord | None) -> dict[str, Any] | None:
         "healthy_include": run.healthy_include,
         "health_ratio": run.health_ratio,
         "github_actions": run.github_actions,
-        "path": str(run.path.relative_to(ROOT)),
+        "path": _display_path(run.path),
     }
+
+
+def _display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def _as_source_results(value: Any) -> list[dict[str, Any]]:

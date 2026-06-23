@@ -46,6 +46,12 @@ Probe sources are excluded by default. Include them explicitly:
 python3 -m pipeline.run_m1 --include-probes
 ```
 
+Render the static M3a Portal from the latest experimental clusters:
+
+```bash
+python3 -m pipeline.render_site
+```
+
 Dry-run outputs go under `data/dry-runs/` and are ignored by git. Live snapshots
 and manifests are intended to be committed after review or by the future
 workflow.
@@ -54,8 +60,9 @@ workflow.
 
 `.github/workflows/m1-hourly.yml` runs the M1 collector hourly and can also be
 started manually. It writes an M1 health acceptance summary to the Actions run,
-then commits `data/snapshots/` and `data/manifests/` only when those outputs
-change.
+runs the local M2 experimental clustering scaffold, renders the static Portal,
+commits `data/snapshots/`, `data/manifests/`, and `site/` when those outputs
+change, then deploys `site/` to GitHub Pages.
 
 ## Outputs
 
@@ -63,13 +70,15 @@ change.
 - `data/manifests/YYYY-MM/<run_id>.json`
 - `data/derived/experimental/<run_id>/clusters.json` for local M2 experiments
 - `data/derived/experimental/<run_id>/cluster-review.md` for local M2 review
+- `site/index.html` and `site/sources/index.html` for the M3a Portal
 
 Each item follows the M1 schema: id, source id, canonical URL, title,
 published/fetched timestamps, language, limited excerpt, topics, and reserved
 cluster/origin fields.
 
 `data/derived/` is ignored by git. M2 experimental outputs are disposable and
-do not affect the M1 acceptance gate or GitHub Actions workflow.
+do not affect the M1 acceptance gate. `site/` is committed because it is the
+public GitHub Pages artifact.
 
 ## Source Health
 
