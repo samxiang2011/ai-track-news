@@ -13,6 +13,7 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from .config import Source, load_sources
+from .llm import GLMClient, pick_model
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,7 @@ DEFAULT_WINDOW_HOURS = 48.0
 DEFAULT_LIMIT_CLUSTERS = 50
 DEFAULT_MAX_CLUSTERS_PER_SOURCE = 4
 DEFAULT_HALF_LIFE_HOURS = 24.0
+DEFAULT_LLM_ITEM_CAP = 80
 SCHEMA_VERSION = "m2-experimental-v0"
 
 TIER_WEIGHTS = {1: 1.5, 2: 1.0, 3: 1.0, 4: 1.2}
@@ -167,7 +169,15 @@ def main(argv: list[str] | None = None) -> int:
     snapshots = sorted(args.snapshot_root.glob("**/*-live.jsonl"))
     raw_items = load_snapshot_items(snapshots, source_meta, topic_rules)
     items = filter_items_for_window(raw_items, now, args.window_hours)
-    clusters = build_clusters(items, now=now, half_life_hours=args.half_life_hours)
+    client = GLMClient()
+    clusters, clustering_mode, llm_info = cluster_with_mode(
+        items,
+        args.mode,
+        client,
+        now,
+        args.half_life_hours,
+        args.llm_item_cap,
+    )
     limited_clusters = select_review_clusters(
         clusters,
         limit=args.limit_clusters,
@@ -191,7 +201,13 @@ def main(argv: list[str] | None = None) -> int:
             "title_overlap_threshold": TITLE_OVERLAP_THRESHOLD,
             "min_shared_title_tokens": MIN_SHARED_TITLE_TOKENS,
             "tier_weights": TIER_WEIGHTS,
-            "llm_calls": 0,
+            "clustering_mode": clustering_mode,
+            "llm_model": llm_info.get("model"),
+            "llm_calls": llm_info.get("llm_calls", 0),
+            "llm_prompt_tokens": llm_info.get("prompt_tokens", 0),
+            "llm_completion_tokens": llm_info.get("completion_tokens", 0),
+            "llm_item_cap": args.llm_item_cap,
+            "fallback_reason": llm_info.get("fallback_reason"),
         },
     )
 
@@ -205,13 +221,19 @@ def main(argv: list[str] | None = None) -> int:
     )
     review_path.write_text(format_review_markdown(output), encoding="utf-8")
 
+    multi_source = sum(
+        1 for cluster in limited_clusters if int(cluster.get("source_count") or 0) >= 2
+    )
     print(
         json.dumps(
             {
                 "run_id": run_id,
                 "status": "success",
+                "clustering_mode": clustering_mode,
                 "clusters": len(limited_clusters),
+                "multi_source_clusters": multi_source,
                 "window_items": len(items),
+                "llm_calls": llm_info.get("llm_calls", 0),
                 "output_paths": [
                     _relative(clusters_path),
                     _relative(review_path),
@@ -241,6 +263,19 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--now", help="Override current UTC time for deterministic output.")
     parser.add_argument("--half-life-hours", type=float, default=DEFAULT_HALF_LIFE_HOURS)
+    parser.add_argument(
+        "--mode",
+        choices=("auto", "llm", "deterministic"),
+        default="auto",
+        help="auto: LLM clustering when LLM_API_KEY is set, else deterministic "
+        "with fallback on error. llm: require LLM. deterministic: rules-only.",
+    )
+    parser.add_argument(
+        "--llm-item-cap",
+        type=int,
+        default=DEFAULT_LLM_ITEM_CAP,
+        help="Max items fed to the LLM clustering call; 0 = no cap.",
+    )
     return parser.parse_args(argv)
 
 
@@ -465,6 +500,178 @@ def select_review_clusters(
     return selected
 
 
+def llm_group_items(client: GLMClient, feed: list[M2Item]) -> list[dict[str, object]]:
+    """Ask the LLM to semantically group items into events.
+
+    Returns [{"item_ids": [str], "title": str, "summary": str}, ...]. Only the
+    grouping and the Chinese title/summary come from the model; heat/tier/
+    representative/flags stay formula-based in build_cluster_payload.
+    """
+    payload = [
+        {
+            "id": item.id,
+            "source_id": item.source_id,
+            "title": item.title,
+            "excerpt": (item.excerpt or "")[:200],
+        }
+        for item in feed
+    ]
+    system = (
+        "You cluster AI news items into EVENTS. An event is the same underlying "
+        "happening covered across independent sources. Merge items from DIFFERENT "
+        "sources only when they are truly about the same event; otherwise leave "
+        "single-item clusters. Reply ONLY with JSON: "
+        '{"clusters":[{"item_ids":[str],"title_zh":str,"summary_zh":str}]}. '
+        "title_zh and summary_zh must be Chinese; summary_zh is 1-2 concise "
+        "sentences. Every input item id must appear in exactly one cluster."
+    )
+    user = (
+        "Cluster these items (distinct source_id => independent source):\n"
+        + json.dumps(payload, ensure_ascii=False)
+    )
+    parsed, _ = client.chat_json(system, user, max_tokens=12000, temperature=0.1)
+    raw = parsed.get("clusters") if isinstance(parsed, dict) else None
+    if not isinstance(raw, list):
+        return []
+    groups: list[dict[str, object]] = []
+    for entry in raw:
+        if not isinstance(entry, dict):
+            continue
+        ids = [str(x) for x in (entry.get("item_ids") or []) if isinstance(x, (str, int))]
+        ids = [str(x) for x in ids]
+        if not ids:
+            continue
+        groups.append(
+            {
+                "item_ids": ids,
+                "title": str(entry.get("title_zh") or "").strip(),
+                "summary": str(entry.get("summary_zh") or "").strip(),
+            }
+        )
+    return groups
+
+
+def _select_llm_feed(items: list[M2Item], item_cap: int) -> list[M2Item]:
+    """Select items to feed the LLM clustering call.
+
+    Caps per source first (otherwise one high-volume feed like HN-AI, which can
+    emit >150 items in 48h, floods the call and crowds out cross-source
+    co-coverage), then takes the most recent up to item_cap. Diversity is what
+    lets the model merge independent sources covering the same event.
+    """
+    if item_cap <= 0:
+        return items
+    per_source_cap = max(1, item_cap // 8)
+    by_source: dict[str, list[M2Item]] = {}
+    for item in sorted(items, key=lambda it: (-it.event_at.timestamp(), it.tier, it.id)):
+        bucket = by_source.setdefault(item.source_id, [])
+        if len(bucket) < per_source_cap:
+            bucket.append(item)
+    feed = [item for bucket in by_source.values() for item in bucket]
+    feed.sort(key=lambda it: (-it.event_at.timestamp(), it.tier, it.id))
+    return feed[:item_cap] if len(items) > item_cap else feed
+
+
+def build_clusters_llm(
+    items: list[M2Item],
+    client: GLMClient,
+    now: datetime,
+    half_life_hours: float,
+    item_cap: int,
+) -> list[dict[str, object]]:
+    """LLM-assisted clustering. Grouping + zh title/summary from the model;
+    ranking recomputed by build_cluster_payload so heat stays formula-based and
+    explainable. Items the model drops (or beyond the feed cap) become singles.
+    """
+    if not items:
+        return []
+    by_id = {item.id: item for item in items}
+    groups = llm_group_items(client, _select_llm_feed(items, item_cap))
+    used: set[str] = set()
+    clusters: list[dict[str, object]] = []
+    for group in groups:
+        members: list[M2Item] = []
+        for item_id in group["item_ids"]:
+            item = by_id.get(item_id)
+            if item is not None and item_id not in used:
+                members.append(item)
+                used.add(item_id)
+        if not members:
+            continue
+        payload = build_cluster_payload(members, now=now, half_life_hours=half_life_hours)
+        if group.get("title"):
+            payload["title"] = group["title"]
+        if group.get("summary"):
+            payload["summary"] = group["summary"]
+        clusters.append(payload)
+    for item in items:
+        if item.id not in used:
+            clusters.append(
+                build_cluster_payload([item], now=now, half_life_hours=half_life_hours)
+            )
+    return sorted(
+        clusters,
+        key=lambda cluster: (
+            -float(cluster["heat_score"]),
+            str(cluster["last_seen"]),
+            str(cluster["id"]),
+        ),
+    )
+
+
+def cluster_with_mode(
+    items: list[M2Item],
+    mode: str,
+    client: GLMClient,
+    now: datetime,
+    half_life_hours: float,
+    item_cap: int,
+) -> tuple[list[dict[str, object]], str, dict[str, object]]:
+    """Return (clusters, clustering_mode, llm_info). auto falls back to
+    deterministic on any LLM error or missing key; llm raises instead."""
+    if mode == "deterministic":
+        clusters = build_clusters(items, now=now, half_life_hours=half_life_hours)
+        return clusters, "deterministic", {}
+    if not client.available:
+        if mode == "llm":
+            raise SystemExit("--mode llm requires LLM_API_KEY to be set")
+        clusters = build_clusters(items, now=now, half_life_hours=half_life_hours)
+        return clusters, "deterministic", {"fallback_reason": "LLM_API_KEY not set"}
+    if not client.model:
+        try:
+            picked = pick_model(client.list_models())
+        except Exception as exc:  # noqa: BLE001 - discovery failure must not break M2
+            if mode == "llm":
+                raise
+            return (
+                build_clusters(items, now=now, half_life_hours=half_life_hours),
+                "deterministic-fallback",
+                {"fallback_reason": f"model discovery failed: {str(exc)[:160]}"},
+            )
+        if not picked:
+            if mode == "llm":
+                raise SystemExit("--mode llm: no chat models available on this key")
+            return (
+                build_clusters(items, now=now, half_life_hours=half_life_hours),
+                "deterministic-fallback",
+                {"fallback_reason": "list_models returned no chat models"},
+            )
+        client.model = picked
+    try:
+        clusters = build_clusters_llm(items, client, now, half_life_hours, item_cap)
+    except Exception as exc:  # noqa: BLE001 - any LLM failure must not break M2
+        if mode == "llm":
+            raise
+        clusters = build_clusters(items, now=now, half_life_hours=half_life_hours)
+        return clusters, "deterministic-fallback", {"fallback_reason": str(exc)[:200]}
+    return clusters, "llm", {
+        "model": client.model,
+        "llm_calls": client.usage.calls,
+        "prompt_tokens": client.usage.prompt_tokens,
+        "completion_tokens": client.usage.completion_tokens,
+    }
+
+
 def choose_representative(items: list[M2Item]) -> M2Item:
     if len(items) == 1:
         return items[0]
@@ -669,6 +876,7 @@ def build_output(
         "schema_version": SCHEMA_VERSION,
         "run_id": run_id,
         "generated_at": _iso(generated_at),
+        "clustering_mode": parameters.get("clustering_mode", "deterministic"),
         "input": {
             "snapshot_paths": [_relative(path) for path in snapshot_paths],
             "snapshot_count": len(snapshot_paths),
@@ -681,7 +889,7 @@ def build_output(
             "candidate_cluster_count": candidate_cluster_count,
             "top_heat_score": clusters[0]["heat_score"] if clusters else None,
             "experimental": True,
-            "llm_calls": 0,
+            "llm_calls": parameters.get("llm_calls", 0),
         },
         "clusters": clusters,
         "items": [item.sidecar_dict() for item in sorted(window_items, key=lambda item: item.id)],
@@ -691,13 +899,15 @@ def build_output(
 def format_review_markdown(output: dict[str, object]) -> str:
     clusters = output["clusters"]
     assert isinstance(clusters, list)
+    parameters = output.get("parameters") or {}
+    mode = parameters.get("clustering_mode", "deterministic")
     lines = [
         "# M2 Experimental Cluster Review",
         "",
         f"- Run id: `{output['run_id']}`",
         f"- Generated at: `{output['generated_at']}`",
         f"- Schema: `{output['schema_version']}`",
-        "- Status: experimental, deterministic, no LLM calls",
+        f"- Status: experimental, clustering_mode=`{mode}`",
         f"- Selected clusters: `{len(clusters)}`",
         f"- Candidate clusters: `{output['summary'].get('candidate_cluster_count')}`",
         "",
@@ -732,6 +942,9 @@ def format_review_markdown(output: dict[str, object]) -> str:
                 "Items:",
             ]
         )
+        summary = cluster.get("summary")
+        if summary:
+            lines.append(f"- Summary: {summary}")
         for item_id in item_ids:
             item = _find_output_item(output, str(item_id))
             if item:

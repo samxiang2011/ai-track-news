@@ -122,14 +122,17 @@ def build_portal(
     )
 
     latest_payload = health_report.get("latest_run") or {}
+    clustering_mode = clusters_data.get("clustering_mode") or "deterministic"
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_at": _iso(now),
         "disclaimer": DISCLAIMER,
+        "clustering_mode": clustering_mode,
         "site": {
             "title": "AI Track News",
             "status_label": "M3a experimental Portal",
-            "experimental_note": "Rules-only clustering; no LLM summaries.",
+            "clustering_mode": clustering_mode,
+            "experimental_note": experimental_note(clustering_mode),
         },
         "input": {
             "clusters_json": _relative(clusters_path),
@@ -329,6 +332,8 @@ def render_index_html(portal: dict[str, Any]) -> str:
     timeline = portal["timeline"]
     input_meta = portal["input"]
     title = portal["site"]["title"]
+    clustering_mode = portal.get("clustering_mode") or "deterministic"
+    limits_html = "".join(f"<li>{h(item)}</li>" for item in known_limits(clustering_mode))
     return page_shell(
         title=title,
         active="home",
@@ -340,7 +345,7 @@ def render_index_html(portal: dict[str, Any]) -> str:
             <p class="subtle">静态 AI 新闻雷达，基于已提交快照自动生成。</p>
           </div>
           <div class="status-panel">
-            <span class="badge badge-warning">Experimental clustering · no LLM summaries</span>
+            <span class="badge badge-warning">{h(experimental_badge(clustering_mode))}</span>
             <span class="status-line">
               Last updated <strong>{h(format_time(portal['generated_at']))}</strong>
             </span>
@@ -386,9 +391,7 @@ def render_index_html(portal: dict[str, Any]) -> str:
             <section class="panel">
               <h2>已知限制</h2>
               <ul class="plain-list">
-                <li>聚类仍是 deterministic rules-only。</li>
-                <li>标题来自代表条目，非中文综合标题。</li>
-                <li>单源热点会被保留并明确标记。</li>
+                {limits_html}
               </ul>
             </section>
           </aside>
@@ -495,6 +498,8 @@ def render_cluster_card(cluster: dict[str, Any]) -> str:
     topics = "".join(chip(topic) for topic in cluster.get("topic_ids", []))
     flags = "".join(chip(flag, "flag-chip") for flag in cluster.get("review_flags", []))
     sources = ", ".join(cluster.get("source_names", [])) or "-"
+    summary = cluster.get("summary")
+    summary_html = f'<p class="cluster-summary">{h(summary)}</p>' if summary else ""
     item_lines = "".join(
         f"<li>{h(title)}</li>" for title in cluster.get("item_titles", [])[:4]
     )
@@ -511,6 +516,7 @@ def render_cluster_card(cluster: dict[str, Any]) -> str:
         </div>
         <h3><a href="{h(cluster.get('representative_url') or '#')}">{h(cluster['title'])}</a></h3>
         <p class="source-line">{h(sources)}</p>
+        {summary_html}
         <div class="chip-row">{topics}{flags}</div>
         <ul class="item-list">{item_lines}</ul>
       </div>
@@ -580,6 +586,36 @@ def metric_card(label: str, value: object) -> str:
 
 def chip(value: object, css_class: str = "topic-chip") -> str:
     return f'<span class="{h(css_class)}">{h(str(value))}</span>'
+
+
+def experimental_note(mode: str) -> str:
+    if mode == "llm":
+        return "LLM-assisted clustering (experimental); titles & summaries are AI-generated."
+    if mode == "deterministic-fallback":
+        return "Rules-only clustering (LLM unavailable; fallback)."
+    return "Rules-only clustering; no LLM summaries."
+
+
+def experimental_badge(mode: str) -> str:
+    if mode == "llm":
+        return "Experimental · LLM-assisted clustering"
+    if mode == "deterministic-fallback":
+        return "Experimental · rules-only (LLM fallback)"
+    return "Experimental · rules-only clustering"
+
+
+def known_limits(mode: str) -> list[str]:
+    if mode == "llm":
+        return [
+            "聚类为 LLM 辅助实验态，未经人工审核。",
+            "标题与摘由 GLM 生成，可能失真，请以原文为准。",
+            "单源热点会被保留并明确标记。",
+        ]
+    return [
+        "聚类仍是 deterministic rules-only。",
+        "标题来自代表条目，非中文综合标题。",
+        "单源热点会被保留并明确标记。",
+    ]
 
 
 def health_summary(healthy: object, total: object, ratio: object) -> str:
@@ -991,6 +1027,13 @@ a:hover {
   margin: 0 0 9px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.cluster-summary {
+  margin: 0 0 9px;
+  color: var(--text);
+  font-size: 13.5px;
+  line-height: 1.5;
 }
 
 .chip-row {

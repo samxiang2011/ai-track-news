@@ -36,7 +36,9 @@ jobs:
         run: python -m pipeline.report_m1_health --github-summary
 
       - name: Run M2 experimental clustering
-        run: python -m pipeline.run_m2_experimental --limit-clusters 20
+        run: python -m pipeline.run_m2_experimental --mode auto --limit-clusters 20
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
       - name: Render Portal
         run: python -m pipeline.render_site

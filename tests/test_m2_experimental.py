@@ -11,8 +11,11 @@ from pipeline.run_m2_experimental import (
     SourceMeta,
     TopicRule,
     build_clusters,
+    build_clusters_llm,
     choose_representative,
+    cluster_with_mode,
     item_from_raw,
+    llm_group_items,
     load_snapshot_items,
     merge_topics,
     select_review_clusters,
@@ -20,6 +23,8 @@ from pipeline.run_m2_experimental import (
     should_cluster_items,
     should_cluster_titles,
 )
+from pipeline.run_m2_experimental import _select_llm_feed
+from pipeline.llm import LLMError
 
 
 class M2ExperimentalTests(unittest.TestCase):
@@ -244,6 +249,110 @@ class M2ExperimentalTests(unittest.TestCase):
 
         self.assertEqual(item.event_at, _time("2026-06-11T12:00:00Z"))
         self.assertEqual(item.topics, ["developer-tools", "general-ai"])
+
+
+class _FakeUsage:
+    def __init__(self) -> None:
+        self.calls = 1
+        self.prompt_tokens = 100
+        self.completion_tokens = 50
+
+
+class _FakeClient:
+    def __init__(
+        self,
+        response: dict | None = None,
+        available: bool = True,
+        model: str = "glm-test",
+        error: Exception | None = None,
+    ) -> None:
+        self.available = available
+        self.model = model
+        self.usage = _FakeUsage()
+        self._response = response
+        self._error = error
+
+    def chat_json(self, system: str, user: str, **kwargs):
+        if self._error is not None:
+            raise self._error
+        return self._response, {}
+
+
+class M2LLMClusteringTests(unittest.TestCase):
+    def test_llm_group_items_parses_clusters(self) -> None:
+        items = [
+            _item("a", "openai-news", "OpenAI launches X", tier=1),
+            _item("b", "techcrunch-ai", "OpenAI X launch", tier=3),
+        ]
+        client = _FakeClient(
+            {"clusters": [{"item_ids": ["a", "b"], "title_zh": "合并事件", "summary_zh": "摘要"}]}
+        )
+        groups = llm_group_items(client, items)
+        self.assertEqual(len(groups), 1)
+        self.assertEqual(groups[0]["item_ids"], ["a", "b"])
+        self.assertEqual(groups[0]["title"], "合并事件")
+        self.assertEqual(groups[0]["summary"], "摘要")
+
+    def test_build_clusters_llm_overrides_title_summary_and_orphans_to_singles(self) -> None:
+        items = [
+            _item("a", "openai-news", "OpenAI launches X", tier=1),
+            _item("b", "techcrunch-ai", "OpenAI X launch", tier=3),
+            _item("c", "the-decoder", "Unrelated story", tier=3),
+        ]
+        client = _FakeClient(
+            {"clusters": [{"item_ids": ["a", "b"], "title_zh": "合并事件", "summary_zh": "GLM 摘要"}]}
+        )
+        now = _time("2026-06-11T12:00:00Z")
+        clusters = build_clusters_llm(items, client, now, 24.0, 80)
+        by_members = {tuple(cluster["item_ids"]): cluster for cluster in clusters}
+        merged = by_members.get(("a", "b"))
+        self.assertIsNotNone(merged)
+        assert merged is not None
+        self.assertEqual(merged["title"], "合并事件")
+        self.assertEqual(merged["summary"], "GLM 摘要")
+        self.assertEqual(merged["source_count"], 2)
+        self.assertIsInstance(merged["heat_score"], float)
+        self.assertIn(("c",), by_members)  # dropped item becomes a single cluster
+
+    def test_cluster_with_mode_auto_falls_back_on_llm_error(self) -> None:
+        items = [
+            _item("a", "openai-news", "OpenAI launches X", tier=1),
+            _item("b", "techcrunch-ai", "OpenAI X launch", tier=3),
+        ]
+        client = _FakeClient(error=LLMError("boom"))
+        now = _time("2026-06-11T12:00:00Z")
+        clusters, mode, info = cluster_with_mode(items, "auto", client, now, 24.0, 80)
+        self.assertEqual(mode, "deterministic-fallback")
+        self.assertTrue(clusters)
+        self.assertIn("fallback_reason", info)
+
+    def test_cluster_with_mode_auto_without_key_is_deterministic(self) -> None:
+        items = [_item("a", "openai-news", "OpenAI launches X", tier=1)]
+        client = _FakeClient(available=False)
+        now = _time("2026-06-11T12:00:00Z")
+        _, mode, _ = cluster_with_mode(items, "auto", client, now, 24.0, 80)
+        self.assertEqual(mode, "deterministic")
+
+    def test_cluster_with_mode_llm_raises_without_key(self) -> None:
+        items = [_item("a", "openai-news", "OpenAI launches X", tier=1)]
+        client = _FakeClient(available=False)
+        now = _time("2026-06-11T12:00:00Z")
+        with self.assertRaises(SystemExit):
+            cluster_with_mode(items, "llm", client, now, 24.0, 80)
+
+    def test_select_llm_feed_caps_dominant_source(self) -> None:
+        # 90 items from one high-volume source + 1 from another, cap 80: the
+        # dominant source must be capped so the other source is represented.
+        flood = [
+            _item(f"h{i}", "hnrss-ai", f"title{i}", tier=2, published_at="2026-06-11T11:00:00Z")
+            for i in range(90)
+        ]
+        other = _item("o1", "openai-news", "other", tier=1, published_at="2026-06-11T12:00:00Z")
+        feed = _select_llm_feed(flood + [other], 80)
+        h_count = sum(1 for item in feed if item.source_id == "hnrss-ai")
+        self.assertLessEqual(h_count, 10)  # per-source cap (80 // 8)
+        self.assertIn("o1", {item.id for item in feed})  # other source represented
+        self.assertLessEqual(len(feed), 80)
 
 
 def _item(
