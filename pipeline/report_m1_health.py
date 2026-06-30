@@ -15,6 +15,10 @@ DEFAULT_MANIFEST_ROOT = ROOT / "data" / "manifests"
 DEFAULT_WINDOW_HOURS = 72.0
 DEFAULT_MIN_HEALTH = 0.8
 DEFAULT_MAX_GAP_HOURS = 8.0
+# Auto-demote: an include source fetches fine but persistently returns 0 items.
+# Suggestion only — never edits sources.yml automatically.
+DEFAULT_DEMOTE_THRESHOLD = 0.5
+DEFAULT_DEMOTE_MIN_SAMPLES = 5
 
 
 @dataclass(frozen=True)
@@ -51,6 +55,8 @@ def main(argv: list[str] | None = None) -> int:
         window_hours=args.window_hours,
         min_health=args.min_health,
         max_gap_hours=args.max_gap_hours,
+        demote_threshold=args.demote_threshold,
+        min_samples=args.demote_min_samples,
     )
 
     markdown = format_markdown(report)
@@ -74,6 +80,18 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument("--window-hours", type=float, default=DEFAULT_WINDOW_HOURS)
     parser.add_argument("--min-health", type=float, default=DEFAULT_MIN_HEALTH)
     parser.add_argument("--max-gap-hours", type=float, default=DEFAULT_MAX_GAP_HOURS)
+    parser.add_argument(
+        "--demote-threshold",
+        type=float,
+        default=DEFAULT_DEMOTE_THRESHOLD,
+        help="Zero-item rate at/above which an include source is a demotion candidate.",
+    )
+    parser.add_argument(
+        "--demote-min-samples",
+        type=int,
+        default=DEFAULT_DEMOTE_MIN_SAMPLES,
+        help="Minimum runs a source must appear in to be a demotion candidate.",
+    )
     parser.add_argument("--now", help="Override current UTC time for deterministic checks.")
     parser.add_argument("--include-dry-runs", action="store_true")
     parser.add_argument("--github-summary", action="store_true")
@@ -145,6 +163,8 @@ def build_report(
     window_hours: float,
     min_health: float,
     max_gap_hours: float,
+    demote_threshold: float = DEFAULT_DEMOTE_THRESHOLD,
+    min_samples: int = DEFAULT_DEMOTE_MIN_SAMPLES,
 ) -> dict[str, Any]:
     now = _ensure_utc(now)
     window_start = now - timedelta(hours=window_hours)
@@ -168,6 +188,11 @@ def build_report(
     )
 
     source_failures = _source_failure_ranking(recent_runs)
+    demotion_candidates = _zero_item_ranking(
+        recent_runs,
+        demote_threshold=demote_threshold,
+        min_samples=min_samples,
+    )
     latest_payload = _run_payload(latest) if latest else None
     success_count = sum(1 for run in recent_runs if run.status == "success")
     clean_count = sum(1 for run in recent_runs if run.is_clean(min_health))
@@ -182,6 +207,8 @@ def build_report(
             "window_hours": window_hours,
             "min_health": min_health,
             "max_gap_hours": max_gap_hours,
+            "demote_threshold": demote_threshold,
+            "demote_min_samples": min_samples,
         },
         "window": {
             "started_at": _iso(window_start),
@@ -207,6 +234,7 @@ def build_report(
         },
         "latest_run": latest_payload,
         "include_source_failures": source_failures,
+        "demotion_candidates": demotion_candidates,
         "verdict": {
             "status": verdict,
             "reason": reason,
@@ -304,6 +332,40 @@ def format_markdown(report: dict[str, Any]) -> str:
                         f"`{_escape_table(row['last_status'])}`",
                         str(row["last_item_count"]),
                         _escape_table(row["last_error"] or "-"),
+                    ]
+                )
+                + " |"
+            )
+
+    candidates = report.get("demotion_candidates") or []
+    lines.extend(["", "## Demotion Candidates (zero-item include sources)", ""])
+    lines.append(
+        "Zero-item = `status=success` with `item_count=0`. Candidate = zero rate ≥ "
+        f"{_percent(criteria['demote_threshold'])} across ≥ "
+        f"{criteria['demote_min_samples']} runs. "
+        "Suggestion only — does not modify sources.yml."
+    )
+    lines.append("")
+    if not candidates:
+        lines.append("No include sources returned zero items in the lookback window.")
+    else:
+        lines.extend(
+            [
+                "| Source | Zero rate | Zero/Seen | Candidate | Last status | Last items |",
+                "| --- | ---: | --- | :---: | --- | ---: |",
+            ]
+        )
+        for row in candidates[:10]:
+            lines.append(
+                "| "
+                + " | ".join(
+                    [
+                        f"`{_escape_table(row['source_id'])}`",
+                        _percent(row["zero_ratio"]),
+                        f"{row['zero_runs']}/{row['seen_runs']}",
+                        "yes" if row["is_candidate"] else "no",
+                        f"`{_escape_table(row['last_status'])}`",
+                        str(row["last_item_count"]),
                     ]
                 )
                 + " |"
@@ -415,6 +477,58 @@ def _source_failure_ranking(runs: list[RunRecord]) -> list[dict[str, Any]]:
             bucket["last_error"] = _trim(str(row.get("error") or ""), 120) or None
             bucket["last_run_id"] = run.run_id
     return sorted(failures.values(), key=lambda row: (-row["bad_runs"], row["source_id"]))
+
+
+def _zero_item_ranking(
+    runs: list[RunRecord],
+    *,
+    demote_threshold: float,
+    min_samples: int,
+) -> list[dict[str, Any]]:
+    """Per-include-source zero-item rate over the window.
+
+    Zero-item = status == "success" with item_count == 0 (the source fetched fine but
+    produced nothing — distinct from a fetch failure). Returns only sources with at
+    least one zero-item observation, sorted candidates-first. Suggests demotion to
+    ``probe``; does NOT modify sources.yml (source changes are a human git-review gate).
+    """
+    stats: dict[str, dict[str, Any]] = {}
+    for run in runs:
+        for row in run.source_results:
+            if row.get("m1_action") != "include":
+                continue
+            source_id = str(row.get("source_id") or "unknown")
+            bucket = stats.setdefault(
+                source_id,
+                {
+                    "source_id": source_id,
+                    "seen_runs": 0,
+                    "zero_runs": 0,
+                    "last_status": None,
+                    "last_item_count": None,
+                    "last_run_id": None,
+                },
+            )
+            bucket["seen_runs"] += 1
+            status = str(row.get("status") or "unknown")
+            item_count = _as_int(row.get("item_count"))
+            if status == "success" and item_count == 0:
+                bucket["zero_runs"] += 1
+            bucket["last_status"] = status
+            bucket["last_item_count"] = item_count if item_count is not None else 0
+            bucket["last_run_id"] = run.run_id
+
+    rows: list[dict[str, Any]] = []
+    for bucket in stats.values():
+        seen = bucket["seen_runs"]
+        zero = bucket["zero_runs"]
+        if zero == 0:
+            continue
+        ratio = round(zero / seen, 4) if seen else 0.0
+        candidate = seen >= min_samples and ratio >= demote_threshold
+        rows.append({**bucket, "zero_ratio": ratio, "is_candidate": candidate})
+    rows.sort(key=lambda row: (not row["is_candidate"], -row["zero_ratio"], row["source_id"]))
+    return rows
 
 
 def _source_row_is_healthy(row: dict[str, Any]) -> bool:

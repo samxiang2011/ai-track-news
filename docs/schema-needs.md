@@ -52,3 +52,23 @@ at each milestone before human review.
   trigger the topic without model/company/channel context.
 - `same_domain` is now emitted only for multi-item clusters, reducing noise in
   single-item review output.
+
+## 2026-06-30 R0 Echo Metric + Auto-demote (read-only measurement layer)
+
+- Added `pipeline/report_echo.py`: quantifies repost-dominated co-occurrence over
+  top-N rendered clusters using each cluster's existing `tier_mix`. A multi-source
+  cluster with no tier1/tier2/tier4 anchor (pure tier3 media) is
+  `repost_dominated` — the most inflated echo form. Title pairwise similarity is
+  an attached corroboration column, not a primary signal. This realizes the BRIEF
+  §3 echo observation item ahead of v1 as the R0 measurement baseline.
+- Extended `pipeline/report_m1_health.py` with `demotion_candidates`: per
+  include-source zero-item rate (`status=success, item_count=0`) over the window.
+  Sources above `--demote-threshold` (default 0.5) with enough samples
+  (`--demote-min-samples`, default 5) are flagged as candidates. Suggestion only —
+  it never edits `sources.yml` (source changes stay a human git-review gate).
+- Both are read-only analysis; neither touches the fetch/cluster/render main path.
+- R0 baseline (2026-06-30): top10 `repost_dominated_ratio` 0.00%, mean independent
+  classes 1.000 (every multi-source cluster has ≥1 independent anchor, but only
+  one class on average — independence is thin, the lever for R1 source additions).
+  Demotion: `arxiv-cs-cl` 64% zero rate (16/25, candidate); `arxiv-cs-ai` 48%
+  (12/25, just under threshold) — establishes the R1 fix priority (cs-cl first).
