@@ -1,16 +1,22 @@
-"""Minimal OpenAI-compatible GLM (智谱 BigModel) client.
+"""Minimal Anthropic-protocol GLM (智谱 BigModel) client.
 
 Zero third-party deps: stdlib urllib only. Reads credentials from the
-environment so no secret is ever written to disk or logged. Used first by the
-LLM smoke test; intended to become the runtime client for M2 LLM clustering and
-summaries once the clustering route is decided.
+environment so no secret is ever written to disk or logged. Used by the LLM
+smoke test and the M2 LLM clustering/summary runtime.
+
+Routes to the GLM Coding Plan via the Anthropic Messages protocol at
+``https://open.bigmodel.cn/api/anthropic``. The 2026-06-30 live probe proved a
+generic urllib client calling ``/api/anthropic/v1/messages`` consumes Coding
+Plan quota (Sam-confirmed in the GLM backend) — no Claude-Code User-Agent
+needed — so the pipeline rides Sam's prepaid plan instead of billing
+pay-as-you-go on the general ``/paas/v4`` endpoint. This supersedes the earlier
+2026-06-29 conclusion that the general endpoint was required.
 
 Env:
   LLM_API_KEY   required for live calls (never printed).
-  LLM_BASE_URL  default is the Coding Plan endpoint; fall back to the general
-                BigModel endpoint if the workload/model requires it.
-  LLM_MODEL     model id. If unset, discover it live via list_models() and pass
-                it to the constructor (the smoke test does this on purpose).
+  LLM_BASE_URL  default is the Coding Plan Anthropic endpoint below.
+  LLM_MODEL     model id; defaults to glm-5.2 (Coding-Plan-listed). On the plan
+                legacy glm-5.1/glm-5 auto-redirect to glm-5.2.
 """
 
 from __future__ import annotations
@@ -23,15 +29,18 @@ from dataclasses import dataclass, field
 from typing import Any
 
 
-# Both endpoints are on the domestic China region (open.bigmodel.cn), not the
-# overseas Z.AI. The 2026-06-29 smoke test proved the Coding Plan endpoint
-# (/coding/paas/v4) is a coding-assistant surface: ~75s latency and it ignores
-# response_format (returns {"answer": ...}). The general endpoint (/paas/v4)
-# honors json_object mode in ~7s, so it is the correct default here.
-CODING_BASE_URL = "https://open.bigmodel.cn/api/coding/paas/v4"
+# The Coding Plan Anthropic endpoint (domestic open.bigmodel.cn, China region —
+# not overseas Z.AI). The 2026-06-30 probe proved a generic client calling
+# /api/anthropic/v1/messages rides the Coding Plan quota (Sam-confirmed in the
+# GLM backend); the plan's "designated tools only" wording is not enforced at
+# this endpoint. The general /paas/v4 endpoint (kept only as a reference
+# constant) is pay-as-you-go and is no longer the default.
+ANTHROPIC_BASE_URL = "https://open.bigmodel.cn/api/anthropic"
 GENERAL_BASE_URL = "https://open.bigmodel.cn/api/paas/v4"
-DEFAULT_BASE_URL = GENERAL_BASE_URL
+DEFAULT_BASE_URL = ANTHROPIC_BASE_URL
+DEFAULT_MODEL = "glm-5.2"
 DEFAULT_TIMEOUT = 90.0
+ANTHROPIC_VERSION = "2023-06-01"
 
 
 class LLMError(RuntimeError):
@@ -71,7 +80,10 @@ class GLMClient:
             self.base_url = os.environ.get("LLM_BASE_URL") or DEFAULT_BASE_URL
         self.base_url = self.base_url.rstrip("/")
         if self.model is None:
-            self.model = os.environ.get("LLM_MODEL")
+            # Always resolve to a concrete model so callers never depend on
+            # live model discovery (the Coding-Plan Anthropic proxy may not
+            # expose /v1/models). Explicit LLM_MODEL wins; else the plan default.
+            self.model = os.environ.get("LLM_MODEL") or DEFAULT_MODEL
 
     @property
     def available(self) -> bool:
@@ -88,8 +100,12 @@ class GLMClient:
         key = self._require_key()
         url = f"{self.base_url}{path}"
         headers = {
-            "Authorization": f"Bearer {key}",
             "Accept": "application/json",
+            # Anthropic-native auth + version; Bearer kept as a compatibility
+            # fallback. The 2026-06-30 probe succeeded with both headers present.
+            "x-api-key": key,
+            "anthropic-version": ANTHROPIC_VERSION,
+            "Authorization": f"Bearer {key}",
         }
         data = None
         if payload is not None:
@@ -118,9 +134,10 @@ class GLMClient:
             raise LLMError(f"non-JSON response from {path}: {(body or '')[:300]}") from exc
 
     def list_models(self) -> list[dict[str, Any]]:
-        """GET /models. Proves auth and lists model ids available to this key."""
-        data = self._request("/models")
-        # OpenAI-compatible shape: {"data": [{"id": "..."}, ...]}
+        """GET /v1/models. Best-effort discovery; callers tolerate failure and
+        fall back to the resolved default model. Returns OpenAI-shaped items.
+        """
+        data = self._request("/v1/models")
         items = data.get("data") if isinstance(data, dict) else None
         if not isinstance(items, list):
             return []
@@ -135,44 +152,34 @@ class GLMClient:
         temperature: float = 0.2,
         thinking: str = "disabled",
     ) -> tuple[Any, dict[str, Any]]:
-        """OpenAI-compatible chat/completions forced to JSON output.
+        """Anthropic Messages call returning a parsed JSON object.
 
-        Returns (parsed_json_object, raw_response). The system prompt must
-        mention JSON (provider requirement for json_object mode); callers should
-        include the exact schema in the prompt. ``thinking`` defaults to
-        "disabled": GLM 5.x are reasoning models whose reasoning_content tokens
-        count against max_tokens and can exhaust the budget before the final
-        JSON; disabling thinking gives fast, schema-faithful JSON for
-        classification/clustering tasks (per the project LLM decision doc).
+        Returns ``(parsed_json_object, raw_response)``. The system prompt must
+        mention JSON (kept as a sanity guard even though Anthropic has no native
+        ``json_object`` mode). Without that mode the model may occasionally wrap
+        output in ```json fences or prose; :func:`_extract_json` strips that
+        before parsing. ``thinking`` is accepted for signature compatibility but
+        not sent — Anthropic "disabled" means omitted, and the probe confirmed
+        fast schema-faithful JSON without it.
         """
         if "json" not in system.lower() and "json" not in user.lower():
-            raise LLMError("json_object mode requires the prompt to mention JSON.")
+            raise LLMError("JSON output requires the prompt to mention JSON.")
         if not self.model:
             raise LLMError("LLM_MODEL is not set; discover it via list_models() first.")
         payload = {
             "model": self.model,
-            "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
-            ],
-            "response_format": {"type": "json_object"},
-            "temperature": temperature,
             "max_tokens": max_tokens,
+            "system": system,
+            "messages": [{"role": "user", "content": user}],
+            "temperature": temperature,
         }
-        if thinking == "disabled":
-            payload["thinking"] = {"type": "disabled"}
-        elif thinking == "enabled":
-            payload["thinking"] = {"type": "enabled"}
-        resp = self._request("/chat/completions", method="POST", payload=payload)
+        resp = self._request("/v1/messages", method="POST", payload=payload)
         content = _extract_content(resp)
-        try:
-            parsed = json.loads(content)
-        except json.JSONDecodeError as exc:
-            raise LLMError(f"model did not return valid JSON: {content[:300]}") from exc
+        parsed = _extract_json(content)
         usage = resp.get("usage") or {}
         self.usage.calls += 1
-        self.usage.prompt_tokens += int(usage.get("prompt_tokens") or 0)
-        self.usage.completion_tokens += int(usage.get("completion_tokens") or 0)
+        self.usage.prompt_tokens += int(usage.get("input_tokens") or 0)
+        self.usage.completion_tokens += int(usage.get("output_tokens") or 0)
         return parsed, resp
 
 
@@ -205,11 +212,42 @@ def pick_model(models: list[dict[str, Any]]) -> str | None:
 
 
 def _extract_content(resp: Any) -> str:
-    choices = resp.get("choices") if isinstance(resp, dict) else None
-    if not isinstance(choices, list) or not choices:
-        raise LLMError(f"response has no choices: {str(resp)[:300]}")
-    message = choices[0].get("message") or {}
-    content = message.get("content")
-    if not isinstance(content, str) or not content.strip():
+    """Read the assistant text from an Anthropic Messages response
+    (``{"content": [{"type": "text", "text": "..."}], ...}``)."""
+    content = resp.get("content") if isinstance(resp, dict) else None
+    if not isinstance(content, list) or not content:
+        raise LLMError(f"response has no content: {str(resp)[:300]}")
+    block = content[0] if isinstance(content[0], dict) else {}
+    text = block.get("text")
+    if not isinstance(text, str) or not text.strip():
         raise LLMError(f"empty content in response: {str(resp)[:300]}")
-    return content
+    return text
+
+
+def _extract_json(text: str) -> Any:
+    """Parse JSON from model text that may be wrapped in ```json fences or have
+    surrounding prose. Anthropic has no native json_object mode, so this adds
+    tolerance. Falls back to the first ``{...}`` span. Raises :class:`LLMError`
+    if no valid JSON object can be recovered.
+    """
+    cleaned = text.strip()
+    # Strip one set of code fences if present (```json\n ... \n```).
+    if cleaned.startswith("```"):
+        newline = cleaned.find("\n")
+        cleaned = cleaned[newline + 1 :] if newline != -1 else cleaned[3:]
+        if cleaned.endswith("```"):
+            cleaned = cleaned[:-3]
+        cleaned = cleaned.strip()
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        pass
+    # Fallback: outermost {...} span.
+    start = cleaned.find("{")
+    end = cleaned.rfind("}")
+    if start != -1 and end > start:
+        try:
+            return json.loads(cleaned[start : end + 1])
+        except json.JSONDecodeError:
+            pass
+    raise LLMError(f"model did not return valid JSON: {text[:300]}")

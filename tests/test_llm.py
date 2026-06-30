@@ -43,17 +43,19 @@ class GLMClientTest(unittest.TestCase):
             client.chat_json("classify this", "items here")
 
     @mock.patch.dict(os.environ, EMPTY_ENV, clear=False)
-    def test_chat_json_requires_model(self):
+    def test_default_model_when_unset(self):
+        # With no explicit model and empty env, the client self-provides the
+        # Coding-Plan default (glm-5.2) so callers never depend on live
+        # model discovery.
         client = llm.GLMClient(api_key="k", model=None)
-        with self.assertRaises(llm.LLMError):
-            client.chat_json("return JSON", "items")
+        self.assertEqual(client.model, llm.DEFAULT_MODEL)
 
     @mock.patch.dict(os.environ, EMPTY_ENV, clear=False)
     def test_chat_json_parses_content_and_tracks_usage(self):
         client = llm.GLMClient(api_key="k", model="glm-test")
         canned = {
-            "choices": [{"message": {"content": '{"results": []}'}}],
-            "usage": {"prompt_tokens": 40, "completion_tokens": 5},
+            "content": [{"type": "text", "text": '{"results": []}'}],
+            "usage": {"input_tokens": 40, "output_tokens": 5},
         }
         with mock.patch.object(client, "_request", return_value=canned):
             parsed, raw = client.chat_json("return JSON only", "items")
@@ -64,7 +66,7 @@ class GLMClientTest(unittest.TestCase):
 
     def test_extract_content_rejects_empty(self):
         with self.assertRaises(llm.LLMError):
-            llm._extract_content({"choices": [{"message": {"content": ""}}]})
+            llm._extract_content({"content": [{"type": "text", "text": ""}]})
 
 
 class PickModelTest(unittest.TestCase):
