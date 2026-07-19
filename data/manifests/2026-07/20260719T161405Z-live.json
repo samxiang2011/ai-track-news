@@ -1,0 +1,191 @@
+{
+  "finished_at": "2026-07-19T16:14:13.356820Z",
+  "git_commit": "1c88f747fb5536252f1f83afa7e3ef99e8919c8a",
+  "llm_usage": {
+    "calls": 0,
+    "completion_tokens": null,
+    "estimated_cost": null,
+    "prompt_tokens": null
+  },
+  "output_paths": [
+    "data/snapshots/2026-07/20260719T161405Z-live.jsonl",
+    "data/manifests/2026-07/20260719T161405Z-live.json"
+  ],
+  "run_id": "20260719T161405Z-live",
+  "runtime": {
+    "github_actions": true,
+    "github_job": "collect",
+    "github_ref_name": "main",
+    "github_repository": "samxiang2011/ai-track-news",
+    "github_run_attempt": "1",
+    "github_run_id": "29694444040",
+    "github_sha": "1c88f747fb5536252f1f83afa7e3ef99e8919c8a",
+    "github_workflow": "M1 hourly collection"
+  },
+  "source_health": {
+    "gate_passed": true,
+    "gate_threshold": 0.8,
+    "health_ratio": 0.8824,
+    "healthy_include": 15,
+    "include_total": 17
+  },
+  "source_results": [
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:05.649775Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "openai-news",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:06.125957Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "google-deepmind-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:06.509477Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "google-ai-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:06.611263Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "microsoft-ai-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:06.693618Z",
+      "item_count": 18,
+      "m1_action": "include",
+      "source_id": "nvidia-deep-learning-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:06.784304Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "github-ai-blog",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:08.004047Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "qbitai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:10.430676Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "hnrss-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:10.833253Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "hnrss-llm",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:10.941137Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "arxiv-cs-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:10.968115Z",
+      "item_count": 0,
+      "m1_action": "include",
+      "source_id": "arxiv-cs-cl",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:11.020888Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "simonwillison",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:11.147133Z",
+      "item_count": 20,
+      "m1_action": "include",
+      "source_id": "latent-space",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:11.292685Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "ai-news-buttondown",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:13.191984Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "the-decoder",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:13.257456Z",
+      "item_count": 19,
+      "m1_action": "include",
+      "source_id": "techcrunch-ai",
+      "status": "success"
+    },
+    {
+      "access_method": "rss",
+      "error": null,
+      "fetched_at": "2026-07-19T16:14:13.348485Z",
+      "item_count": 10,
+      "m1_action": "include",
+      "source_id": "mit-tech-review-ai",
+      "status": "success"
+    }
+  ],
+  "started_at": "2026-07-19T16:14:05.265197Z",
+  "status": "success",
+  "total_clusters": null,
+  "total_new_items": 230
+}
