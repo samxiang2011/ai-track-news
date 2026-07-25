@@ -1,5 +1,8 @@
 # AGENTS.md — ai_track_news Execution Repo
 
+This file contains project-specific deltas; shared repository rules are not
+repeated here.
+
 ## Scope
 
 This repository is the execution layer for the `~/lab/projects/ai_track_news`
@@ -17,8 +20,6 @@ execution-facing summaries when needed.
 
 ## Safety
 
-- Do not commit secrets, API keys, tokens, cookies, private keys, or local env
-  files.
 - Read LLM credentials from `LLM_API_KEY` only.
 - Public data must not include raw HTML, full article bodies, or paywalled
   content.
@@ -35,18 +36,10 @@ execution-facing summaries when needed.
 
 ## Editing
 
-- Prefer small, direct Python changes.
 - Do not introduce vector databases, queues, dynamic web backends, or heavy
   frontend frameworks.
 - Keep generated dry-run outputs under `data/dry-runs/`, which is gitignored.
-
-## Coding Agent Discipline
-
-- Before non-trivial edits, state assumptions and the intended verification.
-- Keep the implementation simple and milestone-scoped. Do not build later M2/M3
-  machinery while working on an M1 fix, or formalize experimental M2 code before
-  the BRIEF gate allows it.
-- Make surgical changes that match the existing Python style.
-- Prefer tests or local CLI runs that reproduce the issue before changing code.
-- Verify with the smallest meaningful command, such as targeted `pytest`, dry
-  run, live run, or `python3 -m pipeline.report_m1_health`, depending on scope.
+- Keep changes within the accepted milestone. Do not build later machinery or
+  formalize experiments before that scope is explicitly extended.
+- Choose the narrowest relevant evaluator: targeted `pytest`, dry run, live run,
+  or `python3 -m pipeline.report_m1_health`.
