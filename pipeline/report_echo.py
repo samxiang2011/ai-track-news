@@ -3,8 +3,8 @@
 只读分析层:读渲染好的 ``site/data/portal.json``,不改抓取/聚类/渲染主链路,
 不写回数据或配置。
 
-产品脊(BRIEF §1):热度 = 独立信源共现。转载/通稿会令 ``source_count`` 虚高
-(多源共现 ≠ 独立证实)。本模块把 BRIEF §3 预留的 echo 观察项从 v1 提前到 v0.x,
+产品脊:热度 = 独立信源共现。转载/通稿会令 ``source_count`` 虚高
+(多源共现 ≠ 独立证实)。本模块把预留的 echo 观察项从 v1 提前到 v0.x,
 用每个 cluster 已有的 ``tier_mix`` 量化伪共现:
 
 - ``tier_mix`` 由 ``build_tier_mix``(``run_m2_experimental.py``)按 ``sources.yml``

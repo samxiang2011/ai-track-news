@@ -1,7 +1,7 @@
 # Design Contract Summary
 
-The full design contract lives in
-`/Users/sam/lab/projects/ai_track_news/BRIEF.md`.
+This summarises the execution constraints this repo is built against. The full
+design contract is maintained upstream and is not mirrored here.
 
 Execution constraints for M1:
 
@@ -18,6 +18,6 @@ Execution constraints for M1:
 
 Runtime truth sources:
 
-- Strategy and milestone truth: lab `BRIEF.md`.
+- Strategy and milestone truth: maintained upstream; ask the maintainer.
 - Running source list: `config/sources.yml`.
 - Schema needs and implementation discoveries: `docs/schema-needs.md`.

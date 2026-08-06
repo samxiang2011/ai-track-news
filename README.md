@@ -6,9 +6,8 @@ Runnable M1 pipeline for AI Track News:
 fetch -> normalize -> dedupe -> snapshot + manifest
 ```
 
-The design source of truth lives in
-`/Users/sam/lab/projects/ai_track_news/BRIEF.md`. This repo only contains the
-execution layer.
+This repo contains the execution layer only. Design decisions are maintained
+upstream and are not mirrored here.
 
 ## Quick Start
 

@@ -7,8 +7,8 @@ smoke test and the M2 LLM clustering/summary runtime.
 Routes to the GLM Coding Plan via the Anthropic Messages protocol at
 ``https://open.bigmodel.cn/api/anthropic``. The 2026-06-30 live probe proved a
 generic urllib client calling ``/api/anthropic/v1/messages`` consumes Coding
-Plan quota (Sam-confirmed in the GLM backend) — no Claude-Code User-Agent
-needed — so the pipeline rides Sam's prepaid plan instead of billing
+Plan quota (confirmed in the GLM backend) — no Claude-Code User-Agent
+needed — so the pipeline rides the prepaid plan instead of billing
 pay-as-you-go on the general ``/paas/v4`` endpoint. This supersedes the earlier
 2026-06-29 conclusion that the general endpoint was required.
 
@@ -31,7 +31,7 @@ from typing import Any
 
 # The Coding Plan Anthropic endpoint (domestic open.bigmodel.cn, China region —
 # not overseas Z.AI). The 2026-06-30 probe proved a generic client calling
-# /api/anthropic/v1/messages rides the Coding Plan quota (Sam-confirmed in the
+# /api/anthropic/v1/messages rides the Coding Plan quota (confirmed in the
 # GLM backend); the plan's "designated tools only" wording is not enforced at
 # this endpoint. The general /paas/v4 endpoint (kept only as a reference
 # constant) is pay-as-you-go and is no longer the default.
@@ -186,7 +186,7 @@ class GLMClient:
 def pick_model(models: list[dict[str, Any]]) -> str | None:
     """Pick a chat-capable model id from a list_models() result.
 
-    Prefer the BRIEF-decided GLM 5.1, then newer 5.x, then 4.x chat ids. Avoid
+    Prefer the accepted default GLM 5.1, then newer 5.x, then 4.x chat ids. Avoid
     non-chat SKUs. Best-effort; the smoke test logs every candidate so a human
     can override via LLM_MODEL.
     """

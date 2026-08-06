@@ -6,7 +6,7 @@ at each milestone before human review.
 ## 2026-06-11 M1 Skeleton
 
 - Added `source_health` to the run manifest output so M1 can report include
-  source health directly. This is an execution extension over the minimal BRIEF
+  source health directly. This is an execution extension over the minimal accepted
   manifest and should be reviewed at M1.
 - Tightened source health after the first live validation: an include source now
   counts as healthy only when it fetches successfully and yields at least one
@@ -59,8 +59,8 @@ at each milestone before human review.
   top-N rendered clusters using each cluster's existing `tier_mix`. A multi-source
   cluster with no tier1/tier2/tier4 anchor (pure tier3 media) is
   `repost_dominated` — the most inflated echo form. Title pairwise similarity is
-  an attached corroboration column, not a primary signal. This realizes the BRIEF
-  §3 echo observation item ahead of v1 as the R0 measurement baseline.
+  an attached corroboration column, not a primary signal. This realises the planned
+  echo observation item ahead of v1 as the R0 measurement baseline.
 - Extended `pipeline/report_m1_health.py` with `demotion_candidates`: per
   include-source zero-item rate (`status=success, item_count=0`) over the window.
   Sources above `--demote-threshold` (default 0.5) with enough samples
