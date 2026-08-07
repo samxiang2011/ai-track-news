@@ -14,6 +14,14 @@
 - A request to review, diagnose, or read does not authorize changing anything.
 - Being asked to change code does not authorize committing, pushing, deploying,
   publishing, or releasing. Each of those needs its own explicit instruction.
+- Before pushing or otherwise publishing any Git ref, its configured
+  pre-publish history check must explicitly pass for that ref and target remote.
+  Missing, unavailable, skipped, inconclusive, or non-zero checks block the
+  operation; do not bypass or disable them. A pass is necessary but never grants
+  publication authority.
+- Creating or widening an automated publisher—including its triggers, write
+  permissions, destinations, or published paths—requires explicit approval for
+  that exact scope.
 - If you cannot see the accepted scope or design contract for this repository, do
   not infer it from the code. Ask. Do not extend or change accepted behaviour on
   your own judgement.
