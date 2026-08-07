@@ -9,23 +9,22 @@ concurrency:
   group: ai-track-news-hourly
   cancel-in-progress: false
 
-permissions:
-  contents: write
-  id-token: write
-  pages: write
+permissions: {}
 
 jobs:
   collect:
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy-pages.outputs.page_url }}
+    permissions:
+      contents: read
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
           python-version: "3.11"
 
@@ -43,8 +42,124 @@ jobs:
       - name: Render Portal
         run: python -m pipeline.render_site
 
-      - name: Commit new data and site
+      - name: Validate bounded publish payload
+        shell: bash
         run: |
+          set -euo pipefail
+          roots=(data/snapshots data/manifests site)
+          for root in "${roots[@]}"; do
+            test -d "$root"
+            if ! find "$root" -type f -print -quit | grep -q .; then
+              echo "Expected publish output is empty."
+              exit 1
+            fi
+          done
+          if find "${roots[@]}" -mindepth 1 -name '.*' -print -quit | grep -q .; then
+            echo "Hidden publish output is not allowed."
+            exit 1
+          fi
+          if find "${roots[@]}" -mindepth 1 ! -type d ! -type f -print -quit | grep -q .; then
+            echo "Publish output must contain only regular files and directories."
+            exit 1
+          fi
+
+      - name: Upload bounded publish payload
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ai-track-news-publish
+          path: |
+            data/snapshots
+            data/manifests
+            site
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository for publish
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: true
+
+      - name: Capture publish base
+        run: echo "PUBLISH_BASE=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Prepare bounded artifact staging
+        shell: bash
+        env:
+          ARTIFACT_STAGING: ${{ runner.temp }}/ai-track-news-publish
+        run: |
+          set -euo pipefail
+          if [ -L "$RUNNER_TEMP" ] || [ ! -d "$RUNNER_TEMP" ]; then
+            echo "Runner temp must be a real directory."
+            exit 1
+          fi
+          if [ -e "$ARTIFACT_STAGING" ] || [ -L "$ARTIFACT_STAGING" ]; then
+            echo "Artifact staging path must not already exist."
+            exit 1
+          fi
+          mkdir -- "$ARTIFACT_STAGING"
+          if [ -L "$ARTIFACT_STAGING" ] || [ ! -d "$ARTIFACT_STAGING" ]; then
+            echo "Artifact staging must be a real directory."
+            exit 1
+          fi
+
+      - name: Download bounded publish payload
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: ai-track-news-publish
+          path: ${{ runner.temp }}/ai-track-news-publish
+
+      - name: Materialize bounded publish payload
+        shell: bash
+        env:
+          ARTIFACT_STAGING: ${{ runner.temp }}/ai-track-news-publish
+        run: |
+          set -euo pipefail
+          if [ -L "$ARTIFACT_STAGING" ] || [ ! -d "$ARTIFACT_STAGING" ]; then
+            echo "Artifact staging must remain a real directory."
+            exit 1
+          fi
+          test -d "$ARTIFACT_STAGING/data/snapshots"
+          test -d "$ARTIFACT_STAGING/data/manifests"
+          test -d "$ARTIFACT_STAGING/site"
+          if find "$ARTIFACT_STAGING" -mindepth 1 -maxdepth 1 ! -name data ! -name site -print -quit | grep -q .; then
+            echo "Unexpected top-level artifact path."
+            exit 1
+          fi
+          if find "$ARTIFACT_STAGING/data" -mindepth 1 -maxdepth 1 ! -name snapshots ! -name manifests -print -quit | grep -q .; then
+            echo "Unexpected data artifact path."
+            exit 1
+          fi
+          if find "$ARTIFACT_STAGING" -mindepth 1 ! -type d ! -type f -print -quit | grep -q .; then
+            echo "Downloaded payload must contain only regular files and directories."
+            exit 1
+          fi
+          destinations=(data data/snapshots data/manifests site)
+          for destination in "${destinations[@]}"; do
+            if [ -L "$destination" ] || [ ! -d "$destination" ]; then
+              echo "Publish destination roots and ancestors must be real directories."
+              exit 1
+            fi
+          done
+          if find data/snapshots data/manifests site -mindepth 1 ! -type d ! -type f -print -quit | grep -q .; then
+            echo "Existing publish destinations must contain only regular files and directories."
+            exit 1
+          fi
+          rsync -r --delete "$ARTIFACT_STAGING/data/snapshots/" data/snapshots/
+          rsync -r --delete "$ARTIFACT_STAGING/data/manifests/" data/manifests/
+          rsync -r --delete "$ARTIFACT_STAGING/site/" site/
+
+      - name: Commit new data and site
+        id: commit
+        run: |
+          echo "created=false" >> "$GITHUB_OUTPUT"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/snapshots data/manifests site
@@ -52,17 +167,44 @@ jobs:
             echo "No data or site changes to commit."
           else
             git commit -m "data: M1 collection $(date -u +%Y%m%dT%H%M%SZ)"
-            git push
+            echo "created=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
+      - name: Run pre-publish history guard
+        if: ${{ steps.commit.outputs.created == 'true' }}
+        run: |
+          python -I .github/scripts/publish_guard.py \
+            --repo . \
+            --base "$PUBLISH_BASE" \
+            --ref HEAD \
+            --target-remote origin \
+            --target-ref refs/heads/main \
+            --min-commits 1 \
+            --max-commits 1
+
+      - name: Push generated commit
+        if: ${{ steps.commit.outputs.created == 'true' }}
+        run: git push origin HEAD:refs/heads/main
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: site
 
+  deploy-pages:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
       - name: Deploy Pages
         id: deploy-pages
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
