@@ -9,30 +9,41 @@ fetch -> normalize -> dedupe -> snapshot + manifest
 This repo contains the execution layer only. Design decisions are maintained
 upstream and are not mirrored here.
 
+## Local environment
+
+Local commands use this repository's ignored `.venv`. On this Mac:
+
+```bash
+/opt/homebrew/opt/python@3.13/bin/python3.13 -m venv .venv
+.venv/bin/python -m pip install -e .
+.venv/bin/python --version
+.venv/bin/python -m pip check
+```
+
 ## Quick Start
 
 Run a local dry run without network access:
 
 ```bash
-python3 -m pipeline.run_m1 --dry-run
+.venv/bin/python -m pipeline.run_m1 --dry-run
 ```
 
 Run a live M1 collection for include sources:
 
 ```bash
-python3 -m pipeline.run_m1
+.venv/bin/python -m pipeline.run_m1
 ```
 
 Report M1 health acceptance status from committed manifests:
 
 ```bash
-python3 -m pipeline.report_m1_health
+.venv/bin/python -m pipeline.report_m1_health
 ```
 
 Run the local-only M2 experimental clustering scaffold:
 
 ```bash
-python3 -m pipeline.run_m2_experimental --limit-clusters 20
+.venv/bin/python -m pipeline.run_m2_experimental --limit-clusters 20
 ```
 
 The review output caps single-source clusters per source by default so one feed
@@ -42,13 +53,13 @@ that cap while debugging.
 Probe sources are excluded by default. Include them explicitly:
 
 ```bash
-python3 -m pipeline.run_m1 --include-probes
+.venv/bin/python -m pipeline.run_m1 --include-probes
 ```
 
 Render the static M3a Portal from the latest experimental clusters:
 
 ```bash
-python3 -m pipeline.render_site
+.venv/bin/python -m pipeline.render_site
 ```
 
 Dry-run outputs go under `data/dry-runs/` and are ignored by git. Live snapshots

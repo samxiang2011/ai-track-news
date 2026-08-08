@@ -113,5 +113,6 @@ context; do not infer it from the code.
 - Keep generated dry-run outputs under `data/dry-runs/`, which is gitignored.
 - Keep changes within the accepted milestone. Do not build later machinery or
   formalize experiments before that scope is explicitly extended.
-- Choose the narrowest relevant evaluator: targeted `pytest`, dry run, live run,
-  or `python3 -m pipeline.report_m1_health`.
+- Choose the narrowest relevant evaluator: a targeted
+  `.venv/bin/python -m unittest <test-module>`, dry run, live run, or
+  `.venv/bin/python -m pipeline.report_m1_health`.
