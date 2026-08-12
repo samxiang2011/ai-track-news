@@ -1,11 +1,188 @@
 {
-  "clustering_mode": "deterministic-fallback",
+  "clustering_mode": "llm",
   "clusters": [
     {
       "experimental": true,
-      "first_seen": "2026-08-11T19:15:35Z",
+      "first_seen": "2026-08-11T17:38:49Z",
       "freshness": "4h ago",
-      "heat_score": 1.6718,
+      "heat_score": 2.5106,
+      "id": "m2exp-0df7f23a50f5cabe",
+      "item_ids": [
+        "68b415c71f0bdd5538df2f09",
+        "b5328476baca7145a6cc2c97",
+        "dbe44e1d5173636e85efae68"
+      ],
+      "item_titles": [
+        "[AINews] How to steal a Reasoning Trace",
+        "\"But marinade\" and leaked passwords are what researchers found in ChatGPT's hidden reasoning",
+        "Show HN: Aileaks – scan repos for leaked LLM reasoning-trace secrets"
+      ],
+      "last_seen": "2026-08-12T12:57:02Z",
+      "rank": 1,
+      "representative_url": "https://the-decoder.com/but-marinade-and-leaked-passwords-are-what-researchers-found-in-chatgpts-hidden-reasoning",
+      "review_flags": [],
+      "source_count": 3,
+      "source_ids": [
+        "hnrss-llm",
+        "latent-space",
+        "the-decoder"
+      ],
+      "source_names": [
+        "Hacker News - LLM Search Feed",
+        "Latent Space",
+        "The Decoder"
+      ],
+      "summary": "安全研究人员发现可以通过API漏洞提取ChatGPT等大模型的隐藏推理链，其中甚至包含泄露的密码等敏感信息；同时已有开源工具可扫描代码库中泄露的LLM推理轨迹。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 2,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "ChatGPT等大模型推理过程被发现存在泄露风险",
+      "topic_ids": [
+        "ai-media",
+        "community",
+        "developer-tools",
+        "general-ai",
+        "industry",
+        "llm"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T16:04:27Z",
+      "freshness": "54m ago",
+      "heat_score": 1.9278,
+      "id": "m2exp-c6ef89e8922af8fa",
+      "item_ids": [
+        "94676d99b2defaa4557b8cf6",
+        "dcf82db3dd7ead1aeba0fec1"
+      ],
+      "item_titles": [
+        "AI coding startup Lovable raised $400M at $13.3B valuation up from $6.6B in 2025",
+        "Lovable confirms new $13.3B valuation, raises another $400M"
+      ],
+      "last_seen": "2026-08-12T16:20:34Z",
+      "rank": 2,
+      "representative_url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m",
+      "review_flags": [],
+      "source_count": 2,
+      "source_ids": [
+        "hnrss-ai",
+        "techcrunch-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed",
+        "TechCrunch AI"
+      ],
+      "summary": "AI编程初创公司Lovable宣布完成4亿美元融资，估值从去年的66亿美元翻倍至133亿美元，此前其年化收入已达5亿美元。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "AI编程初创公司Lovable以133亿美元估值完成4亿美元融资",
+      "topic_ids": [
+        "community",
+        "general-ai",
+        "startup"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-11T18:49:12Z",
+      "freshness": "84m ago",
+      "heat_score": 1.8874,
+      "id": "m2exp-332c9072c1896fcc",
+      "item_ids": [
+        "12441d4060ab69c64e9142ad",
+        "847e04a735969f84f125d40d",
+        "8740e87f6197946e49af6dde"
+      ],
+      "item_titles": [
+        "Google's Gemini is losing market share to ChatGPT and Claude according to new market data",
+        "Everything announced at Made by Google ’26: Pixel 11, Pixel Watch 5, Pixel Tag, and tons of Gemini features",
+        "Google’s Gemini app surges to one billion users"
+      ],
+      "last_seen": "2026-08-12T15:50:04Z",
+      "rank": 3,
+      "representative_url": "https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users",
+      "review_flags": [],
+      "source_count": 2,
+      "source_ids": [
+        "techcrunch-ai",
+        "the-decoder"
+      ],
+      "source_names": [
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "summary": "谷歌Gemini应用月活用户突破十亿，但多项市场数据显示其市场份额正在下滑，正输给OpenAI的ChatGPT和Anthropic的Claude。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 2,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Google Gemini用户突破十亿，但市场份额正被ChatGPT和Claude蚕食",
+      "topic_ids": [
+        "ai-media",
+        "general-ai",
+        "startup"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T13:38:09Z",
+      "freshness": "3h ago",
+      "heat_score": 1.738,
+      "id": "m2exp-22c48982b917681a",
+      "item_ids": [
+        "13613f49d4f130604a6377e3",
+        "7f09c5adcc0f883c6f2469df"
+      ],
+      "item_titles": [
+        "Anthropic CEO整天神神叨叨，投资人受不了了",
+        "Legal startup founder Robert Mahari joins Anthropic to lead Claude's push into law practices"
+      ],
+      "last_seen": "2026-08-12T13:51:18Z",
+      "rank": 4,
+      "representative_url": "https://the-decoder.com/legal-startup-founder-robert-mahari-joins-anthropic-to-lead-claudes-push-into-law-practices",
+      "review_flags": [],
+      "source_count": 2,
+      "source_ids": [
+        "qbitai",
+        "the-decoder"
+      ],
+      "source_names": [
+        "QbitAI",
+        "The Decoder"
+      ],
+      "summary": "法律科技初创公司创始人Robert Mahari加入Anthropic，负责推动Claude在法律行业的部署；与此同时，CEO Dario Amodei的一些言论引发了投资人的不满。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 2,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Anthropic进军法律领域及CEO引发投资人担忧",
+      "topic_ids": [
+        "ai-media",
+        "china-ai-media",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-11T19:15:35Z",
+      "freshness": "5h ago",
+      "heat_score": 1.6015,
       "id": "m2exp-bf5bc59feebe187b",
       "item_ids": [
         "687acffc0d3640aec19486e5",
@@ -16,7 +193,7 @@
         "OpenAI launches ChatGPT desktop app for Linux"
       ],
       "last_seen": "2026-08-12T11:53:31Z",
-      "rank": 1,
+      "rank": 5,
       "representative_url": "https://the-decoder.com/openai-launches-chatgpt-desktop-app-for-linux",
       "review_flags": [
         "near_duplicate_titles"
@@ -30,7 +207,7 @@
         "TechCrunch AI",
         "The Decoder"
       ],
-      "summary": null,
+      "summary": "OpenAI正式为Linux操作系统推出了专用的ChatGPT桌面应用程序。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -38,7 +215,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "OpenAI launches ChatGPT desktop app for Linux",
+      "title": "OpenAI推出Linux版ChatGPT桌面应用",
       "topic_ids": [
         "ai-media",
         "general-ai",
@@ -48,8 +225,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-12T14:01:59Z",
-      "freshness": "2h ago",
-      "heat_score": 1.3709,
+      "freshness": "3h ago",
+      "heat_score": 1.3132,
       "id": "m2exp-cf9f1d62759a495d",
       "item_ids": [
         "c26c8d5a4e90c67829e9c660"
@@ -58,7 +235,7 @@
         "Putting sign language AI into users’ hands"
       ],
       "last_seen": "2026-08-12T14:01:59Z",
-      "rank": 2,
+      "rank": 6,
       "representative_url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands",
       "review_flags": [
         "single_source"
@@ -70,7 +247,7 @@
       "source_names": [
         "Google DeepMind Blog"
       ],
-      "summary": null,
+      "summary": "谷歌DeepMind发布了手语转文本（SL2T）突破性模型，为聋哑和听力障碍用户提供新的手语功能。",
       "tier_mix": {
         "tier1": 1,
         "tier2": 0,
@@ -78,7 +255,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Putting sign language AI into users’ hands",
+      "title": "DeepMind推出手语转文本AI模型",
       "topic_ids": [
         "general-ai",
         "research"
@@ -86,19 +263,175 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-12T16:04:27Z",
-      "freshness": "8m ago",
-      "heat_score": 0.9951,
-      "id": "m2exp-95592bdadf184503",
+      "first_seen": "2026-08-12T17:04:36Z",
+      "freshness": "10m ago",
+      "heat_score": 0.9939,
+      "id": "m2exp-88450d3a0a6cd95a",
       "item_ids": [
-        "dcf82db3dd7ead1aeba0fec1"
+        "afa5269f678aaffeeb1710e9"
       ],
       "item_titles": [
-        "Lovable confirms new $13.3B valuation, raises another $400M"
+        "Some of tech's CEO suite is cloning itself with AI. What happens next?"
       ],
-      "last_seen": "2026-08-12T16:04:27Z",
-      "rank": 3,
-      "representative_url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m",
+      "last_seen": "2026-08-12T17:04:36Z",
+      "rank": 7,
+      "representative_url": "https://www.bbc.com/future/article/20260811-what-its-like-to-meet-an-ai-clone",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "文章探讨了科技高管使用AI技术克隆自身的现象及其未来影响。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "科技界CEO开始用AI克隆自己",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T17:02:54Z",
+      "freshness": "12m ago",
+      "heat_score": 0.9927,
+      "id": "m2exp-39929e22ba3c6f6e",
+      "item_ids": [
+        "2f0a6cdb2825d09d8a88928f"
+      ],
+      "item_titles": [
+        "Stop being skeptical about AI for development"
+      ],
+      "last_seen": "2026-08-12T17:02:54Z",
+      "rank": 8,
+      "representative_url": "https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "文章呼吁开发者停止对AI编程工具的怀疑，拥抱其在开发中的应用。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "不应再对AI用于软件开发持怀疑态度",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T17:02:20Z",
+      "freshness": "12m ago",
+      "heat_score": 0.9923,
+      "id": "m2exp-8e9b77cdda846458",
+      "item_ids": [
+        "b7e000345d15ff9e2d379abb"
+      ],
+      "item_titles": [
+        "Ask HN: What's your team's SDLC look like in this AI world?"
+      ],
+      "last_seen": "2026-08-12T17:02:20Z",
+      "rank": 9,
+      "representative_url": "https://news.ycombinator.com/item?id=49275494",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "用户在Hacker News上发起讨论，询问各团队在AI时代如何调整其软件开发生命周期（SDLC）及遇到的瓶颈。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "讨论：在AI时代团队的开发流程是怎样的",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T16:58:09Z",
+      "freshness": "16m ago",
+      "heat_score": 0.9894,
+      "id": "m2exp-7ebfedc29b7ca078",
+      "item_ids": [
+        "13efccb03c707e3eaa8ac24b"
+      ],
+      "item_titles": [
+        "AI 'productivity pollution': the hidden tax on everyone"
+      ],
+      "last_seen": "2026-08-12T16:58:09Z",
+      "rank": 10,
+      "representative_url": "https://www.machinesociety.ai/p/productivitypollution",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "文章指出AI带来的“生产力污染”正在成为对所有人的隐性负担。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "AI的“生产力污染”：对每个人的隐性代价",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T16:57:58Z",
+      "freshness": "17m ago",
+      "heat_score": 0.9893,
+      "id": "m2exp-40ca0833b60f2e6e",
+      "item_ids": [
+        "65a716af85d31140d8ab62db"
+      ],
+      "item_titles": [
+        "Mesh, Automattic’s CRM for everyone, comes to Android"
+      ],
+      "last_seen": "2026-08-12T16:57:58Z",
+      "rank": 11,
+      "representative_url": "https://techcrunch.com/2026/08/12/mesh-automattics-crm-for-everyone-comes-to-android",
       "review_flags": [
         "single_source"
       ],
@@ -109,7 +442,7 @@
       "source_names": [
         "TechCrunch AI"
       ],
-      "summary": null,
+      "summary": "Automattic推出了一款名为Mesh的AI驱动联系人管理与关系维护应用，现已上线Android平台。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -117,7 +450,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Lovable confirms new $13.3B valuation, raises another $400M",
+      "title": "Automattic的AI联系人应用Mesh登陆Android",
       "topic_ids": [
         "general-ai",
         "startup"
@@ -125,30 +458,30 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-12T15:59:25Z",
-      "freshness": "13m ago",
-      "heat_score": 0.9916,
-      "id": "m2exp-9523307a6f41d7da",
+      "first_seen": "2026-08-12T16:56:43Z",
+      "freshness": "18m ago",
+      "heat_score": 0.9884,
+      "id": "m2exp-3c04424b482385be",
       "item_ids": [
-        "35026c01b5266d6b1f715eab"
+        "ff03e11e0aa1ec1780104953"
       ],
       "item_titles": [
-        "Archer OS: draft spec for AI agents operating apps under OS authority"
+        "Maintaining an organizational knowledge graph with an LLM and event sourcing"
       ],
-      "last_seen": "2026-08-12T15:59:25Z",
-      "rank": 4,
-      "representative_url": "https://github.com/coachpato/archer-os",
+      "last_seen": "2026-08-12T16:56:43Z",
+      "rank": 12,
+      "representative_url": "https://blog.arkency.com/maintaining-an-organizational-knowledge-graph-with-an-llm-and-event-sourcing",
       "review_flags": [
         "single_source"
       ],
       "source_count": 1,
       "source_ids": [
-        "hnrss-ai"
+        "hnrss-llm"
       ],
       "source_names": [
-        "Hacker News - AI Search Feed"
+        "Hacker News - LLM Search Feed"
       ],
-      "summary": null,
+      "summary": "介绍了一种结合大语言模型和事件溯源技术来构建和维护企业组织知识图谱的方法。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -156,38 +489,77 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Archer OS: draft spec for AI agents operating apps under OS authority",
+      "title": "利用LLM和事件溯源维护组织知识图谱",
       "topic_ids": [
         "community",
+        "llm"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T16:51:57Z",
+      "freshness": "23m ago",
+      "heat_score": 0.9852,
+      "id": "m2exp-d3237ebb09a4f0cb",
+      "item_ids": [
+        "3b94d67ca1b43079540d0a45"
+      ],
+      "item_titles": [
+        "Scaling AI agents with trustworthy data"
+      ],
+      "last_seen": "2026-08-12T16:51:57Z",
+      "rank": 13,
+      "representative_url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "mit-tech-review-ai"
+      ],
+      "source_names": [
+        "MIT Technology Review - AI"
+      ],
+      "summary": "文章讨论了企业如何使用高质量、可信的数据来有效扩展其AI智能体的部署。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "利用可信数据扩展AI智能体",
+      "topic_ids": [
+        "ai-media",
         "general-ai"
       ]
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-12T15:58:50Z",
-      "freshness": "13m ago",
-      "heat_score": 0.9912,
-      "id": "m2exp-bbe45c55aa6ebe0c",
+      "first_seen": "2026-08-12T16:46:17Z",
+      "freshness": "28m ago",
+      "heat_score": 0.9813,
+      "id": "m2exp-ae80a23433b08e19",
       "item_ids": [
-        "6a167f9ca15670f64fc97c3e"
+        "b21bb508da591befbbaaad49"
       ],
       "item_titles": [
-        "NIST RFI for modernizing the NVD in the wake of AI"
+        "In case you think there is consciousness, intelligence or personality in an LLM [video]"
       ],
-      "last_seen": "2026-08-12T15:58:50Z",
-      "rank": 5,
-      "representative_url": "https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of",
+      "last_seen": "2026-08-12T16:46:17Z",
+      "rank": 14,
+      "representative_url": "https://www.youtube.com/watch?v=vXV2ltVdLMQ",
       "review_flags": [
         "single_source"
       ],
       "source_count": 1,
       "source_ids": [
-        "hnrss-ai"
+        "hnrss-llm"
       ],
       "source_names": [
-        "Hacker News - AI Search Feed"
+        "Hacker News - LLM Search Feed"
       ],
-      "summary": null,
+      "summary": "通过视频展示和解释，提醒人们不要误认为大语言模型具备真正的意识、智能或人格。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -195,17 +567,98 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "NIST RFI for modernizing the NVD in the wake of AI",
+      "title": "澄清大语言模型中不存在意识或人格的观点",
       "topic_ids": [
         "community",
+        "llm"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T14:22:00Z",
+      "freshness": "28m ago",
+      "heat_score": 0.9811,
+      "id": "m2exp-2ff814129000358a",
+      "item_ids": [
+        "1c51db275442ce813c3a5431",
+        "9b836ad6cd2dc5ceaa160cd7"
+      ],
+      "item_titles": [
+        "Why Sandbar thinks it’s voice-enabled ring can avoid the AI hardware graveyard",
+        "Why Stream ring-maker Sandbar says the future of AI wearables is voice"
+      ],
+      "last_seen": "2026-08-12T16:46:02Z",
+      "rank": 15,
+      "representative_url": "https://techcrunch.com/video/why-stream-ring-maker-sandbar-says-the-future-of-ai-wearables-is-voice",
+      "review_flags": [
+        "single_source",
+        "same_domain"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "techcrunch-ai"
+      ],
+      "source_names": [
+        "TechCrunch AI"
+      ],
+      "summary": "Stream戒指制造商Sandbar认为AI可穿戴设备的未来在于语音交互，并致力于通过语音功能避免重蹈AI硬件失败的覆辙。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Sandbar推出语音驱动的AI智能戒指",
+      "topic_ids": [
+        "general-ai",
+        "startup"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T16:24:32Z",
+      "freshness": "50m ago",
+      "heat_score": 0.9666,
+      "id": "m2exp-7aa459f3f9bc6ed6",
+      "item_ids": [
+        "7455ee54ce8a9f1825e85867"
+      ],
+      "item_titles": [
+        "AI tools for breast cancer detection fall short of radiologists' expectations"
+      ],
+      "last_seen": "2026-08-12T16:24:32Z",
+      "rank": 16,
+      "representative_url": "https://the-decoder.com/ai-tools-for-breast-cancer-detection-fall-short-of-radiologists-expectations",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "the-decoder"
+      ],
+      "source_names": [
+        "The Decoder"
+      ],
+      "summary": "调查显示，尽管约一半的乳腺影像学会成员已在使用FDA批准的AI检测工具，但其表现并未达到预期，仅35%的人对其效果感到满意。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "AI乳腺癌检测工具未达放射科医生预期",
+      "topic_ids": [
+        "ai-media",
         "general-ai"
       ]
     },
     {
       "experimental": true,
       "first_seen": "2026-08-12T15:58:02Z",
-      "freshness": "14m ago",
-      "heat_score": 0.9906,
+      "freshness": "76m ago",
+      "heat_score": 0.949,
       "id": "m2exp-c080e01d1d85b8ae",
       "item_ids": [
         "2ea613277563acd589195b0b"
@@ -214,7 +667,7 @@
         "Local LLM Hardware Calc"
       ],
       "last_seen": "2026-08-12T15:58:02Z",
-      "rank": 6,
+      "rank": 17,
       "representative_url": "https://dubir.net/tools/local-llm-hardware-calculator",
       "review_flags": [
         "single_source"
@@ -226,7 +679,7 @@
       "source_names": [
         "Hacker News - LLM Search Feed"
       ],
-      "summary": null,
+      "summary": "介绍了一款帮助用户计算和评估在本地运行大语言模型所需硬件配置的工具。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -234,7 +687,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Local LLM Hardware Calc",
+      "title": "本地LLM硬件计算器",
       "topic_ids": [
         "community",
         "llm"
@@ -242,126 +695,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-12T15:50:32Z",
-      "freshness": "21m ago",
-      "heat_score": 0.9855,
-      "id": "m2exp-d73668d7f79611e0",
-      "item_ids": [
-        "236af4d5766fb3290b2b5e3a"
-      ],
-      "item_titles": [
-        "Apple Caps Bug Bounty Submissions After AI Surge"
-      ],
-      "last_seen": "2026-08-12T15:50:32Z",
-      "rank": 7,
-      "representative_url": "https://www.pcmag.com/news/apple-limits-bug-bounty-submissions-after-a-barrage-of-ai-entries",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Apple Caps Bug Bounty Submissions After AI Surge",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T15:50:04Z",
-      "freshness": "22m ago",
-      "heat_score": 0.9852,
-      "id": "m2exp-69b73af80f89b76a",
-      "item_ids": [
-        "12441d4060ab69c64e9142ad"
-      ],
-      "item_titles": [
-        "Google's Gemini is losing market share to ChatGPT and Claude according to new market data"
-      ],
-      "last_seen": "2026-08-12T15:50:04Z",
-      "rank": 8,
-      "representative_url": "https://the-decoder.com/googles-gemini-is-losing-market-share-to-chatgpt-and-claude-according-to-new-market-data",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "the-decoder"
-      ],
-      "source_names": [
-        "The Decoder"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 1,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Google's Gemini is losing market share to ChatGPT and Claude according to new market data",
-      "topic_ids": [
-        "ai-media",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T15:49:35Z",
-      "freshness": "22m ago",
-      "heat_score": 0.9848,
-      "id": "m2exp-be0a976e2043e010",
-      "item_ids": [
-        "ef65a36212299efa16c63681"
-      ],
-      "item_titles": [
-        "Researchers have successfully used AI to create brand new viruses"
-      ],
-      "last_seen": "2026-08-12T15:49:35Z",
-      "rank": 9,
-      "representative_url": "https://www.npr.org/2026/08/11/nx-s1-5927074/researchers-have-successfully-used-ai-to-create-brand-new-viruses",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Researchers have successfully used AI to create brand new viruses",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-08-12T15:44:56Z",
-      "freshness": "27m ago",
-      "heat_score": 0.9817,
+      "freshness": "1h ago",
+      "heat_score": 0.9404,
       "id": "m2exp-2eca42ac94d88def",
       "item_ids": [
         "3165e9f7bc4bfb96de3983c7"
@@ -370,7 +706,7 @@
         "How a $250 million acquisition collapsed into allegations of fraud and forged signatures"
       ],
       "last_seen": "2026-08-12T15:44:56Z",
-      "rank": 10,
+      "rank": 18,
       "representative_url": "https://techcrunch.com/2026/08/12/how-a-250-million-acquisition-collapsed-into-allegations-of-fraud-and-forged-signatures",
       "review_flags": [
         "single_source"
@@ -382,7 +718,7 @@
       "source_names": [
         "TechCrunch AI"
       ],
-      "summary": null,
+      "summary": "一起价值2.5亿美元的收购案宣告失败，并演变为涉嫌欺诈和伪造签名的多起法律诉讼。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -390,7 +726,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "How a $250 million acquisition collapsed into allegations of fraud and forged signatures",
+      "title": "2.5亿美元收购案崩塌为欺诈指控",
       "topic_ids": [
         "general-ai",
         "startup"
@@ -399,8 +735,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-12T06:00:00Z",
-      "freshness": "10h ago",
-      "heat_score": 0.9809,
+      "freshness": "11h ago",
+      "heat_score": 0.9397,
       "id": "m2exp-35f6fdb3bbe56cbd",
       "item_ids": [
         "e063daae6225e15695395681"
@@ -409,7 +745,7 @@
         "From assistance to execution: How enterprises put AI to work"
       ],
       "last_seen": "2026-08-12T06:00:00Z",
-      "rank": 11,
+      "rank": 19,
       "representative_url": "https://openai.com/index/how-enterprises-put-ai-to-work",
       "review_flags": [
         "single_source"
@@ -421,7 +757,7 @@
       "source_names": [
         "OpenAI News"
       ],
-      "summary": null,
+      "summary": "OpenAI发布研究，揭示了企业如何通过采用ChatGPT和Codex等工具推动智能体AI的落地，从而在AI应用方面取得领先。",
       "tier_mix": {
         "tier1": 1,
         "tier2": 0,
@@ -429,7 +765,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "From assistance to execution: How enterprises put AI to work",
+      "title": "OpenAI报告：企业如何将AI从辅助转向执行",
       "topic_ids": [
         "general-ai"
       ]
@@ -437,8 +773,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-12T15:25:43Z",
-      "freshness": "46m ago",
-      "heat_score": 0.9686,
+      "freshness": "1h ago",
+      "heat_score": 0.9279,
       "id": "m2exp-83e158b1268dc40f",
       "item_ids": [
         "25dc2915296a39f31abfc1da"
@@ -447,7 +783,7 @@
         "OWASP Top for LLM Apps 2026: Excessive agency risk on the rise"
       ],
       "last_seen": "2026-08-12T15:25:43Z",
-      "rank": 12,
+      "rank": 20,
       "representative_url": "https://www.reversinglabs.com/blog/owasp-top-10-for-llm-apps-excessive-agency",
       "review_flags": [
         "single_source"
@@ -459,7 +795,7 @@
       "source_names": [
         "Hacker News - LLM Search Feed"
       ],
-      "summary": null,
+      "summary": "OWASP发布了2026年大语言模型应用十大安全风险列表，警告LLM系统中的“过度代理”风险正在增加。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -467,338 +803,26 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "OWASP Top for LLM Apps 2026: Excessive agency risk on the rise",
+      "title": "2026年OWASP LLM应用十大风险：过度代理风险上升",
       "topic_ids": [
         "community",
         "llm"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T15:18:25Z",
-      "freshness": "54m ago",
-      "heat_score": 0.9637,
-      "id": "m2exp-930410c73faf88b5",
-      "item_ids": [
-        "48c5d07358fd2d95f54a8490"
-      ],
-      "item_titles": [
-        "Ask HN: Are there any production LLM pipeline setups to learn from?"
-      ],
-      "last_seen": "2026-08-12T15:18:25Z",
-      "rank": 13,
-      "representative_url": "https://news.ycombinator.com/item?id=49273774",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-llm"
-      ],
-      "source_names": [
-        "Hacker News - LLM Search Feed"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Ask HN: Are there any production LLM pipeline setups to learn from?",
-      "topic_ids": [
-        "community",
-        "llm"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T15:08:47Z",
-      "freshness": "63m ago",
-      "heat_score": 0.9573,
-      "id": "m2exp-08e3c42d18785dfb",
-      "item_ids": [
-        "8ce9f137579cbf5f1ee557b2"
-      ],
-      "item_titles": [
-        "Quoting Florian Herrengt"
-      ],
-      "last_seen": "2026-08-12T15:08:47Z",
-      "rank": 14,
-      "representative_url": "https://simonwillison.net/2026/Aug/12/florian-herrengt",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "simonwillison"
-      ],
-      "source_names": [
-        "Simon Willison"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Quoting Florian Herrengt",
-      "topic_ids": [
-        "developer-tools",
-        "llm"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T14:37:33Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9368,
-      "id": "m2exp-f4572098aac6bf5d",
-      "item_ids": [
-        "f2b5a1f0dba7f032583f37fd"
-      ],
-      "item_titles": [
-        "I ran the same local LLM on an RTX 5070 laptop and one with an iGPU"
-      ],
-      "last_seen": "2026-08-12T14:37:33Z",
-      "rank": 15,
-      "representative_url": "https://www.xda-developers.com/same-local-llm-on-rtx-5070-and-integrated-graphics",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-llm"
-      ],
-      "source_names": [
-        "Hacker News - LLM Search Feed"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "I ran the same local LLM on an RTX 5070 laptop and one with an iGPU",
-      "topic_ids": [
-        "community",
-        "llm"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T14:20:33Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9258,
-      "id": "m2exp-e958537f71258358",
-      "item_ids": [
-        "847e04a735969f84f125d40d"
-      ],
-      "item_titles": [
-        "Everything announced at Made by Google ’26: Pixel 11, Pixel Watch 5, Pixel Tag, and tons of Gemini features"
-      ],
-      "last_seen": "2026-08-12T14:20:33Z",
-      "rank": 16,
-      "representative_url": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "techcrunch-ai"
-      ],
-      "source_names": [
-        "TechCrunch AI"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 1,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Everything announced at Made by Google ’26: Pixel 11, Pixel Watch 5, Pixel Tag, and tons of Gemini features",
-      "topic_ids": [
-        "general-ai",
-        "startup"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T13:51:18Z",
-      "freshness": "2h ago",
-      "heat_score": 0.9072,
-      "id": "m2exp-3e1755549ba00c0d",
-      "item_ids": [
-        "7f09c5adcc0f883c6f2469df"
-      ],
-      "item_titles": [
-        "Legal startup founder Robert Mahari joins Anthropic to lead Claude's push into law practices"
-      ],
-      "last_seen": "2026-08-12T13:51:18Z",
-      "rank": 17,
-      "representative_url": "https://the-decoder.com/legal-startup-founder-robert-mahari-joins-anthropic-to-lead-claudes-push-into-law-practices",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "the-decoder"
-      ],
-      "source_names": [
-        "The Decoder"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 1,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Legal startup founder Robert Mahari joins Anthropic to lead Claude's push into law practices",
-      "topic_ids": [
-        "ai-media",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T13:46:12Z",
-      "freshness": "2h ago",
-      "heat_score": 0.904,
-      "id": "m2exp-8b87586b22ddcd75",
-      "item_ids": [
-        "03f07871b1267aa5eea6fe97"
-      ],
-      "item_titles": [
-        "《置身谷内》！Jeff Dean上顶会自曝离职现场：被1500人围堵"
-      ],
-      "last_seen": "2026-08-12T13:46:12Z",
-      "rank": 18,
-      "representative_url": "https://www.qbitai.com/2026/08/471254.html",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "qbitai"
-      ],
-      "source_names": [
-        "QbitAI"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 1,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "《置身谷内》！Jeff Dean上顶会自曝离职现场：被1500人围堵",
-      "topic_ids": [
-        "china-ai-media",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T13:38:09Z",
-      "freshness": "2h ago",
-      "heat_score": 0.8989,
-      "id": "m2exp-1f33cb59b8f530ce",
-      "item_ids": [
-        "13613f49d4f130604a6377e3"
-      ],
-      "item_titles": [
-        "Anthropic CEO整天神神叨叨，投资人受不了了"
-      ],
-      "last_seen": "2026-08-12T13:38:09Z",
-      "rank": 19,
-      "representative_url": "https://www.qbitai.com/2026/08/471162.html",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "qbitai"
-      ],
-      "source_names": [
-        "QbitAI"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 1,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Anthropic CEO整天神神叨叨，投资人受不了了",
-      "topic_ids": [
-        "china-ai-media",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T13:10:55Z",
-      "freshness": "3h ago",
-      "heat_score": 0.8821,
-      "id": "m2exp-469f39e9e1412099",
-      "item_ids": [
-        "ff98b3a89958a3e1b818832a"
-      ],
-      "item_titles": [
-        "国产具身智能创全球新纪录！以30%成本跑赢 Figure AI 45%效率，聪明的具身大脑成关键"
-      ],
-      "last_seen": "2026-08-12T13:10:55Z",
-      "rank": 20,
-      "representative_url": "https://www.qbitai.com/2026/08/471049.html",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "qbitai"
-      ],
-      "source_names": [
-        "QbitAI"
-      ],
-      "summary": null,
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 1,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "国产具身智能创全球新纪录！以30%成本跑赢 Figure AI 45%效率，聪明的具身大脑成关键",
-      "topic_ids": [
-        "china-ai-media",
-        "general-ai"
       ]
     }
   ],
   "disclaimer": "AI 自动聚合排序，未经人工审核，仅为注意力分配建议",
-  "generated_at": "2026-08-12T16:12:31.644943Z",
+  "generated_at": "2026-08-12T17:15:01.301970Z",
   "health": {
     "current_clean_streak": {
-      "hours": 232.99,
+      "hours": 234.03,
       "max_gap_hours": 2.79,
-      "runs": 135,
+      "runs": 136,
       "runs_in_window": 50,
       "started_at": "2026-08-02T23:13:18.143356Z"
     },
     "include_source_failures": [
       {
-        "bad_runs": 9,
+        "bad_runs": 8,
         "last_error": null,
         "last_item_count": 0,
         "last_run_id": "20260810T023513Z-live",
@@ -806,7 +830,7 @@
         "source_id": "arxiv-cs-ai"
       },
       {
-        "bad_runs": 9,
+        "bad_runs": 8,
         "last_error": null,
         "last_item_count": 0,
         "last_run_id": "20260810T023513Z-live",
@@ -831,14 +855,14 @@
       }
     ],
     "latest_run": {
-      "finished_at": "2026-08-12T16:11:35.363809Z",
+      "finished_at": "2026-08-12T17:13:28.509378Z",
       "github_actions": true,
       "health_ratio": 1.0,
       "healthy_include": 17,
       "include_total": 17,
-      "path": "data/manifests/2026-08/20260812T161124Z-live.json",
-      "run_id": "20260812T161124Z-live",
-      "started_at": "2026-08-12T16:11:24.254888Z",
+      "path": "data/manifests/2026-08/20260812T171312Z-live.json",
+      "run_id": "20260812T171312Z-live",
+      "started_at": "2026-08-12T17:13:12.516172Z",
       "status": "success",
       "total_new_items": 272
     },
@@ -847,33 +871,33 @@
       "status": "pass"
     },
     "window": {
-      "average_health_ratio": 0.9753,
+      "average_health_ratio": 0.9777,
       "clean_run_rate": 1.0,
       "clean_runs": 50,
-      "ended_at": "2026-08-12T16:12:31.644943Z",
+      "ended_at": "2026-08-12T17:15:01.301970Z",
       "github_actions_runs": 50,
       "live_runs": 50,
       "local_runs": 0,
       "minimum_health_ratio": 0.8824,
-      "started_at": "2026-08-09T16:12:31.644943Z",
+      "started_at": "2026-08-09T17:15:01.301970Z",
       "status_success_rate": 0.94,
       "status_success_runs": 47,
-      "total_new_items": 13179,
+      "total_new_items": 13218,
       "unknown_runner_runs": 0
     }
   },
   "input": {
-    "candidate_cluster_count": 470,
-    "clusters_generated_at": "2026-08-12T16:11:35.584608Z",
-    "clusters_json": "data/derived/experimental/20260812T161135Z-m2-exp/clusters.json",
-    "clusters_run_id": "20260812T161135Z-m2-exp",
-    "snapshot_count": 647,
-    "window_item_count": 481
+    "candidate_cluster_count": 475,
+    "clusters_generated_at": "2026-08-12T17:13:28.673408Z",
+    "clusters_json": "data/derived/experimental/20260812T171328Z-m2-exp/clusters.json",
+    "clusters_run_id": "20260812T171328Z-m2-exp",
+    "snapshot_count": 648,
+    "window_item_count": 484
   },
   "schema_version": "m3a-portal-v0",
   "site": {
-    "clustering_mode": "deterministic-fallback",
-    "experimental_note": "Rules-only clustering (LLM unavailable; fallback).",
+    "clustering_mode": "llm",
+    "experimental_note": "LLM-assisted clustering (experimental); titles & summaries are AI-generated.",
     "status_label": "M3a experimental Portal",
     "title": "AI Track News"
   },
@@ -1021,7 +1045,7 @@
       "m1_action": "include",
       "name": "arXiv cs.AI",
       "notes": "Research signal; may need downstream filtering.",
-      "recent_bad_runs": 9,
+      "recent_bad_runs": 8,
       "tier": 2,
       "topics": [
         "research"
@@ -1039,7 +1063,7 @@
       "m1_action": "include",
       "name": "arXiv cs.CL",
       "notes": "LLM/NLP research signal; may need downstream filtering.",
-      "recent_bad_runs": 9,
+      "recent_bad_runs": 8,
       "tier": 2,
       "topics": [
         "research",
@@ -1356,11 +1380,353 @@
   ],
   "timeline": [
     {
-      "cluster_id": "m2exp-95592bdadf184503",
-      "cluster_rank": 3,
+      "cluster_id": "m2exp-88450d3a0a6cd95a",
+      "cluster_rank": 7,
+      "event_at": "2026-08-12T17:04:36Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "10m ago",
+      "id": "afa5269f678aaffeeb1710e9",
+      "lang": "en",
+      "published_at": "2026-08-12T17:04:36Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Some of tech's CEO suite is cloning itself with AI. What happens next?",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.bbc.com/future/article/20260811-what-its-like-to-meet-an-ai-clone"
+    },
+    {
+      "cluster_id": "m2exp-39929e22ba3c6f6e",
+      "cluster_rank": 8,
+      "event_at": "2026-08-12T17:02:54Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "12m ago",
+      "id": "2f0a6cdb2825d09d8a88928f",
+      "lang": "en",
+      "published_at": "2026-08-12T17:02:54Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Stop being skeptical about AI for development",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://newsletter.pragmaticengineer.com/p/stop-being-skeptical-about-ai-for"
+    },
+    {
+      "cluster_id": "m2exp-8e9b77cdda846458",
+      "cluster_rank": 9,
+      "event_at": "2026-08-12T17:02:20Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "12m ago",
+      "id": "b7e000345d15ff9e2d379abb",
+      "lang": "en",
+      "published_at": "2026-08-12T17:02:20Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Ask HN: What's your team's SDLC look like in this AI world?",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://news.ycombinator.com/item?id=49275494"
+    },
+    {
+      "cluster_id": "m2exp-7ebfedc29b7ca078",
+      "cluster_rank": 10,
+      "event_at": "2026-08-12T16:58:09Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "16m ago",
+      "id": "13efccb03c707e3eaa8ac24b",
+      "lang": "en",
+      "published_at": "2026-08-12T16:58:09Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI 'productivity pollution': the hidden tax on everyone",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.machinesociety.ai/p/productivitypollution"
+    },
+    {
+      "cluster_id": "m2exp-40ca0833b60f2e6e",
+      "cluster_rank": 11,
+      "event_at": "2026-08-12T16:57:58Z",
+      "fetched_at": "2026-08-12T17:13:28.390142Z",
+      "freshness": "17m ago",
+      "id": "65a716af85d31140d8ab62db",
+      "lang": "en",
+      "published_at": "2026-08-12T16:57:58Z",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "title": "Mesh, Automattic’s CRM for everyone, comes to Android",
+      "topics": [
+        "general-ai",
+        "startup"
+      ],
+      "url": "https://techcrunch.com/2026/08/12/mesh-automattics-crm-for-everyone-comes-to-android"
+    },
+    {
+      "cluster_id": "m2exp-3c04424b482385be",
+      "cluster_rank": 12,
+      "event_at": "2026-08-12T16:56:43Z",
+      "fetched_at": "2026-08-12T17:13:25.150190Z",
+      "freshness": "18m ago",
+      "id": "ff03e11e0aa1ec1780104953",
+      "lang": "en",
+      "published_at": "2026-08-12T16:56:43Z",
+      "source_id": "hnrss-llm",
+      "source_name": "Hacker News - LLM Search Feed",
+      "title": "Maintaining an organizational knowledge graph with an LLM and event sourcing",
+      "topics": [
+        "community",
+        "llm"
+      ],
+      "url": "https://blog.arkency.com/maintaining-an-organizational-knowledge-graph-with-an-llm-and-event-sourcing"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:54:43Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "20m ago",
+      "id": "a0ffcd00819a4e26e69b2e9e",
+      "lang": "en",
+      "published_at": "2026-08-12T16:54:43Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "A few strong opinions about AI",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://noisydeadlines.net/a-few-strong-opinions-about-ai"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:52:28Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "22m ago",
+      "id": "7883bfd1659300c30eab46cc",
+      "lang": "en",
+      "published_at": "2026-08-12T16:52:28Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Can AI do novel security research? Meet the HTTP Terminator",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://portswigger.net/research/can-ai-do-novel-security-research"
+    },
+    {
+      "cluster_id": "m2exp-d3237ebb09a4f0cb",
+      "cluster_rank": 13,
+      "event_at": "2026-08-12T16:51:57Z",
+      "fetched_at": "2026-08-12T17:13:28.502087Z",
+      "freshness": "23m ago",
+      "id": "3b94d67ca1b43079540d0a45",
+      "lang": "en",
+      "published_at": "2026-08-12T16:51:57Z",
+      "source_id": "mit-tech-review-ai",
+      "source_name": "MIT Technology Review - AI",
+      "title": "Scaling AI agents with trustworthy data",
+      "topics": [
+        "ai-media",
+        "general-ai"
+      ],
+      "url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data"
+    },
+    {
+      "cluster_id": "m2exp-ae80a23433b08e19",
+      "cluster_rank": 14,
+      "event_at": "2026-08-12T16:46:17Z",
+      "fetched_at": "2026-08-12T17:13:25.150190Z",
+      "freshness": "28m ago",
+      "id": "b21bb508da591befbbaaad49",
+      "lang": "en",
+      "published_at": "2026-08-12T16:46:17Z",
+      "source_id": "hnrss-llm",
+      "source_name": "Hacker News - LLM Search Feed",
+      "title": "In case you think there is consciousness, intelligence or personality in an LLM [video]",
+      "topics": [
+        "community",
+        "llm"
+      ],
+      "url": "https://www.youtube.com/watch?v=vXV2ltVdLMQ"
+    },
+    {
+      "cluster_id": "m2exp-2ff814129000358a",
+      "cluster_rank": 15,
+      "event_at": "2026-08-12T16:46:02Z",
+      "fetched_at": "2026-08-12T17:13:28.390142Z",
+      "freshness": "28m ago",
+      "id": "9b836ad6cd2dc5ceaa160cd7",
+      "lang": "en",
+      "published_at": "2026-08-12T16:46:02Z",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "title": "Why Stream ring-maker Sandbar says the future of AI wearables is voice",
+      "topics": [
+        "general-ai",
+        "startup"
+      ],
+      "url": "https://techcrunch.com/video/why-stream-ring-maker-sandbar-says-the-future-of-ai-wearables-is-voice"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:32:23Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "42m ago",
+      "id": "7c9c4e4bc7ce82bb258a6ad4",
+      "lang": "en",
+      "published_at": "2026-08-12T16:32:23Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Shaping AI",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.shapingai.com/"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:28:30Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "46m ago",
+      "id": "8630a7ed67709cf58d1ec8e3",
+      "lang": "en",
+      "published_at": "2026-08-12T16:28:30Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: Tanchi – Open-source AI prospecting agent that only automates email",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/tanchihq/tanchi"
+    },
+    {
+      "cluster_id": "m2exp-7aa459f3f9bc6ed6",
+      "cluster_rank": 16,
+      "event_at": "2026-08-12T16:24:32Z",
+      "fetched_at": "2026-08-12T17:13:28.304708Z",
+      "freshness": "50m ago",
+      "id": "7455ee54ce8a9f1825e85867",
+      "lang": "en",
+      "published_at": "2026-08-12T16:24:32Z",
+      "source_id": "the-decoder",
+      "source_name": "The Decoder",
+      "title": "AI tools for breast cancer detection fall short of radiologists' expectations",
+      "topics": [
+        "ai-media",
+        "general-ai"
+      ],
+      "url": "https://the-decoder.com/ai-tools-for-breast-cancer-detection-fall-short-of-radiologists-expectations"
+    },
+    {
+      "cluster_id": "m2exp-c6ef89e8922af8fa",
+      "cluster_rank": 2,
+      "event_at": "2026-08-12T16:20:34Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "54m ago",
+      "id": "94676d99b2defaa4557b8cf6",
+      "lang": "en",
+      "published_at": "2026-08-12T16:20:34Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI coding startup Lovable raised $400M at $13.3B valuation up from $6.6B in 2025",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://lovable.dev/blog/series-c"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:17:31Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "57m ago",
+      "id": "9c6bdbc40f70e1b7ba2d3b04",
+      "lang": "en",
+      "published_at": "2026-08-12T16:17:31Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: CrewScore – coverage check for AI agent prompts (0.6.11)",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://crewscore.ai/"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:14:42Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "60m ago",
+      "id": "a98891f3ea18a4426b560ce8",
+      "lang": "en",
+      "published_at": "2026-08-12T16:14:42Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: Dynobox – A test runner for AI agent skills and workflows",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/dynobox/dynobox"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:10:14Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "64m ago",
+      "id": "d0b2d3fc40b1e342156d64d1",
+      "lang": "en",
+      "published_at": "2026-08-12T16:10:14Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "RL Environments Explained: How AI Agents Learn Real-World Work [video]",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.youtube.com/watch?v=a00xIn5kwhM"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T16:04:35Z",
+      "fetched_at": "2026-08-12T17:13:23.888129Z",
+      "freshness": "70m ago",
+      "id": "5fea08005fa79163241297a9",
+      "lang": "en",
+      "published_at": "2026-08-12T16:04:35Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "IO Factory: Simulating AI-Enabled Influence Campaigns at Scale [pdf]",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://arxiv.org/abs/2608.10920"
+    },
+    {
+      "cluster_id": "m2exp-c6ef89e8922af8fa",
+      "cluster_rank": 2,
       "event_at": "2026-08-12T16:04:27Z",
       "fetched_at": "2026-08-12T16:11:35.292033Z",
-      "freshness": "8m ago",
+      "freshness": "70m ago",
       "id": "dcf82db3dd7ead1aeba0fec1",
       "lang": "en",
       "published_at": "2026-08-12T16:04:27Z",
@@ -1374,11 +1740,11 @@
       "url": "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m"
     },
     {
-      "cluster_id": "m2exp-9523307a6f41d7da",
-      "cluster_rank": 4,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T15:59:25Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "13m ago",
+      "freshness": "75m ago",
       "id": "35026c01b5266d6b1f715eab",
       "lang": "en",
       "published_at": "2026-08-12T15:59:25Z",
@@ -1392,11 +1758,11 @@
       "url": "https://github.com/coachpato/archer-os"
     },
     {
-      "cluster_id": "m2exp-bbe45c55aa6ebe0c",
-      "cluster_rank": 5,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T15:58:50Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "13m ago",
+      "freshness": "76m ago",
       "id": "6a167f9ca15670f64fc97c3e",
       "lang": "en",
       "published_at": "2026-08-12T15:58:50Z",
@@ -1411,10 +1777,10 @@
     },
     {
       "cluster_id": "m2exp-c080e01d1d85b8ae",
-      "cluster_rank": 6,
+      "cluster_rank": 17,
       "event_at": "2026-08-12T15:58:02Z",
       "fetched_at": "2026-08-12T16:11:30.423639Z",
-      "freshness": "14m ago",
+      "freshness": "76m ago",
       "id": "2ea613277563acd589195b0b",
       "lang": "en",
       "published_at": "2026-08-12T15:58:02Z",
@@ -1428,11 +1794,11 @@
       "url": "https://dubir.net/tools/local-llm-hardware-calculator"
     },
     {
-      "cluster_id": "m2exp-d73668d7f79611e0",
-      "cluster_rank": 7,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T15:50:32Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "21m ago",
+      "freshness": "84m ago",
       "id": "236af4d5766fb3290b2b5e3a",
       "lang": "en",
       "published_at": "2026-08-12T15:50:32Z",
@@ -1446,11 +1812,11 @@
       "url": "https://www.pcmag.com/news/apple-limits-bug-bounty-submissions-after-a-barrage-of-ai-entries"
     },
     {
-      "cluster_id": "m2exp-69b73af80f89b76a",
-      "cluster_rank": 8,
+      "cluster_id": "m2exp-332c9072c1896fcc",
+      "cluster_rank": 3,
       "event_at": "2026-08-12T15:50:04Z",
       "fetched_at": "2026-08-12T16:11:35.228338Z",
-      "freshness": "22m ago",
+      "freshness": "84m ago",
       "id": "12441d4060ab69c64e9142ad",
       "lang": "en",
       "published_at": "2026-08-12T15:50:04Z",
@@ -1464,11 +1830,11 @@
       "url": "https://the-decoder.com/googles-gemini-is-losing-market-share-to-chatgpt-and-claude-according-to-new-market-data"
     },
     {
-      "cluster_id": "m2exp-be0a976e2043e010",
-      "cluster_rank": 9,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T15:49:35Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "22m ago",
+      "freshness": "85m ago",
       "id": "ef65a36212299efa16c63681",
       "lang": "en",
       "published_at": "2026-08-12T15:49:35Z",
@@ -1483,10 +1849,10 @@
     },
     {
       "cluster_id": "m2exp-2eca42ac94d88def",
-      "cluster_rank": 10,
+      "cluster_rank": 18,
       "event_at": "2026-08-12T15:44:56Z",
       "fetched_at": "2026-08-12T16:11:35.292033Z",
-      "freshness": "27m ago",
+      "freshness": "1h ago",
       "id": "3165e9f7bc4bfb96de3983c7",
       "lang": "en",
       "published_at": "2026-08-12T15:44:56Z",
@@ -1504,7 +1870,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:31:55Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "40m ago",
+      "freshness": "1h ago",
       "id": "937b3247792a65e985006b3f",
       "lang": "en",
       "published_at": "2026-08-12T15:31:55Z",
@@ -1522,7 +1888,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:31:24Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "41m ago",
+      "freshness": "1h ago",
       "id": "04e79d573cd2185129c5597f",
       "lang": "en",
       "published_at": "2026-08-12T15:31:24Z",
@@ -1540,7 +1906,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:28:01Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "44m ago",
+      "freshness": "1h ago",
       "id": "a67eae8b2f347abe29dd0b31",
       "lang": "en",
       "published_at": "2026-08-12T15:28:01Z",
@@ -1555,10 +1921,10 @@
     },
     {
       "cluster_id": "m2exp-83e158b1268dc40f",
-      "cluster_rank": 12,
+      "cluster_rank": 20,
       "event_at": "2026-08-12T15:25:43Z",
       "fetched_at": "2026-08-12T16:11:30.423639Z",
-      "freshness": "46m ago",
+      "freshness": "1h ago",
       "id": "25dc2915296a39f31abfc1da",
       "lang": "en",
       "published_at": "2026-08-12T15:25:43Z",
@@ -1576,7 +1942,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:21:00Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "51m ago",
+      "freshness": "1h ago",
       "id": "98ca4f1ba1ba1981a684146e",
       "lang": "en",
       "published_at": "2026-08-12T15:21:00Z",
@@ -1590,11 +1956,11 @@
       "url": "https://www.theguardian.com/tv-and-radio/2026/aug/12/roku-ai-slop-fairground-creator-tv-channel"
     },
     {
-      "cluster_id": "m2exp-930410c73faf88b5",
-      "cluster_rank": 13,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T15:18:25Z",
       "fetched_at": "2026-08-12T16:11:30.423639Z",
-      "freshness": "54m ago",
+      "freshness": "1h ago",
       "id": "48c5d07358fd2d95f54a8490",
       "lang": "en",
       "published_at": "2026-08-12T15:18:25Z",
@@ -1612,7 +1978,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:12:36Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "59m ago",
+      "freshness": "2h ago",
       "id": "57a24479101ea80ff2469fa6",
       "lang": "en",
       "published_at": "2026-08-12T15:12:36Z",
@@ -1626,11 +1992,11 @@
       "url": "https://news.ycombinator.com/item?id=49273667"
     },
     {
-      "cluster_id": "m2exp-08e3c42d18785dfb",
-      "cluster_rank": 14,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T15:08:47Z",
       "fetched_at": "2026-08-12T15:15:21.274545Z",
-      "freshness": "63m ago",
+      "freshness": "2h ago",
       "id": "8ce9f137579cbf5f1ee557b2",
       "lang": "en",
       "published_at": "2026-08-12T15:08:47Z",
@@ -1648,7 +2014,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:08:24Z",
       "fetched_at": "2026-08-12T16:11:28.119594Z",
-      "freshness": "64m ago",
+      "freshness": "2h ago",
       "id": "773de1ee3acbd5161fa4d5f7",
       "lang": "en",
       "published_at": "2026-08-12T15:08:24Z",
@@ -1666,7 +2032,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:04:57Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "67m ago",
+      "freshness": "2h ago",
       "id": "38a4b0bf3c5184536a224d27",
       "lang": "en",
       "published_at": "2026-08-12T15:04:57Z",
@@ -1684,7 +2050,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:04:39Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "67m ago",
+      "freshness": "2h ago",
       "id": "5c386e149d3a2fd6ff9e602a",
       "lang": "en",
       "published_at": "2026-08-12T15:04:39Z",
@@ -1702,7 +2068,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T15:03:05Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "69m ago",
+      "freshness": "2h ago",
       "id": "93093a019b68e756df578515",
       "lang": "en",
       "published_at": "2026-08-12T15:03:05Z",
@@ -1720,7 +2086,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:53:24Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "79m ago",
+      "freshness": "2h ago",
       "id": "3d22fe4b1a576f3dc8cf32eb",
       "lang": "en",
       "published_at": "2026-08-12T14:53:24Z",
@@ -1738,7 +2104,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:48:26Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "84m ago",
+      "freshness": "2h ago",
       "id": "3576f9332959e13f1f70fe91",
       "lang": "en",
       "published_at": "2026-08-12T14:48:26Z",
@@ -1756,7 +2122,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:46:44Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "85m ago",
+      "freshness": "2h ago",
       "id": "6a20d5c7ed77cab56b6e8c4d",
       "lang": "en",
       "published_at": "2026-08-12T14:46:44Z",
@@ -1774,7 +2140,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:41:00Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "4d87b49bb45b46e85e2522fc",
       "lang": "en",
       "published_at": "2026-08-12T14:41:00Z",
@@ -1788,11 +2154,11 @@
       "url": "https://medium.com/@kakuxwn/i-built-an-ai-website-in-3-hours-it-got-562-sign-ups-in-8-hours-and-left-me-more-lost-aef1c283124a"
     },
     {
-      "cluster_id": "m2exp-f4572098aac6bf5d",
-      "cluster_rank": 15,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T14:37:33Z",
       "fetched_at": "2026-08-12T15:15:21.043890Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "f2b5a1f0dba7f032583f37fd",
       "lang": "en",
       "published_at": "2026-08-12T14:37:33Z",
@@ -1810,7 +2176,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:34:29Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "fd73ce0e976e316f4c8b99a0",
       "lang": "en",
       "published_at": "2026-08-12T14:34:29Z",
@@ -1828,7 +2194,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:28:31Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "7a8444e439c372009beefd7c",
       "lang": "en",
       "published_at": "2026-08-12T14:28:31Z",
@@ -1846,7 +2212,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:24:23Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "c6a73e90f22ec76a2d21f292",
       "lang": "en",
       "published_at": "2026-08-12T14:24:23Z",
@@ -1860,11 +2226,29 @@
       "url": "https://www.youtube.com/watch?v=2ZU3j4GQ4K8"
     },
     {
+      "cluster_id": "m2exp-2ff814129000358a",
+      "cluster_rank": 15,
+      "event_at": "2026-08-12T14:22:00Z",
+      "fetched_at": "2026-08-12T17:13:28.390142Z",
+      "freshness": "2h ago",
+      "id": "1c51db275442ce813c3a5431",
+      "lang": "en",
+      "published_at": "2026-08-12T14:22:00Z",
+      "source_id": "techcrunch-ai",
+      "source_name": "TechCrunch AI",
+      "title": "Why Sandbar thinks it’s voice-enabled ring can avoid the AI hardware graveyard",
+      "topics": [
+        "general-ai",
+        "startup"
+      ],
+      "url": "https://techcrunch.com/podcast/why-sandbar-thinks-its-voice-enabled-ring-can-avoid-the-ai-hardware-graveyard"
+    },
+    {
       "cluster_id": null,
       "cluster_rank": null,
       "event_at": "2026-08-12T14:20:41Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "61de2ea020f8d7b03562c240",
       "lang": "en",
       "published_at": "2026-08-12T14:20:41Z",
@@ -1878,11 +2262,11 @@
       "url": "https://www.bloomberg.com/news/newsletters/2026-08-11/sequoia-raises-its-bets-on-ai-startups"
     },
     {
-      "cluster_id": "m2exp-e958537f71258358",
-      "cluster_rank": 16,
+      "cluster_id": "m2exp-332c9072c1896fcc",
+      "cluster_rank": 3,
       "event_at": "2026-08-12T14:20:33Z",
       "fetched_at": "2026-08-12T15:15:23.267015Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "847e04a735969f84f125d40d",
       "lang": "en",
       "published_at": "2026-08-12T14:20:33Z",
@@ -1900,7 +2284,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:19:12Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "2h ago",
       "id": "808965009482ba409c103288",
       "lang": "en",
       "published_at": "2026-08-12T14:19:12Z",
@@ -1918,7 +2302,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:14:25Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "1h ago",
+      "freshness": "3h ago",
       "id": "0cb84752b63b2a16fd076cbc",
       "lang": "en",
       "published_at": "2026-08-12T14:14:25Z",
@@ -1936,7 +2320,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:14:12Z",
       "fetched_at": "2026-08-12T15:15:21.043890Z",
-      "freshness": "1h ago",
+      "freshness": "3h ago",
       "id": "9d791ce2e70107f9801cd34f",
       "lang": "en",
       "published_at": "2026-08-12T14:14:12Z",
@@ -1954,7 +2338,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:08:46Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "796feece44f72736d4382147",
       "lang": "en",
       "published_at": "2026-08-12T14:08:46Z",
@@ -1972,7 +2356,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:06:03Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "01df5a11d88d345f72c8f5be",
       "lang": "en",
       "published_at": "2026-08-12T14:06:03Z",
@@ -1990,7 +2374,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:02:46Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "de5acd99dd765901276f8997",
       "lang": "en",
       "published_at": "2026-08-12T14:02:46Z",
@@ -2005,10 +2389,10 @@
     },
     {
       "cluster_id": "m2exp-cf9f1d62759a495d",
-      "cluster_rank": 2,
+      "cluster_rank": 6,
       "event_at": "2026-08-12T14:01:59Z",
       "fetched_at": "2026-08-12T15:15:14.530379Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "c26c8d5a4e90c67829e9c660",
       "lang": "en",
       "published_at": "2026-08-12T14:01:59Z",
@@ -2026,7 +2410,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T14:01:43Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "fc89dac8d15f7ed0f73ebe68",
       "lang": "en",
       "published_at": "2026-08-12T14:01:43Z",
@@ -2044,7 +2428,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:58:40Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "26e63ac8d6c031d1a7a5a8a8",
       "lang": "en",
       "published_at": "2026-08-12T13:58:40Z",
@@ -2062,7 +2446,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:55:26Z",
       "fetched_at": "2026-08-12T15:15:20.473197Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "7b5feb13cb3ece3125bd916c",
       "lang": "en",
       "published_at": "2026-08-12T13:55:26Z",
@@ -2076,11 +2460,11 @@
       "url": "https://arxiv.org/abs/2605.19516"
     },
     {
-      "cluster_id": "m2exp-3e1755549ba00c0d",
-      "cluster_rank": 17,
+      "cluster_id": "m2exp-22c48982b917681a",
+      "cluster_rank": 4,
       "event_at": "2026-08-12T13:51:18Z",
       "fetched_at": "2026-08-12T15:15:23.205242Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "7f09c5adcc0f883c6f2469df",
       "lang": "en",
       "published_at": "2026-08-12T13:51:18Z",
@@ -2094,11 +2478,11 @@
       "url": "https://the-decoder.com/legal-startup-founder-robert-mahari-joins-anthropic-to-lead-claudes-push-into-law-practices"
     },
     {
-      "cluster_id": "m2exp-8b87586b22ddcd75",
-      "cluster_rank": 18,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T13:46:12Z",
       "fetched_at": "2026-08-12T15:15:20.059730Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "03f07871b1267aa5eea6fe97",
       "lang": "zh",
       "published_at": "2026-08-12T13:46:12Z",
@@ -2112,11 +2496,11 @@
       "url": "https://www.qbitai.com/2026/08/471254.html"
     },
     {
-      "cluster_id": "m2exp-1f33cb59b8f530ce",
-      "cluster_rank": 19,
+      "cluster_id": "m2exp-22c48982b917681a",
+      "cluster_rank": 4,
       "event_at": "2026-08-12T13:38:09Z",
       "fetched_at": "2026-08-12T15:15:20.059730Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "13613f49d4f130604a6377e3",
       "lang": "zh",
       "published_at": "2026-08-12T13:38:09Z",
@@ -2134,7 +2518,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:36:46Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "22e04ab98df01bd8b06b9972",
       "lang": "en",
       "published_at": "2026-08-12T13:36:46Z",
@@ -2152,7 +2536,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:22:28Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "f6398043ede23ed997a3ebfe",
       "lang": "en",
       "published_at": "2026-08-12T13:22:28Z",
@@ -2170,7 +2554,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:20:05Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "d10ea54f06e0c3715ffbac68",
       "lang": "en",
       "published_at": "2026-08-12T13:20:05Z",
@@ -2188,7 +2572,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:19:35Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "2851a9b9a12bce1823d75a8e",
       "lang": "en",
       "published_at": "2026-08-12T13:19:35Z",
@@ -2202,11 +2586,11 @@
       "url": "https://developer.nvidia.com/blog/nvidia-exemplar-cloud-lessons-for-unlocking-full-performance-on-ai-infrastructure"
     },
     {
-      "cluster_id": "m2exp-469f39e9e1412099",
-      "cluster_rank": 20,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T13:10:55Z",
       "fetched_at": "2026-08-12T15:15:20.059730Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "ff98b3a89958a3e1b818832a",
       "lang": "zh",
       "published_at": "2026-08-12T13:10:55Z",
@@ -2224,7 +2608,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:10:43Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "7c608bf2cb964f5a19e6d168",
       "lang": "en",
       "published_at": "2026-08-12T13:10:43Z",
@@ -2242,7 +2626,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:05:52Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "0f81de56f8e55652671f196f",
       "lang": "en",
       "published_at": "2026-08-12T13:05:52Z",
@@ -2260,7 +2644,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T13:00:44Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "fac7a44dd84435cbdd8294a9",
       "lang": "en",
       "published_at": "2026-08-12T13:00:44Z",
@@ -2278,7 +2662,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:57:21Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "a63d6f70dbcb74709d9c6c86",
       "lang": "en",
       "published_at": "2026-08-12T12:57:21Z",
@@ -2292,11 +2676,11 @@
       "url": "https://www.reddit.com/r/GeminiAI/comments/1vmd4m7/google_intelligence_right_now"
     },
     {
-      "cluster_id": null,
-      "cluster_rank": null,
+      "cluster_id": "m2exp-0df7f23a50f5cabe",
+      "cluster_rank": 1,
       "event_at": "2026-08-12T12:57:02Z",
       "fetched_at": "2026-08-12T13:48:31.801966Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "dbe44e1d5173636e85efae68",
       "lang": "en",
       "published_at": "2026-08-12T12:57:02Z",
@@ -2314,7 +2698,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:50:57Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "e09a1bfc48c0ddbfbd67c7a6",
       "lang": "en",
       "published_at": "2026-08-12T12:50:57Z",
@@ -2332,7 +2716,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:41:18Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "e401d31bb53a27490c101361",
       "lang": "en",
       "published_at": "2026-08-12T12:41:18Z",
@@ -2350,7 +2734,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:37:58Z",
       "fetched_at": "2026-08-12T13:48:34.811477Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "3d68edaa00b68935d4ef9098",
       "lang": "en",
       "published_at": "2026-08-12T12:37:58Z",
@@ -2368,7 +2752,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:37:08Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "ae39da08ad59a1e6a070483c",
       "lang": "en",
       "published_at": "2026-08-12T12:37:08Z",
@@ -2386,7 +2770,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:36:17Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "17d388eb63219b6565b5d938",
       "lang": "en",
       "published_at": "2026-08-12T12:36:17Z",
@@ -2404,7 +2788,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:31:36Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "941aa6d9c3f90b50ab08513a",
       "lang": "en",
       "published_at": "2026-08-12T12:31:36Z",
@@ -2422,7 +2806,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T12:24:12Z",
       "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "5698e809e332002405fc076e",
       "lang": "en",
       "published_at": "2026-08-12T12:24:12Z",
@@ -2434,367 +2818,6 @@
         "general-ai"
       ],
       "url": "https://www.theguardian.com/technology/2026/aug/12/ai-job-destruction"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T12:23:50Z",
-      "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "3h ago",
-      "id": "1ea4a3915729864a47c45bb6",
-      "lang": "en",
-      "published_at": "2026-08-12T12:23:50Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "I built a personal AI agent in Swift on top of what macOS ships",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://github.com/ivan-magda/swift-claw"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T12:05:42Z",
-      "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "4h ago",
-      "id": "d1c9d7b2403ee1845d443464",
-      "lang": "en",
-      "published_at": "2026-08-12T12:05:42Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Nvidia's $500B Bet to Make AI Compute Wall Street's Next Asset Class",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.forbes.com/sites/robertszczerba/2026/08/10/nvidias-500b-bet-to-make-ai-compute-wall-streets-next-asset-class"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T12:03:23Z",
-      "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "4h ago",
-      "id": "ca88581e4e6332c80b33917c",
-      "lang": "en",
-      "published_at": "2026-08-12T12:03:23Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "AI compute power becoming tradable asset class as CME launches futures contracts",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.cnbc.com/2026/08/11/ai-computing-power-becomes-a-tradable-asset-class-as-cme-starts-futures.html"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:58:05Z",
-      "fetched_at": "2026-08-12T13:48:31.801966Z",
-      "freshness": "4h ago",
-      "id": "3d5d11f3d58e8181a629c0df",
-      "lang": "en",
-      "published_at": "2026-08-12T11:58:05Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "Revision Prompting: improves industrial LLM processes",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://revisionprompting.info/"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:56:28Z",
-      "fetched_at": "2026-08-12T13:48:31.468982Z",
-      "freshness": "4h ago",
-      "id": "6de70724a3ae31bdb1a14754",
-      "lang": "en",
-      "published_at": "2026-08-12T11:56:28Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Cross-Examine – replay base behavior against an AI-generated PR",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://github.com/stefbuilds/cross-examine"
-    },
-    {
-      "cluster_id": "m2exp-bf5bc59feebe187b",
-      "cluster_rank": 1,
-      "event_at": "2026-08-12T11:53:31Z",
-      "fetched_at": "2026-08-12T13:48:34.811477Z",
-      "freshness": "4h ago",
-      "id": "f5fb06352aa9881f232d7e83",
-      "lang": "en",
-      "published_at": "2026-08-12T11:53:31Z",
-      "source_id": "the-decoder",
-      "source_name": "The Decoder",
-      "title": "OpenAI launches ChatGPT desktop app for Linux",
-      "topics": [
-        "ai-media",
-        "general-ai"
-      ],
-      "url": "https://the-decoder.com/openai-launches-chatgpt-desktop-app-for-linux"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:50:28Z",
-      "fetched_at": "2026-08-12T11:59:14.886737Z",
-      "freshness": "4h ago",
-      "id": "c9300de6f911ee48b0fa8038",
-      "lang": "en",
-      "published_at": "2026-08-12T11:50:28Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "An LLM-generated counterexample far outside one's area of expertise",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://mathoverflow.net/questions/514181/what-does-one-do-when-one-accidentally-stumbles-upon-an-llm-generated-counterexa"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:35:03Z",
-      "fetched_at": "2026-08-12T11:59:14.886737Z",
-      "freshness": "4h ago",
-      "id": "ff698bd94cb0e88275ab3fe1",
-      "lang": "en",
-      "published_at": "2026-08-12T11:35:03Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "LLM Is Not a PDF Parser: Use OpenDataLoader First",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://x.com/opendatalo51205"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:14:59Z",
-      "fetched_at": "2026-08-12T11:59:14.362788Z",
-      "freshness": "4h ago",
-      "id": "d7a67f228f0bbe6dc79868d6",
-      "lang": "en",
-      "published_at": "2026-08-12T11:14:59Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Hybrid-retrieval memory layer for AI agents",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://github.com/deepmemteam/deepmem"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:07:07Z",
-      "fetched_at": "2026-08-12T11:59:14.886737Z",
-      "freshness": "5h ago",
-      "id": "5d1d48c1a3b0edeac968e94e",
-      "lang": "en",
-      "published_at": "2026-08-12T11:07:07Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "Most biomedical publications show signs of LLM-assisted writing",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://arxiv.org/abs/2608.10715"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:02:25Z",
-      "fetched_at": "2026-08-12T11:59:14.362788Z",
-      "freshness": "5h ago",
-      "id": "5fb27da3d68c1a8fb19a32a7",
-      "lang": "en",
-      "published_at": "2026-08-12T11:02:25Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Never Trust Your AI Agent's Own Sandbox",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://badshah.io/blog/never-trust-your-ai-agents-sandbox"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T11:00:00Z",
-      "fetched_at": "2026-08-12T15:15:23.267015Z",
-      "freshness": "5h ago",
-      "id": "ba0e4c3180b1bf0210bca95e",
-      "lang": "en",
-      "published_at": "2026-08-12T11:00:00Z",
-      "source_id": "techcrunch-ai",
-      "source_name": "TechCrunch AI",
-      "title": "AI code-testing startup Blacksmith’s valuation jumps almost 10x in less than a year",
-      "topics": [
-        "general-ai",
-        "startup"
-      ],
-      "url": "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T10:55:50Z",
-      "fetched_at": "2026-08-12T11:59:14.362788Z",
-      "freshness": "5h ago",
-      "id": "cd354f00a936f705ca72accf",
-      "lang": "en",
-      "published_at": "2026-08-12T10:55:50Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Interviewing Engineers in the AI Era: Lessons from a Year of Rebuilding",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.coinbase.com/en-ca/blog/interviewing-engineers-in-the-ai-era-lessons-from-a-year-of-rebuilding"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T10:54:29Z",
-      "fetched_at": "2026-08-12T11:59:13.910117Z",
-      "freshness": "5h ago",
-      "id": "ad3b63cf321d1f989eb522d8",
-      "lang": "zh",
-      "published_at": "2026-08-12T10:54:29Z",
-      "source_id": "qbitai",
-      "source_name": "QbitAI",
-      "title": "紫东太初推出GMC核心集剪枝方法，少80%Token仍满血保真多模态能力",
-      "topics": [
-        "china-ai-media",
-        "general-ai"
-      ],
-      "url": "https://www.qbitai.com/2026/08/471030.html"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T10:18:46Z",
-      "fetched_at": "2026-08-12T10:26:59.165000Z",
-      "freshness": "5h ago",
-      "id": "264e9159a553d3c0f2b236a1",
-      "lang": "en",
-      "published_at": "2026-08-12T10:18:46Z",
-      "source_id": "the-decoder",
-      "source_name": "The Decoder",
-      "title": "Microsoft's new MAI Code 1.1 Flash gets crushed by Deepseek on both price and performance",
-      "topics": [
-        "ai-media",
-        "general-ai",
-        "token-export"
-      ],
-      "url": "https://the-decoder.com/microsofts-new-mai-code-1-1-flash-gets-crushed-by-deepseek-on-both-price-and-performance"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T10:08:43Z",
-      "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "6h ago",
-      "id": "84496c324c40a18ea0f2f356",
-      "lang": "en",
-      "published_at": "2026-08-12T10:08:43Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "The Missing Public-Policy Ecosystem Behind Expensive AI Tokens",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://zrainbow.substack.com/p/the-missing-public-policy-ecosystem"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T09:59:27Z",
-      "fetched_at": "2026-08-12T10:26:59.165000Z",
-      "freshness": "6h ago",
-      "id": "4764d17139fc85545ced2d84",
-      "lang": "en",
-      "published_at": "2026-08-12T09:59:27Z",
-      "source_id": "the-decoder",
-      "source_name": "The Decoder",
-      "title": "Mistral now offers EU data processing and priority access, but both come with important limits",
-      "topics": [
-        "ai-media",
-        "general-ai"
-      ],
-      "url": "https://the-decoder.com/mistral-now-offers-eu-data-processing-and-priority-access-but-both-come-with-important-limits"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T09:58:06Z",
-      "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "6h ago",
-      "id": "6c700a5e65d7b49ff93d23f9",
-      "lang": "en",
-      "published_at": "2026-08-12T09:58:06Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "TriageBox – quick Gmail checker, sorting and AI summaries",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://triagebox.pfa87.cc/"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T09:57:48Z",
-      "fetched_at": "2026-08-12T10:26:55.841190Z",
-      "freshness": "6h ago",
-      "id": "d63ac0e15ec46652d2dc9027",
-      "lang": "en",
-      "published_at": "2026-08-12T09:57:48Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "Cost-per-success, not cost-per-call: the LLM routing number nobody measures",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://nitishagar.medium.com/the-cheap-model-that-tripled-your-bill-06c5c796fa25"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T09:53:23Z",
-      "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "6h ago",
-      "id": "94bd665d6cc75d046e5b382b",
-      "lang": "en",
-      "published_at": "2026-08-12T09:53:23Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Why 'open' AI systems are closed, and why this matters (2024)",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.nature.com/articles/s41586-024-08141-1"
     }
   ]
 }
