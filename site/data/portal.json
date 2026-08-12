@@ -3,47 +3,86 @@
   "clusters": [
     {
       "experimental": true,
-      "first_seen": "2026-08-11T17:38:49Z",
-      "freshness": "4h ago",
-      "heat_score": 2.4559,
-      "id": "m2exp-32bb5a290ad84d08",
+      "first_seen": "2026-08-11T19:15:35Z",
+      "freshness": "1h ago",
+      "heat_score": 1.8464,
+      "id": "m2exp-bf5bc59feebe187b",
       "item_ids": [
-        "15b39e0a4758e7ae5ac1ec0b",
+        "687acffc0d3640aec19486e5",
+        "f5fb06352aa9881f232d7e83"
+      ],
+      "item_titles": [
+        "OpenAI launches ChatGPT desktop app for Linux",
+        "OpenAI launches ChatGPT desktop app for Linux"
+      ],
+      "last_seen": "2026-08-12T11:53:31Z",
+      "rank": 1,
+      "representative_url": "https://the-decoder.com/openai-launches-chatgpt-desktop-app-for-linux",
+      "review_flags": [
+        "near_duplicate_titles"
+      ],
+      "source_count": 2,
+      "source_ids": [
+        "techcrunch-ai",
+        "the-decoder"
+      ],
+      "source_names": [
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "summary": "OpenAI 正式为 Linux 操作系统推出专用的 ChatGPT 桌面应用程序。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 2,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "OpenAI 推出 Linux 版 ChatGPT 桌面应用",
+      "topic_ids": [
+        "ai-media",
+        "general-ai",
+        "startup"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-11T17:38:49Z",
+      "freshness": "6h ago",
+      "heat_score": 1.5176,
+      "id": "m2exp-ddf4776cf78146fb",
+      "item_ids": [
         "68b415c71f0bdd5538df2f09",
         "b5328476baca7145a6cc2c97"
       ],
       "item_titles": [
-        "Previous-Token Prediction Based LLM Near-Exact Prompt Reconstruction",
         "[AINews] How to steal a Reasoning Trace",
         "\"But marinade\" and leaked passwords are what researchers found in ChatGPT's hidden reasoning"
       ],
       "last_seen": "2026-08-12T07:11:08Z",
-      "rank": 1,
+      "rank": 2,
       "representative_url": "https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace",
       "review_flags": [],
-      "source_count": 3,
+      "source_count": 2,
       "source_ids": [
-        "hnrss-llm",
         "latent-space",
         "the-decoder"
       ],
       "source_names": [
-        "Hacker News - LLM Search Feed",
         "Latent Space",
         "The Decoder"
       ],
-      "summary": "安全研究人员发现OpenAI、Anthropic和Google的API存在漏洞，允许提取加密的推理轨迹并在模型间转移，且在公开会话中发现了泄露的密码等敏感信息。",
+      "summary": "安全研究人员发现了一种模型替换漏洞，能够从 OpenAI、Anthropic 和 Google 的 API 中提取加密的推理轨迹，并在公共会话中发现了泄露的密码等信息。",
       "tier_mix": {
         "tier1": 0,
-        "tier2": 2,
+        "tier2": 1,
         "tier3": 1,
         "tier4": 0,
         "unknown": 0
       },
-      "title": "研究人员发现可通过模型交换窃取AI推理轨迹",
+      "title": "研究人员发现可提取 AI 模型隐藏推理轨迹的漏洞",
       "topic_ids": [
         "ai-media",
-        "community",
         "developer-tools",
         "general-ai",
         "industry",
@@ -52,9 +91,47 @@
     },
     {
       "experimental": true,
+      "first_seen": "2026-08-12T06:00:00Z",
+      "freshness": "7h ago",
+      "heat_score": 1.0833,
+      "id": "m2exp-35f6fdb3bbe56cbd",
+      "item_ids": [
+        "e063daae6225e15695395681"
+      ],
+      "item_titles": [
+        "From assistance to execution: How enterprises put AI to work"
+      ],
+      "last_seen": "2026-08-12T06:00:00Z",
+      "rank": 3,
+      "representative_url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "openai-news"
+      ],
+      "source_names": [
+        "OpenAI News"
+      ],
+      "summary": "OpenAI 发布的研究揭示了企业如何采用智能体 AI 以及 ChatGPT 和 Codex 等工具，并展示了前沿公司如何在 AI 应用中保持领先。",
+      "tier_mix": {
+        "tier1": 1,
+        "tier2": 0,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "OpenAI 研究：企业如何利用 AI 从辅助走向执行",
+      "topic_ids": [
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
       "first_seen": "2026-08-11T05:12:20Z",
-      "freshness": "13h ago",
-      "heat_score": 1.1624,
+      "freshness": "14h ago",
+      "heat_score": 1.0775,
       "id": "m2exp-f424c335f6021a91",
       "item_ids": [
         "42dd3da0a4974866274499f1",
@@ -65,7 +142,7 @@
         "LLM Model-Swapping Trick Can Expose AI Reasoning Traces"
       ],
       "last_seen": "2026-08-11T22:57:53Z",
-      "rank": 2,
+      "rank": 4,
       "representative_url": "https://www.qbitai.com/2026/08/470485.html",
       "review_flags": [],
       "source_count": 2,
@@ -77,7 +154,7 @@
         "Hacker News - LLM Search Feed",
         "QbitAI"
       ],
-      "summary": "Anthropic的一个未发布模型在攻克150多年未解的数学难题“黎曼猜想”上取得了令人瞩目的新进展，大幅推高了下界。",
+      "summary": "Anthropic 一个尚未公开的新模型在解决著名的数学难题黎曼猜想方面取得了突破性进展，大幅推高了下界。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -85,7 +162,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Anthropic未公开模型在黎曼猜想上取得重大进展",
+      "title": "Anthropic 未公开模型在黎曼猜想上取得新进展",
       "topic_ids": [
         "china-ai-media",
         "community",
@@ -95,9 +172,282 @@
     },
     {
       "experimental": true,
+      "first_seen": "2026-08-12T13:36:46Z",
+      "freshness": "13m ago",
+      "heat_score": 0.9918,
+      "id": "m2exp-e077ede91ec970b4",
+      "item_ids": [
+        "22e04ab98df01bd8b06b9972"
+      ],
+      "item_titles": [
+        "I pointed my AI security plugin at my own prod app – it refused to invent a bug"
+      ],
+      "last_seen": "2026-08-12T13:36:46Z",
+      "rank": 5,
+      "representative_url": "https://github.com/kenjichristopherv-del/securitymaxxing",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "一名开发者将其开发的 AI 安全插件指向自己的生产环境应用程序，结果该 AI 拒绝编造漏洞。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "开发者测试 AI 安全插件：拒绝编造漏洞",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T13:22:28Z",
+      "freshness": "27m ago",
+      "heat_score": 0.982,
+      "id": "m2exp-37a9c1c33a530ef0",
+      "item_ids": [
+        "f6398043ede23ed997a3ebfe"
+      ],
+      "item_titles": [
+        "Show HN: Talkform.org, Turn voice inputs into structured data using front end AI"
+      ],
+      "last_seen": "2026-08-12T13:22:28Z",
+      "rank": 6,
+      "representative_url": "https://talkform.org/",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "Talkform.org 是一款新工具，利用前端 AI 技术将用户的语音输入直接转换为结构化数据。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Talkform.org：使用前端 AI 将语音输入转化为结构化数据",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T13:20:05Z",
+      "freshness": "30m ago",
+      "heat_score": 0.9804,
+      "id": "m2exp-676331e8d316b434",
+      "item_ids": [
+        "d10ea54f06e0c3715ffbac68"
+      ],
+      "item_titles": [
+        "AI is removing the middle class of software engineering"
+      ],
+      "last_seen": "2026-08-12T13:20:05Z",
+      "rank": 7,
+      "representative_url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "文章探讨人工智能如何通过自动化编码任务，逐渐消除软件工程领域的中级岗位。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "AI 正在消除软件工程的中产阶级",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T13:19:35Z",
+      "freshness": "30m ago",
+      "heat_score": 0.9801,
+      "id": "m2exp-59e338f1e16a040c",
+      "item_ids": [
+        "2851a9b9a12bce1823d75a8e"
+      ],
+      "item_titles": [
+        "Nvidia Exemplar Cloud: Lessons for Unlocking Performance on AI Infrastructure"
+      ],
+      "last_seen": "2026-08-12T13:19:35Z",
+      "rank": 8,
+      "representative_url": "https://developer.nvidia.com/blog/nvidia-exemplar-cloud-lessons-for-unlocking-full-performance-on-ai-infrastructure",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": "Nvidia 分享了如何在其云平台上充分释放和优化 AI 基础设施性能的经验教训。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Nvidia Exemplar Cloud：释放 AI 基础设施性能的经验",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T12:57:02Z",
+      "freshness": "53m ago",
+      "heat_score": 0.9648,
+      "id": "m2exp-e83059eb6df4a1a2",
+      "item_ids": [
+        "dbe44e1d5173636e85efae68"
+      ],
+      "item_titles": [
+        "Show HN: Aileaks – scan repos for leaked LLM reasoning-trace secrets"
+      ],
+      "last_seen": "2026-08-12T12:57:02Z",
+      "rank": 9,
+      "representative_url": "https://github.com/sarthakuwar/aileaks",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-llm"
+      ],
+      "source_names": [
+        "Hacker News - LLM Search Feed"
+      ],
+      "summary": "Aileaks 是一款新工具，用于扫描代码仓库中可能泄露的大语言模型推理轨迹和机密信息。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Aileaks：扫描代码库中泄露的 LLM 推理轨迹机密",
+      "topic_ids": [
+        "community",
+        "llm"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T12:37:58Z",
+      "freshness": "72m ago",
+      "heat_score": 0.9521,
+      "id": "m2exp-bd15f8c23d1c5810",
+      "item_ids": [
+        "3d68edaa00b68935d4ef9098"
+      ],
+      "item_titles": [
+        "Nvidia's Nemotron 4 aims for one trillion parameters, a scale Chinese labs already surpassed"
+      ],
+      "last_seen": "2026-08-12T12:37:58Z",
+      "rank": 10,
+      "representative_url": "https://the-decoder.com/nvidias-nemotron-4-aims-for-one-trillion-parameters-a-scale-chinese-labs-already-surpassed",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "the-decoder"
+      ],
+      "source_names": [
+        "The Decoder"
+      ],
+      "summary": "Nvidia 正在开发 Nemotron 4 开源权重模型，旨在与全球最优秀的免费模型竞争，其参数规模将达到一万亿。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Nvidia 的 Nemotron 4 模型瞄准万亿参数规模",
+      "topic_ids": [
+        "ai-media",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-08-12T11:58:05Z",
+      "freshness": "1h ago",
+      "heat_score": 0.9261,
+      "id": "m2exp-a2313f53e173da60",
+      "item_ids": [
+        "3d5d11f3d58e8181a629c0df"
+      ],
+      "item_titles": [
+        "Revision Prompting: improves industrial LLM processes"
+      ],
+      "last_seen": "2026-08-12T11:58:05Z",
+      "rank": 11,
+      "representative_url": "https://revisionprompting.info/",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-llm"
+      ],
+      "source_names": [
+        "Hacker News - LLM Search Feed"
+      ],
+      "summary": "介绍了一种名为 Revision Prompting 的技术，旨在优化和改进大语言模型在工业应用中的处理流程。",
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Revision Prompting：改进工业级 LLM 流程",
+      "topic_ids": [
+        "community",
+        "llm"
+      ]
+    },
+    {
+      "experimental": true,
       "first_seen": "2026-08-12T11:50:28Z",
-      "freshness": "10m ago",
-      "heat_score": 0.9939,
+      "freshness": "1h ago",
+      "heat_score": 0.9212,
       "id": "m2exp-058abb3458f34ae4",
       "item_ids": [
         "c9300de6f911ee48b0fa8038"
@@ -106,7 +456,7 @@
         "An LLM-generated counterexample far outside one's area of expertise"
       ],
       "last_seen": "2026-08-12T11:50:28Z",
-      "rank": 3,
+      "rank": 12,
       "representative_url": "https://mathoverflow.net/questions/514181/what-does-one-do-when-one-accidentally-stumbles-upon-an-llm-generated-counterexa",
       "review_flags": [
         "single_source"
@@ -118,7 +468,7 @@
       "source_names": [
         "Hacker News - LLM Search Feed"
       ],
-      "summary": "近期多个案例显示，大语言模型（LLM）在数学领域展现出强大能力，不仅生成了人类专家领域之外的反例，还在黎曼猜想等重大未解难题上取得了突破。",
+      "summary": "一位数学家在论坛上求助，表示意外发现了一个由大语言模型生成的、超出其专业领域的数学反例。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -126,7 +476,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "LLM在数学领域展现惊人反例发现能力",
+      "title": "数学家意外发现 LLM 生成的领域外反例",
       "topic_ids": [
         "community",
         "llm"
@@ -135,8 +485,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-12T11:35:03Z",
-      "freshness": "26m ago",
-      "heat_score": 0.9833,
+      "freshness": "2h ago",
+      "heat_score": 0.9114,
       "id": "m2exp-f986f0d275eb521b",
       "item_ids": [
         "ff698bd94cb0e88275ab3fe1"
@@ -145,7 +495,7 @@
         "LLM Is Not a PDF Parser: Use OpenDataLoader First"
       ],
       "last_seen": "2026-08-12T11:35:03Z",
-      "rank": 4,
+      "rank": 13,
       "representative_url": "https://x.com/opendatalo51205",
       "review_flags": [
         "single_source"
@@ -157,7 +507,7 @@
       "source_names": [
         "Hacker News - LLM Search Feed"
       ],
-      "summary": "文章指出大语言模型并不适合直接用于解析PDF文件，建议优先使用专门的工具OpenDataLoader。",
+      "summary": "文章指出大语言模型并不适合直接解析 PDF 文件，建议优先使用专门的 OpenDataLoader 工具。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -165,215 +515,17 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "LLM不是PDF解析器：应优先使用OpenDataLoader",
+      "title": "LLM 不是 PDF 解析器：应优先使用 OpenDataLoader",
       "topic_ids": [
         "community",
         "llm"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-11T09:24:44Z",
-      "freshness": "17h ago",
-      "heat_score": 0.978,
-      "id": "m2exp-71668b90d9486e49",
-      "item_ids": [
-        "8740e87f6197946e49af6dde",
-        "bd01c48390fb5d0d235d311b"
-      ],
-      "item_titles": [
-        "Google’s Gemini app surges to one billion users",
-        "谷歌创始人布林紧急接管Gemini团队，但“3.5 Pro已被取消”"
-      ],
-      "last_seen": "2026-08-11T18:49:12Z",
-      "rank": 5,
-      "representative_url": "https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users",
-      "review_flags": [],
-      "source_count": 2,
-      "source_ids": [
-        "qbitai",
-        "techcrunch-ai"
-      ],
-      "source_names": [
-        "QbitAI",
-        "TechCrunch AI"
-      ],
-      "summary": "谷歌Gemini应用月活跃用户已突破10亿，紧追ChatGPT；同时联合创始人谢尔盖·布林紧急接管Gemini团队以应对内部算力分配的内耗问题。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 2,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "谷歌Gemini用户突破十亿，布林紧急接管团队",
-      "topic_ids": [
-        "china-ai-media",
-        "general-ai",
-        "startup"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T11:14:59Z",
-      "freshness": "46m ago",
-      "heat_score": 0.9697,
-      "id": "m2exp-774dc69249ffcdbb",
-      "item_ids": [
-        "d7a67f228f0bbe6dc79868d6"
-      ],
-      "item_titles": [
-        "Hybrid-retrieval memory layer for AI agents"
-      ],
-      "last_seen": "2026-08-12T11:14:59Z",
-      "rank": 6,
-      "representative_url": "https://github.com/deepmemteam/deepmem",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "一款名为DeepMem的混合检索记忆层工具发布，旨在为AI智能体提供更高效的记忆管理。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "为AI智能体设计的混合检索记忆层",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T11:07:07Z",
-      "freshness": "54m ago",
-      "heat_score": 0.9644,
-      "id": "m2exp-ab2fee3c3baa47ca",
-      "item_ids": [
-        "5d1d48c1a3b0edeac968e94e"
-      ],
-      "item_titles": [
-        "Most biomedical publications show signs of LLM-assisted writing"
-      ],
-      "last_seen": "2026-08-12T11:07:07Z",
-      "rank": 7,
-      "representative_url": "https://arxiv.org/abs/2608.10715",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-llm"
-      ],
-      "source_names": [
-        "Hacker News - LLM Search Feed"
-      ],
-      "summary": "一项arXiv研究表明，大多数生物医学领域的出版物已经表现出使用大语言模型辅助写作的迹象。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "多数生物医学出版物显示出LLM辅助写作的迹象",
-      "topic_ids": [
-        "community",
-        "llm"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T11:02:25Z",
-      "freshness": "58m ago",
-      "heat_score": 0.9613,
-      "id": "m2exp-be90e4c1fc602cf3",
-      "item_ids": [
-        "5fb27da3d68c1a8fb19a32a7"
-      ],
-      "item_titles": [
-        "Never Trust Your AI Agent's Own Sandbox"
-      ],
-      "last_seen": "2026-08-12T11:02:25Z",
-      "rank": 8,
-      "representative_url": "https://badshah.io/blog/never-trust-your-ai-agents-sandbox",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "文章探讨了AI智能体沙盒环境的安全隐患，提醒开发者在部署时不要完全信任智能体自身的沙盒。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "永远不要信任AI智能体自己的沙盒",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T10:55:50Z",
-      "freshness": "65m ago",
-      "heat_score": 0.9569,
-      "id": "m2exp-f37f4202a703d69b",
-      "item_ids": [
-        "cd354f00a936f705ca72accf"
-      ],
-      "item_titles": [
-        "Interviewing Engineers in the AI Era: Lessons from a Year of Rebuilding"
-      ],
-      "last_seen": "2026-08-12T10:55:50Z",
-      "rank": 9,
-      "representative_url": "https://www.coinbase.com/en-ca/blog/interviewing-engineers-in-the-ai-era-lessons-from-a-year-of-rebuilding",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "Coinbase分享了他们在AI时代重建工程师面试流程的经验和教训。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "AI时代的工程师面试经验",
-      "topic_ids": [
-        "community",
-        "general-ai"
       ]
     },
     {
       "experimental": true,
       "first_seen": "2026-08-12T10:54:29Z",
-      "freshness": "66m ago",
-      "heat_score": 0.956,
+      "freshness": "2h ago",
+      "heat_score": 0.8861,
       "id": "m2exp-ed0201111ea2c6e8",
       "item_ids": [
         "ad3b63cf321d1f989eb522d8"
@@ -382,7 +534,7 @@
         "紫东太初推出GMC核心集剪枝方法，少80%Token仍满血保真多模态能力"
       ],
       "last_seen": "2026-08-12T10:54:29Z",
-      "rank": 10,
+      "rank": 14,
       "representative_url": "https://www.qbitai.com/2026/08/471030.html",
       "review_flags": [
         "single_source"
@@ -394,7 +546,7 @@
       "source_names": [
         "QbitAI"
       ],
-      "summary": "紫东太初推出了一种免训练、开箱即用的GMC核心集剪枝方法，在减少80%Token的情况下仍能保持满血的多模态能力。",
+      "summary": "紫东太初发布了 GMC 核心集剪枝方法，该方法免训练且开箱即用，在减少 80% Token 的情况下仍能满血保留多模态能力。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -402,7 +554,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "紫东太初推出GMC核心集剪枝方法",
+      "title": "紫东太初推出 GMC 剪枝方法，减少 80% Token 仍保持多模态能力",
       "topic_ids": [
         "china-ai-media",
         "general-ai"
@@ -411,8 +563,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-11T00:03:18Z",
-      "freshness": "17h ago",
-      "heat_score": 0.9461,
+      "freshness": "19h ago",
+      "heat_score": 0.8769,
       "id": "m2exp-fd1253bab06c6db3",
       "item_ids": [
         "5ee9830f2c5d243594ce585e",
@@ -423,7 +575,7 @@
         "OpenAI lets employees cash out another $7 billion in stock"
       ],
       "last_seen": "2026-08-11T18:01:22Z",
-      "rank": 11,
+      "rank": 15,
       "representative_url": "https://the-decoder.com/openai-lets-employees-cash-out-another-7-billion-in-stock",
       "review_flags": [],
       "source_count": 2,
@@ -435,7 +587,7 @@
         "TechCrunch AI",
         "The Decoder"
       ],
-      "summary": "OpenAI完成了价值70亿美元的股票回购要约，允许现任和前任员工以8500亿美元的估值套现部分股份，缓解流动性压力。",
+      "summary": "OpenAI 完成了一项价值 70 亿美元的股票回购要约，允许现任和前任员工以 8520 亿美元的估值套现部分股票。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -443,7 +595,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "OpenAI完成70亿美元员工股票回购",
+      "title": "OpenAI 完成 70 亿美元员工股票回购",
       "topic_ids": [
         "ai-media",
         "general-ai",
@@ -453,8 +605,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-12T10:18:46Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9326,
+      "freshness": "3h ago",
+      "heat_score": 0.8644,
       "id": "m2exp-bd0ef4bac3087f5d",
       "item_ids": [
         "264e9159a553d3c0f2b236a1"
@@ -463,7 +615,7 @@
         "Microsoft's new MAI Code 1.1 Flash gets crushed by Deepseek on both price and performance"
       ],
       "last_seen": "2026-08-12T10:18:46Z",
-      "rank": 12,
+      "rank": 16,
       "representative_url": "https://the-decoder.com/microsofts-new-mai-code-1-1-flash-gets-crushed-by-deepseek-on-both-price-and-performance",
       "review_flags": [
         "single_source"
@@ -475,7 +627,7 @@
       "source_names": [
         "The Decoder"
       ],
-      "summary": "微软发布了用于GitHub Copilot的代码模型MAI Code 1.1 Flash，尽管成本和Token效率有所提升，但在基准测试中其性能和价格均不敌DeepSeek。",
+      "summary": "微软发布了用于 GitHub Copilot 的代码模型 MAI Code 1.1 Flash，但在基准测试中，其性能和价格均不及 DeepSeek。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -483,7 +635,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "微软MAI Code 1.1 Flash在性能和价格上被DeepSeek击败",
+      "title": "微软 MAI Code 1.1 Flash 在价格和性能上被 DeepSeek 击败",
       "topic_ids": [
         "ai-media",
         "general-ai",
@@ -492,48 +644,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-12T10:08:43Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9261,
-      "id": "m2exp-828a448b23a8a110",
-      "item_ids": [
-        "84496c324c40a18ea0f2f356"
-      ],
-      "item_titles": [
-        "The Missing Public-Policy Ecosystem Behind Expensive AI Tokens"
-      ],
-      "last_seen": "2026-08-12T10:08:43Z",
-      "rank": 13,
-      "representative_url": "https://zrainbow.substack.com/p/the-missing-public-policy-ecosystem",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "文章探讨了高昂的AI Token成本背后，公共政策和监管生态系统的缺失问题。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "昂贵AI Token背后缺失的公共政策生态",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-08-12T09:59:27Z",
-      "freshness": "2h ago",
-      "heat_score": 0.9201,
+      "freshness": "3h ago",
+      "heat_score": 0.8529,
       "id": "m2exp-597dbfa623021059",
       "item_ids": [
         "4764d17139fc85545ced2d84"
@@ -542,7 +655,7 @@
         "Mistral now offers EU data processing and priority access, but both come with important limits"
       ],
       "last_seen": "2026-08-12T09:59:27Z",
-      "rank": 14,
+      "rank": 17,
       "representative_url": "https://the-decoder.com/mistral-now-offers-eu-data-processing-and-priority-access-but-both-come-with-important-limits",
       "review_flags": [
         "single_source"
@@ -554,7 +667,7 @@
       "source_names": [
         "The Decoder"
       ],
-      "summary": "Mistral现在允许客户将AI请求路由通过欧洲或美国的服务器，并提供高峰期的优先队列访问，但这两项服务均需额外收费且存在限制。",
+      "summary": "Mistral 开始允许客户选择通过欧洲或美国的服务器路由 AI 请求，并在高峰期提供优先队列访问，但这两项服务均需额外收费且有限制。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -562,7 +675,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Mistral推出欧盟数据处理和优先访问服务",
+      "title": "Mistral 推出欧盟数据处理和优先访问服务",
       "topic_ids": [
         "ai-media",
         "general-ai"
@@ -570,48 +683,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-12T09:57:48Z",
-      "freshness": "2h ago",
-      "heat_score": 0.9191,
-      "id": "m2exp-108507c11dde8a0f",
-      "item_ids": [
-        "d63ac0e15ec46652d2dc9027"
-      ],
-      "item_titles": [
-        "Cost-per-success, not cost-per-call: the LLM routing number nobody measures"
-      ],
-      "last_seen": "2026-08-12T09:57:48Z",
-      "rank": 15,
-      "representative_url": "https://nitishagar.medium.com/the-cheap-model-that-tripled-your-bill-06c5c796fa25",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-llm"
-      ],
-      "source_names": [
-        "Hacker News - LLM Search Feed"
-      ],
-      "summary": "文章指出，在评估LLM路由策略时，业界普遍忽视了“单次成功成本”这一关键指标，而仅仅关注单次调用成本。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "LLM路由中被忽视的指标：单次成功成本",
-      "topic_ids": [
-        "community",
-        "llm"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-08-10T23:56:15Z",
-      "freshness": "26h ago",
-      "heat_score": 0.8466,
+      "freshness": "27h ago",
+      "heat_score": 0.7847,
       "id": "m2exp-1bb0c781e7d1581e",
       "item_ids": [
         "55886623ca9bcaeb2c5dcf61",
@@ -622,7 +696,7 @@
         "Daybreak models are now available on AWS"
       ],
       "last_seen": "2026-08-11T10:00:00Z",
-      "rank": 16,
+      "rank": 18,
       "representative_url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
       "review_flags": [],
       "source_count": 2,
@@ -634,7 +708,7 @@
         "OpenAI News",
         "TechCrunch AI"
       ],
-      "summary": "OpenAI正在扩展其AI网络安全防御计划Daybreak，并推出了一款经过网络攻击训练的新型AI模型，同时该能力也已上线AWS。",
+      "summary": "OpenAI 扩展了其 Daybreak AI 网络安全防御计划，推出新的网络训练模型，并通过 Amazon Bedrock 向企业提供相关能力。",
       "tier_mix": {
         "tier1": 1,
         "tier2": 0,
@@ -642,7 +716,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "OpenAI推出Daybreak网络安全模型",
+      "title": "OpenAI 扩展 Daybreak 网络安全模型并在 AWS 上线",
       "topic_ids": [
         "general-ai",
         "startup",
@@ -652,8 +726,8 @@
     {
       "experimental": true,
       "first_seen": "2026-08-12T07:31:19Z",
-      "freshness": "4h ago",
-      "heat_score": 0.8302,
+      "freshness": "6h ago",
+      "heat_score": 0.7695,
       "id": "m2exp-c1caf8cd1c9da9db",
       "item_ids": [
         "559fccc578b7a3f2885272ab"
@@ -662,7 +736,7 @@
         "2026中国科创投资夏季峰会暨陕西科创产业生态大会圆满落幕"
       ],
       "last_seen": "2026-08-12T07:31:19Z",
-      "rank": 17,
+      "rank": 19,
       "representative_url": "https://www.qbitai.com/2026/08/470901.html",
       "review_flags": [
         "single_source"
@@ -674,7 +748,7 @@
       "source_names": [
         "QbitAI"
       ],
-      "summary": "由融中财经和秦创原主办的2026中国科创投资夏季峰会暨陕西科创产业生态大会近日圆满落幕。",
+      "summary": "由融中财经和秦创原科技创新投资集团主办的 2026 中国科创投资夏季峰会暨陕西科创产业生态大会圆满落幕。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -682,7 +756,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "2026中国科创投资夏季峰会落幕",
+      "title": "2026 中国科创投资夏季峰会暨陕西科创产业生态大会落幕",
       "topic_ids": [
         "china-ai-media",
         "general-ai"
@@ -690,51 +764,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-08-11T08:45:06Z",
-      "freshness": "23h ago",
-      "heat_score": 0.7432,
-      "id": "m2exp-50c6a3adba078fc6",
-      "item_ids": [
-        "90fbd00069554810de78c4be",
-        "c5d3a8c772284e340ecaf43a"
-      ],
-      "item_titles": [
-        "Anthropic says it will watermark text generated by its AI models",
-        "Anthropic watermarks all Claude outputs globally with marks that \"may persist through some editing\""
-      ],
-      "last_seen": "2026-08-11T12:13:47Z",
-      "rank": 18,
-      "representative_url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models",
-      "review_flags": [],
-      "source_count": 2,
-      "source_ids": [
-        "techcrunch-ai",
-        "the-decoder"
-      ],
-      "source_names": [
-        "TechCrunch AI",
-        "The Decoder"
-      ],
-      "summary": "Anthropic宣布将为所有Claude模型生成的文本嵌入隐形水印，并使用C2PA标准对文件进行签名，水印在部分编辑后依然可能保留。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 2,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "Anthropic宣布为Claude输出添加全局水印",
-      "topic_ids": [
-        "ai-media",
-        "general-ai",
-        "startup"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-08-12T04:29:57Z",
-      "freshness": "7h ago",
-      "heat_score": 0.7319,
+      "freshness": "9h ago",
+      "heat_score": 0.6785,
       "id": "m2exp-dd20bc89c7c19944",
       "item_ids": [
         "af7e93ce88fec444ed8cc4f2"
@@ -743,7 +775,7 @@
         "人形之外，擎羽把“身体”变成具身智能的新变量"
       ],
       "last_seen": "2026-08-12T04:29:57Z",
-      "rank": 19,
+      "rank": 20,
       "representative_url": "https://www.qbitai.com/2026/08/470874.html",
       "review_flags": [
         "single_source"
@@ -755,7 +787,7 @@
       "source_names": [
         "QbitAI"
       ],
-      "summary": "擎羽正从柔性本体走向跨本体基础智能，试图将“身体”变为具身智能领域的新变量，使任务与世界知识得以延续。",
+      "summary": "擎羽致力于从柔性本体走向跨本体基础智能，试图将物理身体转化为具身智能领域的新变量。",
       "tier_mix": {
         "tier1": 0,
         "tier2": 0,
@@ -763,64 +795,26 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "擎羽探索具身智能新变量",
+      "title": "擎羽将“身体”变为具身智能的新变量",
       "topic_ids": [
         "china-ai-media",
         "general-ai"
       ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-08-12T04:00:00Z",
-      "freshness": "8h ago",
-      "heat_score": 0.7169,
-      "id": "m2exp-06966bcfef419a55",
-      "item_ids": [
-        "0f102392ac34121bf14b4dba"
-      ],
-      "item_titles": [
-        "CHORUS: Complementary Experts for High-Coverage Testbench Stimulus Generation"
-      ],
-      "last_seen": "2026-08-12T04:00:00Z",
-      "rank": 20,
-      "representative_url": "https://arxiv.org/abs/2608.10090",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "arxiv-cs-ai"
-      ],
-      "source_names": [
-        "arXiv cs.AI"
-      ],
-      "summary": "提出CHORUS框架，利用互补专家模型和可执行反馈，提升大语言模型在代码生成中的测试平台激励生成覆盖率。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "CHORUS：面向高覆盖率测试平台激励生成的互补专家模型",
-      "topic_ids": [
-        "research"
-      ]
     }
   ],
   "disclaimer": "AI 自动聚合排序，未经人工审核，仅为注意力分配建议",
-  "generated_at": "2026-08-12T12:01:11.847462Z",
+  "generated_at": "2026-08-12T13:50:19.198913Z",
   "health": {
     "current_clean_streak": {
-      "hours": 228.8,
+      "hours": 230.62,
       "max_gap_hours": 2.79,
-      "runs": 132,
+      "runs": 133,
       "runs_in_window": 51,
       "started_at": "2026-08-02T23:13:18.143356Z"
     },
     "include_source_failures": [
       {
-        "bad_runs": 13,
+        "bad_runs": 12,
         "last_error": null,
         "last_item_count": 0,
         "last_run_id": "20260810T023513Z-live",
@@ -828,7 +822,7 @@
         "source_id": "arxiv-cs-ai"
       },
       {
-        "bad_runs": 13,
+        "bad_runs": 12,
         "last_error": null,
         "last_item_count": 0,
         "last_run_id": "20260810T023513Z-live",
@@ -853,14 +847,14 @@
       }
     ],
     "latest_run": {
-      "finished_at": "2026-08-12T11:59:18.877772Z",
+      "finished_at": "2026-08-12T13:48:35.152534Z",
       "github_actions": true,
       "health_ratio": 1.0,
       "healthy_include": 17,
       "include_total": 17,
-      "path": "data/manifests/2026-08/20260812T115910Z-live.json",
-      "run_id": "20260812T115910Z-live",
-      "started_at": "2026-08-12T11:59:10.196429Z",
+      "path": "data/manifests/2026-08/20260812T134826Z-live.json",
+      "run_id": "20260812T134826Z-live",
+      "started_at": "2026-08-12T13:48:26.368772Z",
       "status": "success",
       "total_new_items": 273
     },
@@ -869,28 +863,28 @@
       "status": "pass"
     },
     "window": {
-      "average_health_ratio": 0.9666,
+      "average_health_ratio": 0.9689,
       "clean_run_rate": 1.0,
       "clean_runs": 51,
-      "ended_at": "2026-08-12T12:01:11.847462Z",
+      "ended_at": "2026-08-12T13:50:19.198913Z",
       "github_actions_runs": 51,
       "live_runs": 51,
       "local_runs": 0,
       "minimum_health_ratio": 0.8824,
-      "started_at": "2026-08-09T12:01:11.847462Z",
+      "started_at": "2026-08-09T13:50:19.198913Z",
       "status_success_rate": 0.9412,
       "status_success_runs": 48,
-      "total_new_items": 13295,
+      "total_new_items": 13334,
       "unknown_runner_runs": 0
     }
   },
   "input": {
-    "candidate_cluster_count": 450,
-    "clusters_generated_at": "2026-08-12T11:59:19.067777Z",
-    "clusters_json": "data/derived/experimental/20260812T115919Z-m2-exp/clusters.json",
-    "clusters_run_id": "20260812T115919Z-m2-exp",
-    "snapshot_count": 644,
-    "window_item_count": 459
+    "candidate_cluster_count": 459,
+    "clusters_generated_at": "2026-08-12T13:48:35.344958Z",
+    "clusters_json": "data/derived/experimental/20260812T134835Z-m2-exp/clusters.json",
+    "clusters_run_id": "20260812T134835Z-m2-exp",
+    "snapshot_count": 645,
+    "window_item_count": 465
   },
   "schema_version": "m3a-portal-v0",
   "site": {
@@ -1043,7 +1037,7 @@
       "m1_action": "include",
       "name": "arXiv cs.AI",
       "notes": "Research signal; may need downstream filtering.",
-      "recent_bad_runs": 13,
+      "recent_bad_runs": 12,
       "tier": 2,
       "topics": [
         "research"
@@ -1061,7 +1055,7 @@
       "m1_action": "include",
       "name": "arXiv cs.CL",
       "notes": "LLM/NLP research signal; may need downstream filtering.",
-      "recent_bad_runs": 13,
+      "recent_bad_runs": 12,
       "tier": 2,
       "topics": [
         "research",
@@ -1378,11 +1372,407 @@
   ],
   "timeline": [
     {
+      "cluster_id": "m2exp-e077ede91ec970b4",
+      "cluster_rank": 5,
+      "event_at": "2026-08-12T13:36:46Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "13m ago",
+      "id": "22e04ab98df01bd8b06b9972",
+      "lang": "en",
+      "published_at": "2026-08-12T13:36:46Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "I pointed my AI security plugin at my own prod app – it refused to invent a bug",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/kenjichristopherv-del/securitymaxxing"
+    },
+    {
+      "cluster_id": "m2exp-37a9c1c33a530ef0",
+      "cluster_rank": 6,
+      "event_at": "2026-08-12T13:22:28Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "27m ago",
+      "id": "f6398043ede23ed997a3ebfe",
+      "lang": "en",
+      "published_at": "2026-08-12T13:22:28Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: Talkform.org, Turn voice inputs into structured data using front end AI",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://talkform.org/"
+    },
+    {
+      "cluster_id": "m2exp-676331e8d316b434",
+      "cluster_rank": 7,
+      "event_at": "2026-08-12T13:20:05Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "30m ago",
+      "id": "d10ea54f06e0c3715ffbac68",
+      "lang": "en",
+      "published_at": "2026-08-12T13:20:05Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI is removing the middle class of software engineering",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html"
+    },
+    {
+      "cluster_id": "m2exp-59e338f1e16a040c",
+      "cluster_rank": 8,
+      "event_at": "2026-08-12T13:19:35Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "30m ago",
+      "id": "2851a9b9a12bce1823d75a8e",
+      "lang": "en",
+      "published_at": "2026-08-12T13:19:35Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Nvidia Exemplar Cloud: Lessons for Unlocking Performance on AI Infrastructure",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://developer.nvidia.com/blog/nvidia-exemplar-cloud-lessons-for-unlocking-full-performance-on-ai-infrastructure"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T13:10:43Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "39m ago",
+      "id": "7c608bf2cb964f5a19e6d168",
+      "lang": "en",
+      "published_at": "2026-08-12T13:10:43Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Building infrastructure for financially autonomous AI agents",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://squidbank.xyz/"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T13:05:52Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "44m ago",
+      "id": "0f81de56f8e55652671f196f",
+      "lang": "en",
+      "published_at": "2026-08-12T13:05:52Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "The future is for billionaires – the rest of us will get open weight AI, maybe",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.theregister.com/ai-and-ml/2026/08/10/the-future-is-for-billionaires-the-rest-of-us-will-get-open-weight-ai-models-maybe/5285690"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T13:00:44Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "49m ago",
+      "id": "fac7a44dd84435cbdd8294a9",
+      "lang": "en",
+      "published_at": "2026-08-12T13:00:44Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Why Overkill Skills Lead to AI Workslop Instead of Deep Work",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://dupflo.dev/blog/why-overkill-skills-lead-to-ai-workslop"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:57:21Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "52m ago",
+      "id": "a63d6f70dbcb74709d9c6c86",
+      "lang": "en",
+      "published_at": "2026-08-12T12:57:21Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Google AI Overview thinks Sam Altman has died",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.reddit.com/r/GeminiAI/comments/1vmd4m7/google_intelligence_right_now"
+    },
+    {
+      "cluster_id": "m2exp-e83059eb6df4a1a2",
+      "cluster_rank": 9,
+      "event_at": "2026-08-12T12:57:02Z",
+      "fetched_at": "2026-08-12T13:48:31.801966Z",
+      "freshness": "53m ago",
+      "id": "dbe44e1d5173636e85efae68",
+      "lang": "en",
+      "published_at": "2026-08-12T12:57:02Z",
+      "source_id": "hnrss-llm",
+      "source_name": "Hacker News - LLM Search Feed",
+      "title": "Show HN: Aileaks – scan repos for leaked LLM reasoning-trace secrets",
+      "topics": [
+        "community",
+        "llm"
+      ],
+      "url": "https://github.com/sarthakuwar/aileaks"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:50:57Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "59m ago",
+      "id": "e09a1bfc48c0ddbfbd67c7a6",
+      "lang": "en",
+      "published_at": "2026-08-12T12:50:57Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Notes on Chess and AI; or How I Learned to Stop Worrying and Love the Bomb",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://awonder676.substack.com/p/notes-on-chess-and-ai"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:41:18Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "69m ago",
+      "id": "e401d31bb53a27490c101361",
+      "lang": "en",
+      "published_at": "2026-08-12T12:41:18Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Experts are warning: our AI arms race is putting humanity at risk",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/11/openai-anthropic-google-deepmind-letter"
+    },
+    {
+      "cluster_id": "m2exp-bd15f8c23d1c5810",
+      "cluster_rank": 10,
+      "event_at": "2026-08-12T12:37:58Z",
+      "fetched_at": "2026-08-12T13:48:34.811477Z",
+      "freshness": "72m ago",
+      "id": "3d68edaa00b68935d4ef9098",
+      "lang": "en",
+      "published_at": "2026-08-12T12:37:58Z",
+      "source_id": "the-decoder",
+      "source_name": "The Decoder",
+      "title": "Nvidia's Nemotron 4 aims for one trillion parameters, a scale Chinese labs already surpassed",
+      "topics": [
+        "ai-media",
+        "general-ai"
+      ],
+      "url": "https://the-decoder.com/nvidias-nemotron-4-aims-for-one-trillion-parameters-a-scale-chinese-labs-already-surpassed"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:37:08Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "73m ago",
+      "id": "ae39da08ad59a1e6a070483c",
+      "lang": "en",
+      "published_at": "2026-08-12T12:37:08Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Retrieval vs. Memory in Agentic AI Systems",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://machinelearningmastery.com/retrieval-vs-memory-in-agentic-ai-systems"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:36:17Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "74m ago",
+      "id": "17d388eb63219b6565b5d938",
+      "lang": "en",
+      "published_at": "2026-08-12T12:36:17Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: AI 3D pop-out videos for Reels, Shorts and ads",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://videopopy.com/"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:31:36Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "78m ago",
+      "id": "941aa6d9c3f90b50ab08513a",
+      "lang": "en",
+      "published_at": "2026-08-12T12:31:36Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Oh Lord, AI Reporters Are Breaking Big News",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:24:12Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "86m ago",
+      "id": "5698e809e332002405fc076e",
+      "lang": "en",
+      "published_at": "2026-08-12T12:24:12Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI was supposed to destroy jobs. Where's the carnage?",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.theguardian.com/technology/2026/aug/12/ai-job-destruction"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:23:50Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "86m ago",
+      "id": "1ea4a3915729864a47c45bb6",
+      "lang": "en",
+      "published_at": "2026-08-12T12:23:50Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "I built a personal AI agent in Swift on top of what macOS ships",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/ivan-magda/swift-claw"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:05:42Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "1h ago",
+      "id": "d1c9d7b2403ee1845d443464",
+      "lang": "en",
+      "published_at": "2026-08-12T12:05:42Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Nvidia's $500B Bet to Make AI Compute Wall Street's Next Asset Class",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.forbes.com/sites/robertszczerba/2026/08/10/nvidias-500b-bet-to-make-ai-compute-wall-streets-next-asset-class"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T12:03:23Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "1h ago",
+      "id": "ca88581e4e6332c80b33917c",
+      "lang": "en",
+      "published_at": "2026-08-12T12:03:23Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI compute power becoming tradable asset class as CME launches futures contracts",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.cnbc.com/2026/08/11/ai-computing-power-becomes-a-tradable-asset-class-as-cme-starts-futures.html"
+    },
+    {
+      "cluster_id": "m2exp-a2313f53e173da60",
+      "cluster_rank": 11,
+      "event_at": "2026-08-12T11:58:05Z",
+      "fetched_at": "2026-08-12T13:48:31.801966Z",
+      "freshness": "1h ago",
+      "id": "3d5d11f3d58e8181a629c0df",
+      "lang": "en",
+      "published_at": "2026-08-12T11:58:05Z",
+      "source_id": "hnrss-llm",
+      "source_name": "Hacker News - LLM Search Feed",
+      "title": "Revision Prompting: improves industrial LLM processes",
+      "topics": [
+        "community",
+        "llm"
+      ],
+      "url": "https://revisionprompting.info/"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-08-12T11:56:28Z",
+      "fetched_at": "2026-08-12T13:48:31.468982Z",
+      "freshness": "1h ago",
+      "id": "6de70724a3ae31bdb1a14754",
+      "lang": "en",
+      "published_at": "2026-08-12T11:56:28Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Cross-Examine – replay base behavior against an AI-generated PR",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/stefbuilds/cross-examine"
+    },
+    {
+      "cluster_id": "m2exp-bf5bc59feebe187b",
+      "cluster_rank": 1,
+      "event_at": "2026-08-12T11:53:31Z",
+      "fetched_at": "2026-08-12T13:48:34.811477Z",
+      "freshness": "1h ago",
+      "id": "f5fb06352aa9881f232d7e83",
+      "lang": "en",
+      "published_at": "2026-08-12T11:53:31Z",
+      "source_id": "the-decoder",
+      "source_name": "The Decoder",
+      "title": "OpenAI launches ChatGPT desktop app for Linux",
+      "topics": [
+        "ai-media",
+        "general-ai"
+      ],
+      "url": "https://the-decoder.com/openai-launches-chatgpt-desktop-app-for-linux"
+    },
+    {
       "cluster_id": "m2exp-058abb3458f34ae4",
-      "cluster_rank": 3,
+      "cluster_rank": 12,
       "event_at": "2026-08-12T11:50:28Z",
       "fetched_at": "2026-08-12T11:59:14.886737Z",
-      "freshness": "10m ago",
+      "freshness": "1h ago",
       "id": "c9300de6f911ee48b0fa8038",
       "lang": "en",
       "published_at": "2026-08-12T11:50:28Z",
@@ -1397,10 +1787,10 @@
     },
     {
       "cluster_id": "m2exp-f986f0d275eb521b",
-      "cluster_rank": 4,
+      "cluster_rank": 13,
       "event_at": "2026-08-12T11:35:03Z",
       "fetched_at": "2026-08-12T11:59:14.886737Z",
-      "freshness": "26m ago",
+      "freshness": "2h ago",
       "id": "ff698bd94cb0e88275ab3fe1",
       "lang": "en",
       "published_at": "2026-08-12T11:35:03Z",
@@ -1414,11 +1804,11 @@
       "url": "https://x.com/opendatalo51205"
     },
     {
-      "cluster_id": "m2exp-774dc69249ffcdbb",
-      "cluster_rank": 6,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T11:14:59Z",
       "fetched_at": "2026-08-12T11:59:14.362788Z",
-      "freshness": "46m ago",
+      "freshness": "2h ago",
       "id": "d7a67f228f0bbe6dc79868d6",
       "lang": "en",
       "published_at": "2026-08-12T11:14:59Z",
@@ -1432,11 +1822,11 @@
       "url": "https://github.com/deepmemteam/deepmem"
     },
     {
-      "cluster_id": "m2exp-ab2fee3c3baa47ca",
-      "cluster_rank": 7,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T11:07:07Z",
       "fetched_at": "2026-08-12T11:59:14.886737Z",
-      "freshness": "54m ago",
+      "freshness": "2h ago",
       "id": "5d1d48c1a3b0edeac968e94e",
       "lang": "en",
       "published_at": "2026-08-12T11:07:07Z",
@@ -1450,11 +1840,11 @@
       "url": "https://arxiv.org/abs/2608.10715"
     },
     {
-      "cluster_id": "m2exp-be90e4c1fc602cf3",
-      "cluster_rank": 8,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T11:02:25Z",
       "fetched_at": "2026-08-12T11:59:14.362788Z",
-      "freshness": "58m ago",
+      "freshness": "2h ago",
       "id": "5fb27da3d68c1a8fb19a32a7",
       "lang": "en",
       "published_at": "2026-08-12T11:02:25Z",
@@ -1468,11 +1858,11 @@
       "url": "https://badshah.io/blog/never-trust-your-ai-agents-sandbox"
     },
     {
-      "cluster_id": "m2exp-f37f4202a703d69b",
-      "cluster_rank": 9,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T10:55:50Z",
       "fetched_at": "2026-08-12T11:59:14.362788Z",
-      "freshness": "65m ago",
+      "freshness": "2h ago",
       "id": "cd354f00a936f705ca72accf",
       "lang": "en",
       "published_at": "2026-08-12T10:55:50Z",
@@ -1487,10 +1877,10 @@
     },
     {
       "cluster_id": "m2exp-ed0201111ea2c6e8",
-      "cluster_rank": 10,
+      "cluster_rank": 14,
       "event_at": "2026-08-12T10:54:29Z",
       "fetched_at": "2026-08-12T11:59:13.910117Z",
-      "freshness": "66m ago",
+      "freshness": "2h ago",
       "id": "ad3b63cf321d1f989eb522d8",
       "lang": "zh",
       "published_at": "2026-08-12T10:54:29Z",
@@ -1505,10 +1895,10 @@
     },
     {
       "cluster_id": "m2exp-bd0ef4bac3087f5d",
-      "cluster_rank": 12,
+      "cluster_rank": 16,
       "event_at": "2026-08-12T10:18:46Z",
       "fetched_at": "2026-08-12T10:26:59.165000Z",
-      "freshness": "1h ago",
+      "freshness": "3h ago",
       "id": "264e9159a553d3c0f2b236a1",
       "lang": "en",
       "published_at": "2026-08-12T10:18:46Z",
@@ -1523,11 +1913,11 @@
       "url": "https://the-decoder.com/microsofts-new-mai-code-1-1-flash-gets-crushed-by-deepseek-on-both-price-and-performance"
     },
     {
-      "cluster_id": "m2exp-828a448b23a8a110",
-      "cluster_rank": 13,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T10:08:43Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "1h ago",
+      "freshness": "3h ago",
       "id": "84496c324c40a18ea0f2f356",
       "lang": "en",
       "published_at": "2026-08-12T10:08:43Z",
@@ -1542,10 +1932,10 @@
     },
     {
       "cluster_id": "m2exp-597dbfa623021059",
-      "cluster_rank": 14,
+      "cluster_rank": 17,
       "event_at": "2026-08-12T09:59:27Z",
       "fetched_at": "2026-08-12T10:26:59.165000Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "4764d17139fc85545ced2d84",
       "lang": "en",
       "published_at": "2026-08-12T09:59:27Z",
@@ -1563,7 +1953,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T09:58:06Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "6c700a5e65d7b49ff93d23f9",
       "lang": "en",
       "published_at": "2026-08-12T09:58:06Z",
@@ -1577,11 +1967,11 @@
       "url": "https://triagebox.pfa87.cc/"
     },
     {
-      "cluster_id": "m2exp-108507c11dde8a0f",
-      "cluster_rank": 15,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T09:57:48Z",
       "fetched_at": "2026-08-12T10:26:55.841190Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "d63ac0e15ec46652d2dc9027",
       "lang": "en",
       "published_at": "2026-08-12T09:57:48Z",
@@ -1599,7 +1989,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T09:53:23Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "2h ago",
+      "freshness": "3h ago",
       "id": "94bd665d6cc75d046e5b382b",
       "lang": "en",
       "published_at": "2026-08-12T09:53:23Z",
@@ -1617,7 +2007,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T09:21:01Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "2h ago",
+      "freshness": "4h ago",
       "id": "e06f5909c3ed9ff5a1d209fe",
       "lang": "en",
       "published_at": "2026-08-12T09:21:01Z",
@@ -1635,7 +2025,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T09:17:08Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "2h ago",
+      "freshness": "4h ago",
       "id": "8e0ceccc4571b9826177fb18",
       "lang": "en",
       "published_at": "2026-08-12T09:17:08Z",
@@ -1653,7 +2043,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:59:38Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "feea473dacd089b28fdd9879",
       "lang": "en",
       "published_at": "2026-08-12T08:59:38Z",
@@ -1671,7 +2061,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:53:43Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "3h ago",
+      "freshness": "4h ago",
       "id": "9724ac995a2af635b08d223e",
       "lang": "en",
       "published_at": "2026-08-12T08:53:43Z",
@@ -1689,7 +2079,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:46:51Z",
       "fetched_at": "2026-08-12T10:26:55.841190Z",
-      "freshness": "3h ago",
+      "freshness": "5h ago",
       "id": "21a24a4668f02a53001c5733",
       "lang": "en",
       "published_at": "2026-08-12T08:46:51Z",
@@ -1707,7 +2097,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:45:55Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "3h ago",
+      "freshness": "5h ago",
       "id": "219a2423ea3ef931d94cd2bb",
       "lang": "en",
       "published_at": "2026-08-12T08:45:55Z",
@@ -1725,7 +2115,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:37:55Z",
       "fetched_at": "2026-08-12T10:26:55.352075Z",
-      "freshness": "3h ago",
+      "freshness": "5h ago",
       "id": "483b453cb3347b22a2acbbd5",
       "lang": "en",
       "published_at": "2026-08-12T08:37:55Z",
@@ -1743,7 +2133,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:27:11Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "3h ago",
+      "freshness": "5h ago",
       "id": "fa0a1ca2b30d88d6f57fa859",
       "lang": "en",
       "published_at": "2026-08-12T08:27:11Z",
@@ -1761,7 +2151,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T08:11:09Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "3h ago",
+      "freshness": "5h ago",
       "id": "8e4450109b8eb1c4ec597009",
       "lang": "en",
       "published_at": "2026-08-12T08:11:09Z",
@@ -1779,7 +2169,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:51:20Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "5h ago",
       "id": "8c9036c9e0f0cff78118ce90",
       "lang": "en",
       "published_at": "2026-08-12T07:51:20Z",
@@ -1797,7 +2187,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:38:41Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "fa0b21e1250bd12540331383",
       "lang": "en",
       "published_at": "2026-08-12T07:38:41Z",
@@ -1812,10 +2202,10 @@
     },
     {
       "cluster_id": "m2exp-c1caf8cd1c9da9db",
-      "cluster_rank": 17,
+      "cluster_rank": 19,
       "event_at": "2026-08-12T07:31:19Z",
       "fetched_at": "2026-08-12T08:39:46.633513Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "559fccc578b7a3f2885272ab",
       "lang": "zh",
       "published_at": "2026-08-12T07:31:19Z",
@@ -1833,7 +2223,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:28:06Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "1007367946328b2be18851f3",
       "lang": "en",
       "published_at": "2026-08-12T07:28:06Z",
@@ -1851,7 +2241,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:21:04Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "62f47c231670f5104cffe0e1",
       "lang": "en",
       "published_at": "2026-08-12T07:21:04Z",
@@ -1865,11 +2255,11 @@
       "url": "https://www.musegen.ai/"
     },
     {
-      "cluster_id": "m2exp-32bb5a290ad84d08",
-      "cluster_rank": 1,
+      "cluster_id": "m2exp-ddf4776cf78146fb",
+      "cluster_rank": 2,
       "event_at": "2026-08-12T07:11:08Z",
       "fetched_at": "2026-08-12T08:39:49.767574Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "68b415c71f0bdd5538df2f09",
       "lang": "en",
       "published_at": "2026-08-12T07:11:08Z",
@@ -1888,7 +2278,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:09:37Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "ca64bff3f5ad59420af1ade8",
       "lang": "en",
       "published_at": "2026-08-12T07:09:37Z",
@@ -1906,7 +2296,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:08:45Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "38758f5e67d62103bbf99eaa",
       "lang": "en",
       "published_at": "2026-08-12T07:08:45Z",
@@ -1924,7 +2314,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:02:51Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "153c6271f2535c1c8d535900",
       "lang": "en",
       "published_at": "2026-08-12T07:02:51Z",
@@ -1942,7 +2332,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T07:01:50Z",
       "fetched_at": "2026-08-12T08:39:48.878553Z",
-      "freshness": "4h ago",
+      "freshness": "6h ago",
       "id": "30ebfa3b741e6c5e9c8f4001",
       "lang": "en",
       "published_at": "2026-08-12T07:01:50Z",
@@ -1960,7 +2350,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T06:33:04Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "5h ago",
+      "freshness": "7h ago",
       "id": "6d0fa1ac82e9090e068af4a3",
       "lang": "en",
       "published_at": "2026-08-12T06:33:04Z",
@@ -1978,7 +2368,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T06:28:59Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "5h ago",
+      "freshness": "7h ago",
       "id": "49e2ca69a1cc17de7694836a",
       "lang": "en",
       "published_at": "2026-08-12T06:28:59Z",
@@ -1992,11 +2382,28 @@
       "url": "https://www.nzz.ch/feuilleton/wir-muessen-uns-verteidigen-warum-susanne-wille-sich-gerade-mit-der-eth-verbuendet-ld.10018097"
     },
     {
+      "cluster_id": "m2exp-35f6fdb3bbe56cbd",
+      "cluster_rank": 3,
+      "event_at": "2026-08-12T06:00:00Z",
+      "fetched_at": "2026-08-12T13:48:26.512558Z",
+      "freshness": "7h ago",
+      "id": "e063daae6225e15695395681",
+      "lang": "en",
+      "published_at": "2026-08-12T06:00:00Z",
+      "source_id": "openai-news",
+      "source_name": "OpenAI News",
+      "title": "From assistance to execution: How enterprises put AI to work",
+      "topics": [
+        "general-ai"
+      ],
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
+    },
+    {
       "cluster_id": null,
       "cluster_rank": null,
       "event_at": "2026-08-12T05:59:57Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "6h ago",
+      "freshness": "7h ago",
       "id": "bf736bc4cad9821bc082c742",
       "lang": "en",
       "published_at": "2026-08-12T05:59:57Z",
@@ -2014,7 +2421,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T05:57:53Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "6h ago",
+      "freshness": "7h ago",
       "id": "f1dd687413b04ab97b2f406e",
       "lang": "en",
       "published_at": "2026-08-12T05:57:53Z",
@@ -2032,7 +2439,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T05:52:54Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "6h ago",
+      "freshness": "7h ago",
       "id": "fa0e72b8e05b2bcbd20adbee",
       "lang": "en",
       "published_at": "2026-08-12T05:52:54Z",
@@ -2050,7 +2457,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T05:42:42Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "6h ago",
+      "freshness": "8h ago",
       "id": "9613e6356f4518ae7167c9a1",
       "lang": "en",
       "published_at": "2026-08-12T05:42:42Z",
@@ -2068,7 +2475,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T05:30:12Z",
       "fetched_at": "2026-08-12T06:43:31.798775Z",
-      "freshness": "6h ago",
+      "freshness": "8h ago",
       "id": "17be618ee48eb9193194b122",
       "lang": "en",
       "published_at": "2026-08-12T05:30:12Z",
@@ -2083,10 +2490,10 @@
     },
     {
       "cluster_id": "m2exp-dd20bc89c7c19944",
-      "cluster_rank": 19,
+      "cluster_rank": 20,
       "event_at": "2026-08-12T04:29:57Z",
       "fetched_at": "2026-08-12T05:03:51.885634Z",
-      "freshness": "7h ago",
+      "freshness": "9h ago",
       "id": "af7e93ce88fec444ed8cc4f2",
       "lang": "zh",
       "published_at": "2026-08-12T04:29:57Z",
@@ -2104,7 +2511,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "0084f4c971d47a3eb95ca6b5",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2122,7 +2529,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "040f0cfbd4be4c19b0e05795",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2139,7 +2546,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "0956051bfb9950adbb78401b",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2157,7 +2564,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "09bd9077a39f480d33bd4701",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2174,7 +2581,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "0b2f0c8aac8b2afedc9e886d",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2187,11 +2594,11 @@
       "url": "https://arxiv.org/abs/2608.10108"
     },
     {
-      "cluster_id": "m2exp-06966bcfef419a55",
-      "cluster_rank": 20,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "0f102392ac34121bf14b4dba",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2208,7 +2615,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "108f86f5a43270f82d68c016",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2226,7 +2633,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "11f943a4cc8b55bd71bd6c3c",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2243,7 +2650,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "219ce9a478bbf83b6e52c063",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2261,7 +2668,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "232d55fe0c35cea708cdfc1e",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2278,7 +2685,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "24e0ed72880f6d359a5ba21d",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2296,7 +2703,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "2c865ac2c0d812608dd0ee79",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2314,7 +2721,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "3ab4777dbaf8280bc3eb5d99",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2331,7 +2738,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "44a6f67ba2329488540590ec",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2349,7 +2756,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "53651593bc6fd988c6b76add",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2367,7 +2774,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "5ce3911d7e5952b1a7e18b72",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2384,7 +2791,7 @@
       "cluster_rank": null,
       "event_at": "2026-08-12T04:00:00Z",
       "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
+      "freshness": "9h ago",
       "id": "625ac6a4d07967b6619e1854",
       "lang": "en",
       "published_at": "2026-08-12T04:00:00Z",
@@ -2396,409 +2803,6 @@
         "research"
       ],
       "url": "https://arxiv.org/abs/2608.10408"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "69075008f5ab0a86018a2a7f",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Multimodal Item Parameter Estimation using Simulated Response Probabilitie",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10154"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "72db71cd21b61d9ae4432c45",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "ReCBM: Uncertainty-Gated Relational Reasoning for Concept Bottleneck Models",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10004"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "7a9a9ba911b3d1dbf666fe1f",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "TRACE: Trustworthy Retrieval-Augmented Conversational Engine",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10176"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "7c89309e078d2db6697cd9d1",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "How Robust Are LLMs to Vietnamese Dialects?",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10414"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "7fe133f0f3b67b3d02edc97f",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Position Encoding in Transformers: From Absolute and Relative Methods to Rotary Position Embeddings and Long-Context Scaling",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10021"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "82bd7c975432271f25e13e2b",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Decodable But Not Detachable: Training Data Granularity Determines Parametric Modularity in Large Language Models",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10214"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "858cc09bd6e3f046b64d3c06",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Carefully Considering Culture: Analyzing LLM Alignment in Single- and Multi-Cultural Settings using Cultural Consensus Theory",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.09937"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "9405b1df607896a2e58f6fdb",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "SPOTting the Future: Lookahead Explanations for Deep Reinforcement Learning",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.09967"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "98aed69579fa834129519cc5",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10218"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "b17ba7c99fa7d79d764b335d",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Post-Hoc Sparse Coding of Latent Communication Between Vision-Language Model Agents",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10198"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "b264480a3311165220eb84ff",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Conflict or Strategy? Asymmetric Role Framing of La France insoumise and Rassemblement National in French News Headlines, 2022-2025",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.09936"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "b757768785cd7231daac99ad",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "The Parser Already Knows: Lightweight Bias Correction in Constrained Decoding",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10137"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "be57b7632c200f74fca969e7",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "The CASE Framework: A Multi-Disciplinary Control Architecture for Governing Enterprise Agentic AI",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10153"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "cad122b25a10a9c6819bcf5d",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Off-Axis, On Purpose: Where a Transformer Computes Concepts and Why it Does So",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10251"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "d6e54ff911adb802224d5c3c",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "The Multilingual Quantization Tax: Structural Collapse and Typological Fragility in Edge SLMs",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.09941"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "dc04176ee0f6676af63e3f7a",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Generating Attacks for LLMs with GFlowNets",
-      "topics": [
-        "research",
-        "token-export"
-      ],
-      "url": "https://arxiv.org/abs/2608.10171"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "defa0bd3939e07d1d886e77e",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Evaluation-Conditioned Training: Teaching Models to Generalize to Stronger Oversight Regimes",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10209"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "e481e33f9e8f671b1230acc5",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Towards Sustainable Artificial Intelligence: A Comprehensive Review and Comparative Analysis of Deep Learning Models' Carbon Footprint",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.09998"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "e6a18ed85350ed0e92985fa7",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Beyond Decision Boundaries: Relational Geometry Attacks on Contrastive Embedding Manifolds",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10237"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "ee686cae9a2dcec1f6e066dd",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "LLM Agents Factory: Retrieval of Domain-Specific LLM Agents",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.09934"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.043865Z",
-      "freshness": "8h ago",
-      "id": "f076fd94ca1d3bdbaad39f20",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-ai",
-      "source_name": "arXiv cs.AI",
-      "title": "Self-evolving Agentic Customer Support System at LinkedIn",
-      "topics": [
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10224"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "f087a989fc2f5d3451e0c345",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Locally Deployable Small Language Models for Emergency Department Decision Support: A Systematic Benchmark of Fine-Tuning Strategies",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10273"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-08-12T04:00:00Z",
-      "fetched_at": "2026-08-12T05:03:53.207675Z",
-      "freshness": "8h ago",
-      "id": "f27122ef2c2c50326b811e36",
-      "lang": "en",
-      "published_at": "2026-08-12T04:00:00Z",
-      "source_id": "arxiv-cs-cl",
-      "source_name": "arXiv cs.CL",
-      "title": "Cracks in the Foundation: Seemingly Minor Architectural Choices Impact Long Context Extension",
-      "topics": [
-        "llm",
-        "research"
-      ],
-      "url": "https://arxiv.org/abs/2608.10296"
     }
   ]
 }
