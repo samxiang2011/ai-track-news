@@ -1,195 +1,389 @@
 {
-  "clustering_mode": "llm",
+  "clustering_mode": "deterministic-fallback",
   "clusters": [
     {
       "experimental": true,
-      "first_seen": "2026-09-02T16:18:31Z",
-      "freshness": "12h ago",
-      "heat_score": 2.0492,
-      "id": "m2exp-8cab2aa8606fe5c4",
+      "first_seen": "2026-09-01T19:39:22Z",
+      "freshness": "23h ago",
+      "heat_score": 2.293,
+      "id": "m2exp-0872ee1f610e0028",
       "item_ids": [
-        "355be2cf6d2d139c093acbd4",
-        "8cc888518962c24e0858e64b",
-        "fc8ba1244954cc9682036f3c"
+        "00495f029513eb0b6b7dd95e",
+        "1ac14c578ffaf691552f2310",
+        "5c4430abfb4276e5e6ca003f",
+        "88ebeee8ae9678bc5fc56dd5",
+        "af9cc98f65eb7d79e24a2422",
+        "c34d5f0d36696d9ee97204aa"
       ],
       "item_titles": [
-        "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-        "Gemini 3.8 Flash is Google's third budget model in six weeks while frontier models remain MIA",
-        "llm-gemini 0.34"
+        "Anthropic's Claude Fable 5.1 promises better coding and research at up to 45 percent less",
+        "Anthropic’s new Fable release is cheaper, less restrictive",
+        "Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线",
+        "Claude Fable 5.1 tops AI index but costs 20% more per task",
+        "Claude Fable 5.1 made me a really nice animated pelican",
+        "[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens"
       ],
-      "last_seen": "2026-09-02T16:59:29Z",
+      "last_seen": "2026-09-02T12:12:14Z",
       "rank": 1,
-      "representative_url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber",
-      "review_flags": [],
-      "source_count": 3,
+      "representative_url": "https://the-decoder.com/anthropics-claude-fable-5-1-promises-better-coding-and-research-at-up-to-45-percent-less",
+      "review_flags": [
+        "event_key_cluster"
+      ],
+      "source_count": 6,
       "source_ids": [
-        "google-deepmind-blog",
+        "hnrss-ai",
+        "latent-space",
+        "qbitai",
         "simonwillison",
+        "techcrunch-ai",
         "the-decoder"
       ],
       "source_names": [
-        "Google DeepMind Blog",
+        "Hacker News - AI Search Feed",
+        "Latent Space",
+        "QbitAI",
         "Simon Willison",
+        "TechCrunch AI",
         "The Decoder"
       ],
-      "summary": "谷歌推出六周内第三个Flash模型Gemini 3.8 Flash，部分智能体编程基准追平Claude Opus 5，同时发布安全专用版本Flash Cyber。",
+      "summary": null,
       "tier_mix": {
-        "tier1": 1,
-        "tier2": 1,
-        "tier3": 1,
+        "tier1": 0,
+        "tier2": 3,
+        "tier3": 3,
         "tier4": 0,
         "unknown": 0
       },
-      "title": "谷歌发布Gemini 3.8 Flash及Flash Cyber",
+      "title": "Anthropic's Claude Fable 5.1 promises better coding and research at up to 45 percent less",
       "topic_ids": [
         "ai-media",
+        "china-ai-media",
+        "community",
         "developer-tools",
         "general-ai",
+        "industry",
         "llm",
-        "research"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-09-02T14:20:28Z",
-      "freshness": "9h ago",
-      "heat_score": 1.3452,
-      "id": "m2exp-981c6b2a4560e662",
-      "item_ids": [
-        "6e21950e60182b6b310f722a",
-        "b5008ebffacf4d58ec96a10d"
-      ],
-      "item_titles": [
-        "OpenAI calls Astra its most dangerous model yet - watching what it does is only getting harder",
-        "OpenAI’s new reasoning technique alarms AI safety experts"
-      ],
-      "last_seen": "2026-09-02T20:19:14Z",
-      "rank": 2,
-      "representative_url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts",
-      "review_flags": [],
-      "source_count": 2,
-      "source_ids": [
-        "techcrunch-ai",
-        "the-decoder"
-      ],
-      "source_names": [
-        "TechCrunch AI",
-        "The Decoder"
-      ],
-      "summary": "OpenAI新模型Astra采用循环深度等新技术，被官方评为首个具备关键网络能力、最危险却更难监督的模型。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 2,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "OpenAI Astra模型引发安全专家担忧",
-      "topic_ids": [
-        "ai-media",
-        "general-ai",
-        "startup"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-09-02T17:09:06Z",
-      "freshness": "11h ago",
-      "heat_score": 1.2424,
-      "id": "m2exp-67e58c6ef070840a",
-      "item_ids": [
-        "6f533d6c462d19cc7ce5ee07",
-        "f095e7d4bf3946d5fa9ab4df"
-      ],
-      "item_titles": [
-        "US government sides with OpenAI on issue of training LLMs on copyrighted material",
-        "US Department of Justice backs fair use for AI training in landmark copyright case"
-      ],
-      "last_seen": "2026-09-02T18:24:42Z",
-      "rank": 3,
-      "representative_url": "https://the-decoder.com/us-department-of-justice-backs-fair-use-for-ai-training-in-landmark-copyright-case",
-      "review_flags": [],
-      "source_count": 2,
-      "source_ids": [
-        "techcrunch-ai",
-        "the-decoder"
-      ],
-      "source_names": [
-        "TechCrunch AI",
-        "The Decoder"
-      ],
-      "summary": "在《纽约时报》诉OpenAI等集体诉讼中，美国司法部提交法庭意见，主张用版权文本训练AI模型构成合理使用。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 0,
-        "tier3": 2,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "美国司法部在版权诉讼中支持AI训练属合理使用",
-      "topic_ids": [
-        "ai-media",
-        "general-ai",
         "startup",
         "token-export"
       ]
     },
     {
       "experimental": true,
-      "first_seen": "2026-09-01T23:57:28Z",
-      "freshness": "22h ago",
-      "heat_score": 1.1961,
-      "id": "m2exp-21c3d63cebde3f17",
+      "first_seen": "2026-09-03T11:12:57Z",
+      "freshness": "6m ago",
+      "heat_score": 0.9969,
+      "id": "m2exp-5f222fecccf6ec76",
       "item_ids": [
-        "5c4430abfb4276e5e6ca003f",
-        "af9cc98f65eb7d79e24a2422",
-        "c34d5f0d36696d9ee97204aa"
+        "318a31e3b0c43b8be4c95ab3"
       ],
       "item_titles": [
-        "Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线",
-        "Claude Fable 5.1 made me a really nice animated pelican",
-        "[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens"
+        "A dark horse enter China's AI race: StartLux"
       ],
-      "last_seen": "2026-09-02T07:46:08Z",
-      "rank": 4,
-      "representative_url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1",
+      "last_seen": "2026-09-03T11:12:57Z",
+      "rank": 2,
+      "representative_url": "https://chinaonchina.com/article/chen-dawei-returns-enters-the-large-model-sector",
       "review_flags": [
-        "event_key_cluster"
+        "single_source"
       ],
-      "source_count": 3,
+      "source_count": 1,
       "source_ids": [
-        "latent-space",
-        "qbitai",
-        "simonwillison"
+        "hnrss-ai"
       ],
       "source_names": [
-        "Latent Space",
-        "QbitAI",
-        "Simon Willison"
+        "Hacker News - AI Search Feed"
       ],
-      "summary": "Anthropic推出新SOTA模型Claude Fable 5.1，8项基准屠榜，缓存价格下调75%但输出token增加70%，并上线反蒸馏机制。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
-        "tier2": 2,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "A dark horse enter China's AI race: StartLux",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T11:08:16Z",
+      "freshness": "10m ago",
+      "heat_score": 0.9937,
+      "id": "m2exp-013a0d6e3c4c03dc",
+      "item_ids": [
+        "ece85941249a378b2d720ecc"
+      ],
+      "item_titles": [
+        "Returning from the AI brain-rot state, re-take the thinking ownership"
+      ],
+      "last_seen": "2026-09-03T11:08:16Z",
+      "rank": 3,
+      "representative_url": "https://news.ycombinator.com/item?id=49548507",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Returning from the AI brain-rot state, re-take the thinking ownership",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T11:04:57Z",
+      "freshness": "14m ago",
+      "heat_score": 0.9914,
+      "id": "m2exp-0709b3f521e55859",
+      "item_ids": [
+        "07390a714e456bcdf7a5e5c9"
+      ],
+      "item_titles": [
+        "AI-assisted mushroom hunting is a recipe for a bad trip"
+      ],
+      "last_seen": "2026-09-03T11:04:57Z",
+      "rank": 4,
+      "representative_url": "https://www.theregister.com/offbeat/2026/09/02/ai-assisted-mushroom-hunting-is-a-recipe-for-a-bad-trip/5294060",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "AI-assisted mushroom hunting is a recipe for a bad trip",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T11:04:22Z",
+      "freshness": "14m ago",
+      "heat_score": 0.991,
+      "id": "m2exp-9ece21e6b3f1064e",
+      "item_ids": [
+        "38b6495a627ac5c7093eea5b"
+      ],
+      "item_titles": [
+        "From Click-Ops to IaC: A Safer Workflow with AI"
+      ],
+      "last_seen": "2026-09-03T11:04:22Z",
+      "rank": 5,
+      "representative_url": "https://masterpoint.io/blog/dont-let-ai-break-your-infra",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-ai"
+      ],
+      "source_names": [
+        "Hacker News - AI Search Feed"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "From Click-Ops to IaC: A Safer Workflow with AI",
+      "topic_ids": [
+        "community",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T10:27:11Z",
+      "freshness": "51m ago",
+      "heat_score": 0.9658,
+      "id": "m2exp-cadccc5badb04a0d",
+      "item_ids": [
+        "2a1231129d93d71fad7179a4"
+      ],
+      "item_titles": [
+        "Understanding, Mitigating Numerical Sources of Nondeterminism in LLM Inference"
+      ],
+      "last_seen": "2026-09-03T10:27:11Z",
+      "rank": 6,
+      "representative_url": "https://arxiv.org/abs/2506.09501",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "hnrss-llm"
+      ],
+      "source_names": [
+        "Hacker News - LLM Search Feed"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 1,
+        "tier3": 0,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Understanding, Mitigating Numerical Sources of Nondeterminism in LLM Inference",
+      "topic_ids": [
+        "community",
+        "llm"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T10:18:36Z",
+      "freshness": "60m ago",
+      "heat_score": 0.96,
+      "id": "m2exp-b0a6cde5dee02a4c",
+      "item_ids": [
+        "1f68b41809eb838cc0d2870f"
+      ],
+      "item_titles": [
+        "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！"
+      ],
+      "last_seen": "2026-09-03T10:18:36Z",
+      "rank": 7,
+      "representative_url": "https://www.qbitai.com/2026/09/483189.html",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "qbitai"
+      ],
+      "source_names": [
+        "QbitAI"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
         "tier3": 1,
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Anthropic发布Claude Fable/Mythos 5.1新模型",
+      "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
       "topic_ids": [
         "china-ai-media",
-        "developer-tools",
-        "general-ai",
-        "industry",
-        "llm",
-        "token-export"
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T10:13:24Z",
+      "freshness": "65m ago",
+      "heat_score": 0.9566,
+      "id": "m2exp-71f12566c398cf03",
+      "item_ids": [
+        "77feae189ded89eeea3b381a"
+      ],
+      "item_titles": [
+        "陈大年复出，入局大模型"
+      ],
+      "last_seen": "2026-09-03T10:13:24Z",
+      "rank": 8,
+      "representative_url": "https://www.qbitai.com/2026/09/483600.html",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "qbitai"
+      ],
+      "source_names": [
+        "QbitAI"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "陈大年复出，入局大模型",
+      "topic_ids": [
+        "china-ai-media",
+        "general-ai"
+      ]
+    },
+    {
+      "experimental": true,
+      "first_seen": "2026-09-03T08:22:02Z",
+      "freshness": "2h ago",
+      "heat_score": 0.8854,
+      "id": "m2exp-af82460270b80088",
+      "item_ids": [
+        "ae19108885ac0893992e0c54"
+      ],
+      "item_titles": [
+        "Anthropic ramps up Claude infrastructure with $35 billion Lambda deal"
+      ],
+      "last_seen": "2026-09-03T08:22:02Z",
+      "rank": 9,
+      "representative_url": "https://the-decoder.com/anthropic-ramps-up-claude-infrastructure-with-35-billion-lambda-deal",
+      "review_flags": [
+        "single_source"
+      ],
+      "source_count": 1,
+      "source_ids": [
+        "the-decoder"
+      ],
+      "source_names": [
+        "The Decoder"
+      ],
+      "summary": null,
+      "tier_mix": {
+        "tier1": 0,
+        "tier2": 0,
+        "tier3": 1,
+        "tier4": 0,
+        "unknown": 0
+      },
+      "title": "Anthropic ramps up Claude infrastructure with $35 billion Lambda deal",
+      "topic_ids": [
+        "ai-media",
+        "general-ai"
       ]
     },
     {
       "experimental": true,
       "first_seen": "2026-09-02T21:00:00Z",
-      "freshness": "8h ago",
-      "heat_score": 1.0379,
+      "freshness": "14h ago",
+      "heat_score": 0.827,
       "id": "m2exp-69087df13af25f54",
       "item_ids": [
         "a4a0601f1f87b20e4be18ed7"
@@ -198,7 +392,7 @@
         "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!"
       ],
       "last_seen": "2026-09-02T21:00:00Z",
-      "rank": 5,
+      "rank": 10,
       "representative_url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my",
       "review_flags": [
         "single_source"
@@ -210,7 +404,7 @@
       "source_names": [
         "GitHub Blog - AI and ML"
       ],
-      "summary": "GitHub Podcast解释loop engineering、harnesses、squads、open weights等开发者圈流行的AI术语。",
+      "summary": null,
       "tier_mix": {
         "tier1": 1,
         "tier2": 0,
@@ -218,7 +412,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "GitHub播客解读AI新术语",
+      "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
       "topic_ids": [
         "coding",
         "developer-tools"
@@ -226,48 +420,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-09-03T05:10:23Z",
-      "freshness": "43m ago",
-      "heat_score": 0.9726,
-      "id": "m2exp-c59823f0a734ea71",
-      "item_ids": [
-        "158bc89a151d93799e449f55"
-      ],
-      "item_titles": [
-        "Generative AI without guardrails can harm learning"
-      ],
-      "last_seen": "2026-09-03T05:10:23Z",
-      "rank": 6,
-      "representative_url": "https://pubmed.ncbi.nlm.nih.gov/40560616",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "研究表明缺乏防护措施的生成式AI可能对学习效果产生负面影响。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "无护栏的生成式AI可能损害学习",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-09-03T04:38:33Z",
-      "freshness": "75m ago",
-      "heat_score": 0.9514,
+      "freshness": "6h ago",
+      "heat_score": 0.7581,
       "id": "m2exp-98dee1feb6b7dffe",
       "item_ids": [
         "1d6b63efae6a0d6226fac113"
@@ -276,7 +431,7 @@
         "[AINews] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training"
       ],
       "last_seen": "2026-09-03T04:38:33Z",
-      "rank": 7,
+      "rank": 11,
       "representative_url": "https://www.latent.space/p/ainews-muse-spark-13-matches-gpt",
       "review_flags": [
         "single_source"
@@ -288,7 +443,7 @@
       "source_names": [
         "Latent Space"
       ],
-      "summary": "Meta发布Muse Spark 1.3，性能匹配GPT-5.6-Sol，被视为前沿实验室强势回归之作。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -296,7 +451,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "Muse Spark 1.3匹配GPT-5.6-Sol，Meta跻身前沿实验室",
+      "title": "[AINews] Muse Spark 1.3 matches GPT-5.6-Sol, confirming Meta Superintelligence as the newest Frontier Lab, >90% discount for training",
       "topic_ids": [
         "developer-tools",
         "industry",
@@ -305,48 +460,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-09-03T04:26:29Z",
-      "freshness": "87m ago",
-      "heat_score": 0.9434,
-      "id": "m2exp-2c8c7c235f06ba43",
-      "item_ids": [
-        "e331611a374a4bf8ad1c8fc6"
-      ],
-      "item_titles": [
-        "AI Can Help Plan a Bioweapon"
-      ],
-      "last_seen": "2026-09-03T04:26:29Z",
-      "rank": 8,
-      "representative_url": "https://secondthoughts.ai/p/ai-can-help-plan-a-bioweapon-building",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "文章探讨AI如何可能被用于协助生物武器的策划。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "AI可帮助策划生物武器",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-09-03T04:19:38Z",
-      "freshness": "1h ago",
-      "heat_score": 0.939,
+      "freshness": "6h ago",
+      "heat_score": 0.7482,
       "id": "m2exp-0fbdac8cca039b8c",
       "item_ids": [
         "79161fc4aa97e3d5207f0cd9"
@@ -355,7 +471,7 @@
         "How viable is LLM-assisted 3D modeling in Blender?"
       ],
       "last_seen": "2026-09-03T04:19:38Z",
-      "rank": 9,
+      "rank": 12,
       "representative_url": "https://twitter.com/louszbd/status/2093047548550525165",
       "review_flags": [
         "single_source"
@@ -367,7 +483,7 @@
       "source_names": [
         "Hacker News - LLM Search Feed"
       ],
-      "summary": "讨论大模型辅助Blender三维建模工作的实际可行性。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -375,7 +491,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "LLM辅助Blender 3D建模的可行性探讨",
+      "title": "How viable is LLM-assisted 3D modeling in Blender?",
       "topic_ids": [
         "community",
         "llm"
@@ -383,48 +499,9 @@
     },
     {
       "experimental": true,
-      "first_seen": "2026-09-03T04:19:05Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9386,
-      "id": "m2exp-5c1187d03d1151b7",
-      "item_ids": [
-        "99b13813a1090cecd3cd1003"
-      ],
-      "item_titles": [
-        "New York City Bans AI from Elementary Schools"
-      ],
-      "last_seen": "2026-09-03T04:19:05Z",
-      "rank": 10,
-      "representative_url": "https://gizmodo.com/new-york-city-bans-ai-from-elementary-schools-2000806172",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "纽约市颁布禁令，禁止在小学阶段使用AI工具。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "纽约市禁止小学使用AI",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-04b36d8bfe8f9bc4",
       "item_ids": [
         "3ee165e0ce799de8d98ba265"
@@ -433,7 +510,7 @@
         "ClaimReceipt: Verifying Evidence Sufficiency and Coverage in Agent Evaluations"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 11,
+      "rank": 13,
       "representative_url": "https://arxiv.org/abs/2609.01992",
       "review_flags": [
         "single_source"
@@ -445,7 +522,7 @@
       "source_names": [
         "arXiv cs.AI"
       ],
-      "summary": "提出验证智能体评估报告声明是否可由留存证据重算及覆盖的方法。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -453,7 +530,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "ClaimReceipt：验证智能体评估中的证据充分性",
+      "title": "ClaimReceipt: Verifying Evidence Sufficiency and Coverage in Agent Evaluations",
       "topic_ids": [
         "research"
       ]
@@ -461,8 +538,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-04c02d77eb7e374b",
       "item_ids": [
         "fb157b511dc41d7912310698"
@@ -471,7 +548,7 @@
         "The Ceiling Is in the Channel: Auditing Learner Gaps and Measurement Frontiers in Clinical Prediction"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 12,
+      "rank": 14,
       "representative_url": "https://arxiv.org/abs/2609.01909",
       "review_flags": [
         "single_source"
@@ -499,8 +576,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-0ae629c84d9bf161",
       "item_ids": [
         "4a5ff66ee90796aa35f5bc2b"
@@ -509,7 +586,7 @@
         "MemeCULT-1K: Benchmarking South Asian Cultural Context and Humor Understanding of Multimodal Models"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 13,
+      "rank": 15,
       "representative_url": "https://arxiv.org/abs/2609.01772",
       "review_flags": [
         "single_source"
@@ -521,7 +598,7 @@
       "source_names": [
         "arXiv cs.CL"
       ],
-      "summary": "构建基准评估多模态模型对南亚文化语境和幽默的理解能力。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -529,7 +606,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "MemeCULT-1K：南亚文化语境与幽默理解基准",
+      "title": "MemeCULT-1K: Benchmarking South Asian Cultural Context and Humor Understanding of Multimodal Models",
       "topic_ids": [
         "llm",
         "research"
@@ -538,8 +615,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-16299e0e7d9ca03f",
       "item_ids": [
         "3f3f213d8931bd18bd4c6ae6"
@@ -548,7 +625,7 @@
         "Monitoring Web Agents Without Internal Signals: Observable Trajectories and Key-Step Supervision"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 14,
+      "rank": 16,
       "representative_url": "https://arxiv.org/abs/2609.02057",
       "review_flags": [
         "single_source"
@@ -560,7 +637,7 @@
       "source_names": [
         "arXiv cs.AI"
       ],
-      "summary": "研究在无法获取模型内部信号时，基于可观测轨迹和关键步骤监督来监控Web智能体。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -568,7 +645,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "无内部信号下监控Web智能体",
+      "title": "Monitoring Web Agents Without Internal Signals: Observable Trajectories and Key-Step Supervision",
       "topic_ids": [
         "research"
       ]
@@ -576,8 +653,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-1bdd8dba2072e565",
       "item_ids": [
         "0a067c5e42beae04c5ac3e22"
@@ -586,7 +663,7 @@
         "DocHop: Benchmarking Out-of-domain Multi-hop Reasoning in Information-Dense Documents"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 15,
+      "rank": 17,
       "representative_url": "https://arxiv.org/abs/2609.02059",
       "review_flags": [
         "single_source"
@@ -598,7 +675,7 @@
       "source_names": [
         "arXiv cs.AI"
       ],
-      "summary": "提出DocHop基准，评估多模态大模型在信息密集文档上的跨域多跳推理能力。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -606,7 +683,7 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "DocHop：信息密集文档的跨域多跳推理基准",
+      "title": "DocHop: Benchmarking Out-of-domain Multi-hop Reasoning in Information-Dense Documents",
       "topic_ids": [
         "research"
       ]
@@ -614,8 +691,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-215788f9166925d9",
       "item_ids": [
         "e3fe3bfaa45edba8b1a470d3"
@@ -624,7 +701,7 @@
         "How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 16,
+      "rank": 18,
       "representative_url": "https://arxiv.org/abs/2609.01798",
       "review_flags": [
         "single_source"
@@ -653,8 +730,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-23b01f78967ce234",
       "item_ids": [
         "c715410049bba9dc97b8aff4"
@@ -663,7 +740,7 @@
         "Candidate Generation and Definition-Guided Verification for Sentence-Level Depression Symptom Recognition"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 17,
+      "rank": 19,
       "representative_url": "https://arxiv.org/abs/2609.01833",
       "review_flags": [
         "single_source"
@@ -692,8 +769,8 @@
     {
       "experimental": true,
       "first_seen": "2026-09-03T04:00:00Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9262,
+      "freshness": "7h ago",
+      "heat_score": 0.7381,
       "id": "m2exp-368e2f182dca9050",
       "item_ids": [
         "23e144d144b9237d20203b54"
@@ -702,7 +779,7 @@
         "Grounded, Compute-Efficient LLM Policy Agents for Energy-Poverty Equity in Physically-Constrained Peer-to-Peer Energy Markets"
       ],
       "last_seen": "2026-09-03T04:00:00Z",
-      "rank": 18,
+      "rank": 20,
       "representative_url": "https://arxiv.org/abs/2609.01918",
       "review_flags": [
         "single_source"
@@ -714,7 +791,7 @@
       "source_names": [
         "arXiv cs.CL"
       ],
-      "summary": "提出计算高效且有据可依的LLM策略智能体，用于物理约束下的点对点能源市场能源贫困公平问题。",
+      "summary": null,
       "tier_mix": {
         "tier1": 0,
         "tier2": 1,
@@ -722,99 +799,21 @@
         "tier4": 0,
         "unknown": 0
       },
-      "title": "面向能源贫困公平的LLM策略智能体",
+      "title": "Grounded, Compute-Efficient LLM Policy Agents for Energy-Poverty Equity in Physically-Constrained Peer-to-Peer Energy Markets",
       "topic_ids": [
         "llm",
         "research"
       ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-09-03T03:59:19Z",
-      "freshness": "1h ago",
-      "heat_score": 0.9258,
-      "id": "m2exp-326727c71779e505",
-      "item_ids": [
-        "ab0cac7a38adbcbe6675b932"
-      ],
-      "item_titles": [
-        "PromptSonar – Execution path analyzer for AI agents and MCP servers"
-      ],
-      "last_seen": "2026-09-03T03:59:19Z",
-      "rank": 19,
-      "representative_url": "https://github.com/meghal86/promptsonar",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "hnrss-ai"
-      ],
-      "source_names": [
-        "Hacker News - AI Search Feed"
-      ],
-      "summary": "开源工具PromptSonar用于分析AI智能体和MCP服务器的执行路径。",
-      "tier_mix": {
-        "tier1": 0,
-        "tier2": 1,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "PromptSonar：AI智能体执行路径分析器",
-      "topic_ids": [
-        "community",
-        "general-ai"
-      ]
-    },
-    {
-      "experimental": true,
-      "first_seen": "2026-09-02T18:00:00Z",
-      "freshness": "11h ago",
-      "heat_score": 0.9159,
-      "id": "m2exp-b17e6c029e69dee7",
-      "item_ids": [
-        "fbfd060b861c994281af0eba"
-      ],
-      "item_titles": [
-        "How we make AI coding more cost efficient without sacrificing task quality"
-      ],
-      "last_seen": "2026-09-02T18:00:00Z",
-      "rank": 20,
-      "representative_url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality",
-      "review_flags": [
-        "single_source"
-      ],
-      "source_count": 1,
-      "source_ids": [
-        "github-ai-blog"
-      ],
-      "source_names": [
-        "GitHub Blog - AI and ML"
-      ],
-      "summary": "GitHub Copilot团队分享在不牺牲任务质量前提下降低AI编程成本的实践。",
-      "tier_mix": {
-        "tier1": 1,
-        "tier2": 0,
-        "tier3": 0,
-        "tier4": 0,
-        "unknown": 0
-      },
-      "title": "GitHub谈如何让AI编程更具成本效率",
-      "topic_ids": [
-        "coding",
-        "developer-tools"
-      ]
     }
   ],
   "disclaimer": "AI 自动聚合排序，未经人工审核，仅为注意力分配建议",
-  "generated_at": "2026-09-03T05:54:02.666457Z",
+  "generated_at": "2026-09-03T11:19:01.307211Z",
   "health": {
     "current_clean_streak": {
-      "hours": 241.73,
+      "hours": 247.15,
       "max_gap_hours": 8.27,
-      "runs": 90,
-      "runs_in_window": 16,
+      "runs": 91,
+      "runs_in_window": 17,
       "started_at": "2026-08-24T04:10:11.046829Z"
     },
     "include_source_failures": [
@@ -828,14 +827,14 @@
       }
     ],
     "latest_run": {
-      "finished_at": "2026-09-03T05:50:20.159168Z",
+      "finished_at": "2026-09-03T11:17:21.542292Z",
       "github_actions": true,
       "health_ratio": 1.0,
       "healthy_include": 17,
       "include_total": 17,
-      "path": "data/manifests/2026-09/20260903T055012Z-live.json",
-      "run_id": "20260903T055012Z-live",
-      "started_at": "2026-09-03T05:50:12.040421Z",
+      "path": "data/manifests/2026-09/20260903T111714Z-live.json",
+      "run_id": "20260903T111714Z-live",
+      "started_at": "2026-09-03T11:17:14.300341Z",
       "status": "success",
       "total_new_items": 275
     },
@@ -844,33 +843,33 @@
       "status": "fail"
     },
     "window": {
-      "average_health_ratio": 0.989,
+      "average_health_ratio": 0.9896,
       "clean_run_rate": 1.0,
-      "clean_runs": 16,
-      "ended_at": "2026-09-03T05:54:02.666457Z",
-      "github_actions_runs": 16,
-      "live_runs": 16,
+      "clean_runs": 17,
+      "ended_at": "2026-09-03T11:19:01.307211Z",
+      "github_actions_runs": 17,
+      "live_runs": 17,
       "local_runs": 0,
       "minimum_health_ratio": 0.9412,
-      "started_at": "2026-08-31T05:54:02.666457Z",
+      "started_at": "2026-08-31T11:19:01.307211Z",
       "status_success_rate": 1.0,
-      "status_success_runs": 16,
-      "total_new_items": 4347,
+      "status_success_runs": 17,
+      "total_new_items": 4622,
       "unknown_runner_runs": 0
     }
   },
   "input": {
-    "candidate_cluster_count": 372,
-    "clusters_generated_at": "2026-09-03T05:50:20.317796Z",
-    "clusters_json": "data/derived/experimental/20260903T055020Z-m2-exp/clusters.json",
-    "clusters_run_id": "20260903T055020Z-m2-exp",
-    "snapshot_count": 985,
-    "window_item_count": 380
+    "candidate_cluster_count": 378,
+    "clusters_generated_at": "2026-09-03T11:17:22.009706Z",
+    "clusters_json": "data/derived/experimental/20260903T111722Z-m2-exp/clusters.json",
+    "clusters_run_id": "20260903T111722Z-m2-exp",
+    "snapshot_count": 986,
+    "window_item_count": 383
   },
   "schema_version": "m3a-portal-v0",
   "site": {
-    "clustering_mode": "llm",
-    "experimental_note": "LLM-assisted clustering (experimental); titles & summaries are AI-generated.",
+    "clustering_mode": "deterministic-fallback",
+    "experimental_note": "Rules-only clustering (LLM unavailable; fallback).",
     "status_label": "M3a experimental Portal",
     "title": "AI Track News"
   },
@@ -1353,11 +1352,443 @@
   ],
   "timeline": [
     {
-      "cluster_id": "m2exp-c59823f0a734ea71",
+      "cluster_id": "m2exp-5f222fecccf6ec76",
+      "cluster_rank": 2,
+      "event_at": "2026-09-03T11:12:57Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "6m ago",
+      "id": "318a31e3b0c43b8be4c95ab3",
+      "lang": "en",
+      "published_at": "2026-09-03T11:12:57Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "A dark horse enter China's AI race: StartLux",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://chinaonchina.com/article/chen-dawei-returns-enters-the-large-model-sector"
+    },
+    {
+      "cluster_id": "m2exp-013a0d6e3c4c03dc",
+      "cluster_rank": 3,
+      "event_at": "2026-09-03T11:08:16Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "10m ago",
+      "id": "ece85941249a378b2d720ecc",
+      "lang": "en",
+      "published_at": "2026-09-03T11:08:16Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Returning from the AI brain-rot state, re-take the thinking ownership",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://news.ycombinator.com/item?id=49548507"
+    },
+    {
+      "cluster_id": "m2exp-0709b3f521e55859",
+      "cluster_rank": 4,
+      "event_at": "2026-09-03T11:04:57Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "14m ago",
+      "id": "07390a714e456bcdf7a5e5c9",
+      "lang": "en",
+      "published_at": "2026-09-03T11:04:57Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI-assisted mushroom hunting is a recipe for a bad trip",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.theregister.com/offbeat/2026/09/02/ai-assisted-mushroom-hunting-is-a-recipe-for-a-bad-trip/5294060"
+    },
+    {
+      "cluster_id": "m2exp-9ece21e6b3f1064e",
+      "cluster_rank": 5,
+      "event_at": "2026-09-03T11:04:22Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "14m ago",
+      "id": "38b6495a627ac5c7093eea5b",
+      "lang": "en",
+      "published_at": "2026-09-03T11:04:22Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "From Click-Ops to IaC: A Safer Workflow with AI",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://masterpoint.io/blog/dont-let-ai-break-your-infra"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T11:04:09Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "14m ago",
+      "id": "48f282b9d2b1e61c63d32ab4",
+      "lang": "en",
+      "published_at": "2026-09-03T11:04:09Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "My AI agent kept waiting on me. I built a VS Code extension to fix that",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/chahe-dridi/vscode-agent-bell"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T11:02:42Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "16m ago",
+      "id": "b64941f28b4199ac5bf66447",
+      "lang": "en",
+      "published_at": "2026-09-03T11:02:42Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Scaling agentic AI pilots across the enterprise",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.technologyreview.com/2026/09/03/1142868/scaling-agentic-ai-pilots-across-the-enterprise"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T10:57:37Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "21m ago",
+      "id": "79fd253cb8dd3698f55fa31c",
+      "lang": "en",
+      "published_at": "2026-09-03T10:57:37Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: Cut your AI bill by a third. Same tools, same output",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.getfemail.com/"
+    },
+    {
+      "cluster_id": "m2exp-cadccc5badb04a0d",
       "cluster_rank": 6,
+      "event_at": "2026-09-03T10:27:11Z",
+      "fetched_at": "2026-09-03T11:17:18.645573Z",
+      "freshness": "51m ago",
+      "id": "2a1231129d93d71fad7179a4",
+      "lang": "en",
+      "published_at": "2026-09-03T10:27:11Z",
+      "source_id": "hnrss-llm",
+      "source_name": "Hacker News - LLM Search Feed",
+      "title": "Understanding, Mitigating Numerical Sources of Nondeterminism in LLM Inference",
+      "topics": [
+        "community",
+        "llm"
+      ],
+      "url": "https://arxiv.org/abs/2506.09501"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T10:19:45Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "59m ago",
+      "id": "d5865b812982ccc5aede2e10",
+      "lang": "en",
+      "published_at": "2026-09-03T10:19:45Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "£100M competition to back British AI companies to fix public services",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.gov.uk/government/news/100-million-competition-to-back-british-ai-companies-to-fix-public-services"
+    },
+    {
+      "cluster_id": "m2exp-b0a6cde5dee02a4c",
+      "cluster_rank": 7,
+      "event_at": "2026-09-03T10:18:36Z",
+      "fetched_at": "2026-09-03T11:17:17.478259Z",
+      "freshness": "60m ago",
+      "id": "1f68b41809eb838cc0d2870f",
+      "lang": "zh",
+      "published_at": "2026-09-03T10:18:36Z",
+      "source_id": "qbitai",
+      "source_name": "QbitAI",
+      "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
+      "topics": [
+        "china-ai-media",
+        "general-ai"
+      ],
+      "url": "https://www.qbitai.com/2026/09/483189.html"
+    },
+    {
+      "cluster_id": "m2exp-71f12566c398cf03",
+      "cluster_rank": 8,
+      "event_at": "2026-09-03T10:13:24Z",
+      "fetched_at": "2026-09-03T11:17:17.478259Z",
+      "freshness": "65m ago",
+      "id": "77feae189ded89eeea3b381a",
+      "lang": "zh",
+      "published_at": "2026-09-03T10:13:24Z",
+      "source_id": "qbitai",
+      "source_name": "QbitAI",
+      "title": "陈大年复出，入局大模型",
+      "topics": [
+        "china-ai-media",
+        "general-ai"
+      ],
+      "url": "https://www.qbitai.com/2026/09/483600.html"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T10:04:16Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "74m ago",
+      "id": "fb58ca7d5d6ce1ea61a28f2e",
+      "lang": "en",
+      "published_at": "2026-09-03T10:04:16Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "LTO Tape Shipments Up 57% in Q1 2026 as AI and Archive Demand Accelerate",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.storagereview.com/news/lto-tape-shipments-up-57-in-q1-2026-as-ai-and-archive-demand-accelerate"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T10:03:46Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "75m ago",
+      "id": "415b7a15820d0ed97683fb31",
+      "lang": "en",
+      "published_at": "2026-09-03T10:03:46Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Winston – Senior AI Platform Engineer – Remote (NA or India Preferred)",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://winston.team/"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T09:50:05Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "88m ago",
+      "id": "b1d3ad782a0e0dbb65ea61d9",
+      "lang": "en",
+      "published_at": "2026-09-03T09:50:05Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Marvin – Open-source macOS AI coding IDE that learns from its own sessions",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/RobertIlisei/MARVIN"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T09:46:49Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "1h ago",
+      "id": "3884fc6fa78d2977324d255f",
+      "lang": "en",
+      "published_at": "2026-09-03T09:46:49Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "AI agents are hacking systems without any input from humans",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.pbs.org/newshour/science/ai-agents-are-hacking-systems-without-any-input-from-humans-how-did-we-get-here"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T09:13:41Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "3939e9fc8afdc47aaf7ab4b8",
+      "lang": "en",
+      "published_at": "2026-09-03T09:13:41Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Show HN: Concorde, one AI agent shared by an organization",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://github.com/shutter-network/concorde"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T09:00:37Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "0352b953af89fcc86c825dcd",
+      "lang": "en",
+      "published_at": "2026-09-03T09:00:37Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Semek: Local AI hub for labelling/filtering digital content",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://itdaily.com/news/software/aaltra-and-ghent-university-develop-semek-a-local-ai-hub-for-digital-content"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T08:46:24Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "6b23681d670367b8ce21aa51",
+      "lang": "en",
+      "published_at": "2026-09-03T08:46:24Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Pieter Levels: Programming, Viral AI Startups, and Digital Nomad Life [video]",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.youtube.com/watch?v=oFtjKbXKqbg"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T08:33:34Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "3e649106b493ef8771a88939",
+      "lang": "en",
+      "published_at": "2026-09-03T08:33:34Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Lab Policy on AI in Writing and Communication",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.cs.columbia.edu/~johnhew/lab/ai-policy.html"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T08:30:57Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "a606405707844eb43e0868c8",
+      "lang": "en",
+      "published_at": "2026-09-03T08:30:57Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "35 people I know lost their tech jobs. AI was part of the reason.",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://medium.com/@salari-dev/35-people-i-know-lost-their-tech-jobs-ai-was-part-of-the-reason-the-layoff-wasnt-the-worst-part-787a4ee4a5e2"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T08:27:57Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "458a4ba2ac1a5a99481cdaf2",
+      "lang": "en",
+      "published_at": "2026-09-03T08:27:57Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "States defy the tech lobby on AI rules",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.politico.com/news/2026/09/02/how-silicon-valley-lost-its-war-against-state-ai-laws-01054133"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T08:26:12Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "e237f658400d82131c82ae47",
+      "lang": "en",
+      "published_at": "2026-09-03T08:26:12Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "BrainTube – Your personal AI powered knowledge base",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://brain-tube.com/"
+    },
+    {
+      "cluster_id": "m2exp-af82460270b80088",
+      "cluster_rank": 9,
+      "event_at": "2026-09-03T08:22:02Z",
+      "fetched_at": "2026-09-03T11:17:21.056616Z",
+      "freshness": "2h ago",
+      "id": "ae19108885ac0893992e0c54",
+      "lang": "en",
+      "published_at": "2026-09-03T08:22:02Z",
+      "source_id": "the-decoder",
+      "source_name": "The Decoder",
+      "title": "Anthropic ramps up Claude infrastructure with $35 billion Lambda deal",
+      "topics": [
+        "ai-media",
+        "general-ai"
+      ],
+      "url": "https://the-decoder.com/anthropic-ramps-up-claude-infrastructure-with-35-billion-lambda-deal"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
+      "event_at": "2026-09-03T08:20:51Z",
+      "fetched_at": "2026-09-03T11:17:18.065288Z",
+      "freshness": "2h ago",
+      "id": "5cd9dc3c9022f53fda09c9cf",
+      "lang": "en",
+      "published_at": "2026-09-03T08:20:51Z",
+      "source_id": "hnrss-ai",
+      "source_name": "Hacker News - AI Search Feed",
+      "title": "Kids go from curious to frustrated playing with AI-stuffed toys, UW study finds",
+      "topics": [
+        "community",
+        "general-ai"
+      ],
+      "url": "https://www.geekwire.com/2026/kids-go-from-curious-to-frustrated-playing-with-ai-stuffed-toys-uw-study-finds"
+    },
+    {
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-09-03T05:10:23Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "43m ago",
+      "freshness": "6h ago",
       "id": "158bc89a151d93799e449f55",
       "lang": "en",
       "published_at": "2026-09-03T05:10:23Z",
@@ -1372,10 +1803,10 @@
     },
     {
       "cluster_id": "m2exp-98dee1feb6b7dffe",
-      "cluster_rank": 7,
+      "cluster_rank": 11,
       "event_at": "2026-09-03T04:38:33Z",
       "fetched_at": "2026-09-03T05:50:17.298191Z",
-      "freshness": "75m ago",
+      "freshness": "6h ago",
       "id": "1d6b63efae6a0d6226fac113",
       "lang": "en",
       "published_at": "2026-09-03T04:38:33Z",
@@ -1390,11 +1821,11 @@
       "url": "https://www.latent.space/p/ainews-muse-spark-13-matches-gpt"
     },
     {
-      "cluster_id": "m2exp-2c8c7c235f06ba43",
-      "cluster_rank": 8,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-09-03T04:26:29Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "87m ago",
+      "freshness": "6h ago",
       "id": "e331611a374a4bf8ad1c8fc6",
       "lang": "en",
       "published_at": "2026-09-03T04:26:29Z",
@@ -1409,10 +1840,10 @@
     },
     {
       "cluster_id": "m2exp-0fbdac8cca039b8c",
-      "cluster_rank": 9,
+      "cluster_rank": 12,
       "event_at": "2026-09-03T04:19:38Z",
       "fetched_at": "2026-09-03T05:50:16.383367Z",
-      "freshness": "1h ago",
+      "freshness": "6h ago",
       "id": "79161fc4aa97e3d5207f0cd9",
       "lang": "en",
       "published_at": "2026-09-03T04:19:38Z",
@@ -1426,11 +1857,11 @@
       "url": "https://twitter.com/louszbd/status/2093047548550525165"
     },
     {
-      "cluster_id": "m2exp-5c1187d03d1151b7",
-      "cluster_rank": 10,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-09-03T04:19:05Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "1h ago",
+      "freshness": "6h ago",
       "id": "99b13813a1090cecd3cd1003",
       "lang": "en",
       "published_at": "2026-09-03T04:19:05Z",
@@ -1448,7 +1879,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "065b1d2ffdbed293832efe4f",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1465,7 +1896,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "0785bd4d067c4eba141c7e8b",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1482,7 +1913,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "08d68ccb98b5d5de79cc7a18",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1496,10 +1927,10 @@
     },
     {
       "cluster_id": "m2exp-1bdd8dba2072e565",
-      "cluster_rank": 15,
+      "cluster_rank": 17,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "0a067c5e42beae04c5ac3e22",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1516,7 +1947,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "0ff5af8daaad568ec7b2700f",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1533,7 +1964,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "1084943256442dac2342e25b",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1550,7 +1981,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "156636c018605a001e5c2606",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1568,7 +1999,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "1ccfbe0a8bad808b97861230",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1586,7 +2017,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "2007c899eb8775d9c99667f0",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1601,10 +2032,10 @@
     },
     {
       "cluster_id": "m2exp-368e2f182dca9050",
-      "cluster_rank": 18,
+      "cluster_rank": 20,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "23e144d144b9237d20203b54",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1622,7 +2053,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "32d27d2b539715371e9dbc8b",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1639,7 +2070,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "33fbdf88b1a9548abad85ac4",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1656,7 +2087,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "38437202c0f21d40f98644c4",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1674,7 +2105,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "3d8f8d184aff611b0988a4db",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1689,10 +2120,10 @@
     },
     {
       "cluster_id": "m2exp-04b36d8bfe8f9bc4",
-      "cluster_rank": 11,
+      "cluster_rank": 13,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "3ee165e0ce799de8d98ba265",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1706,10 +2137,10 @@
     },
     {
       "cluster_id": "m2exp-16299e0e7d9ca03f",
-      "cluster_rank": 14,
+      "cluster_rank": 16,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "3f3f213d8931bd18bd4c6ae6",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1723,10 +2154,10 @@
     },
     {
       "cluster_id": "m2exp-0ae629c84d9bf161",
-      "cluster_rank": 13,
+      "cluster_rank": 15,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "4a5ff66ee90796aa35f5bc2b",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1744,7 +2175,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "51fcf904d8236adb921068bf",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1762,7 +2193,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "535d1d0eb1bf25585619c4b1",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1779,7 +2210,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "6b8f72469567050513225c03",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1796,7 +2227,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "6cc6e4580ca6bd2ec5c9f507",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1814,7 +2245,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "74b5d3f64a82a09c18a013bb",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1832,7 +2263,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "779e451d4d66e1ef1840615d",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1849,7 +2280,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "7843030e1f941d586da0797b",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1867,7 +2298,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "8a586cfa8d658350d6a7f775",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1885,7 +2316,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "9e42e1edf1ae0746b637be1d",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1903,7 +2334,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "a4baaa912fda924165b7bba2",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1920,7 +2351,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "a8e347a0b40717f83e3eb31e",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1937,7 +2368,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "accfcc158cb08f7d8f8f5d81",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1954,7 +2385,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "b5c5e0989061faf7d93219cc",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1972,7 +2403,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "b984f532206a27b1a7e8ffa9",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -1990,7 +2421,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "c085b859a6beb0382623cf80",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2005,10 +2436,10 @@
     },
     {
       "cluster_id": "m2exp-23b01f78967ce234",
-      "cluster_rank": 17,
+      "cluster_rank": 19,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "c715410049bba9dc97b8aff4",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2026,7 +2457,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "c962c458763bed38f53adf4d",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2043,7 +2474,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "cbad707bcd6df5ea70ce68e1",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2061,7 +2492,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "d2126994150d6e4458ac3744",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2075,10 +2506,10 @@
     },
     {
       "cluster_id": "m2exp-215788f9166925d9",
-      "cluster_rank": 16,
+      "cluster_rank": 18,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "e3fe3bfaa45edba8b1a470d3",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2096,7 +2527,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.877078Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "ef443b0f80745816f99797bb",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2114,7 +2545,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "f66f7b36853aa18ba008c90b",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2128,10 +2559,10 @@
     },
     {
       "cluster_id": "m2exp-04c02d77eb7e374b",
-      "cluster_rank": 12,
+      "cluster_rank": 14,
       "event_at": "2026-09-03T04:00:00Z",
       "fetched_at": "2026-09-03T05:50:16.725015Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "fb157b511dc41d7912310698",
       "lang": "en",
       "published_at": "2026-09-03T04:00:00Z",
@@ -2144,11 +2575,11 @@
       "url": "https://arxiv.org/abs/2609.01909"
     },
     {
-      "cluster_id": "m2exp-326727c71779e505",
-      "cluster_rank": 19,
+      "cluster_id": null,
+      "cluster_rank": null,
       "event_at": "2026-09-03T03:59:19Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "1h ago",
+      "freshness": "7h ago",
       "id": "ab0cac7a38adbcbe6675b932",
       "lang": "en",
       "published_at": "2026-09-03T03:59:19Z",
@@ -2166,7 +2597,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T03:42:28Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "2h ago",
+      "freshness": "7h ago",
       "id": "1c21f6da87ab727a1fea6bd9",
       "lang": "en",
       "published_at": "2026-09-03T03:42:28Z",
@@ -2184,7 +2615,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T03:24:42Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "2h ago",
+      "freshness": "7h ago",
       "id": "2d512a451d3be3caeeac7f6f",
       "lang": "en",
       "published_at": "2026-09-03T03:24:42Z",
@@ -2202,7 +2633,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T03:16:43Z",
       "fetched_at": "2026-09-03T05:50:15.771642Z",
-      "freshness": "2h ago",
+      "freshness": "8h ago",
       "id": "d437f4c2dc59be9b4bc75e12",
       "lang": "zh",
       "published_at": "2026-09-03T03:16:43Z",
@@ -2220,7 +2651,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T03:07:02Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "2h ago",
+      "freshness": "8h ago",
       "id": "d91e6c93256cdeeb44b4c26f",
       "lang": "en",
       "published_at": "2026-09-03T03:07:02Z",
@@ -2238,7 +2669,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T02:34:12Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "3h ago",
+      "freshness": "8h ago",
       "id": "f64af371ca279439d068c814",
       "lang": "en",
       "published_at": "2026-09-03T02:34:12Z",
@@ -2256,7 +2687,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T02:04:59Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "3h ago",
+      "freshness": "9h ago",
       "id": "ed4b62c16837a4ca570549da",
       "lang": "en",
       "published_at": "2026-09-03T02:04:59Z",
@@ -2274,7 +2705,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T01:43:31Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "4h ago",
+      "freshness": "9h ago",
       "id": "0666d7ff963f6aae9387d92e",
       "lang": "en",
       "published_at": "2026-09-03T01:43:31Z",
@@ -2292,7 +2723,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T01:31:45Z",
       "fetched_at": "2026-09-03T05:50:15.771642Z",
-      "freshness": "4h ago",
+      "freshness": "9h ago",
       "id": "2f75c2e772769edbc570c67f",
       "lang": "zh",
       "published_at": "2026-09-03T01:31:45Z",
@@ -2310,7 +2741,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T01:27:05Z",
       "fetched_at": "2026-09-03T05:50:15.771642Z",
-      "freshness": "4h ago",
+      "freshness": "9h ago",
       "id": "ac4c92528a199e5cacb97f65",
       "lang": "zh",
       "published_at": "2026-09-03T01:27:05Z",
@@ -2328,7 +2759,7 @@
       "cluster_rank": null,
       "event_at": "2026-09-03T01:11:22Z",
       "fetched_at": "2026-09-03T05:50:16.133487Z",
-      "freshness": "4h ago",
+      "freshness": "10h ago",
       "id": "5e8d258a0f8644bfeed2a727",
       "lang": "en",
       "published_at": "2026-09-03T01:11:22Z",
@@ -2340,438 +2771,6 @@
         "general-ai"
       ],
       "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-03T00:51:16Z",
-      "fetched_at": "2026-09-03T05:50:15.771642Z",
-      "freshness": "5h ago",
-      "id": "f8613b31383c206dc6f757e4",
-      "lang": "zh",
-      "published_at": "2026-09-03T00:51:16Z",
-      "source_id": "qbitai",
-      "source_name": "QbitAI",
-      "title": "今年最难的机器人Demo，“机器人含量”为0",
-      "topics": [
-        "china-ai-media",
-        "general-ai"
-      ],
-      "url": "https://www.qbitai.com/2026/09/483351.html"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-03T00:11:55Z",
-      "fetched_at": "2026-09-03T00:17:36.915071Z",
-      "freshness": "5h ago",
-      "id": "dfda7d3a8c1165e285cc23cb",
-      "lang": "en",
-      "published_at": "2026-09-03T00:11:55Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "Show HN: Redactle LLM Leaderboard",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://redactle.net/llm-leaderboard"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T23:39:26Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "6h ago",
-      "id": "79d6ec3b6f1658d0ca85a7b4",
-      "lang": "en",
-      "published_at": "2026-09-02T23:39:26Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Workplace surveillance is on the rise, spurred by AI",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://knowablemagazine.org/content/article/society/2026/surveillance-at-work-is-increasing"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T23:28:56Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "6h ago",
-      "id": "c6237c077477184b21dc5dab",
-      "lang": "en",
-      "published_at": "2026-09-02T23:28:56Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Why Software Developers Are Highly Unrepresentative of Broader AI Use",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://paulkedrosky.com/why-software-developers-are-hiunrepresentative-of-broader-ai-use"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T23:03:38Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "6h ago",
-      "id": "627ba282758c76c120ba1366",
-      "lang": "en",
-      "published_at": "2026-09-02T23:03:38Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "AI-Memory 2.0 – The Best Memory System for Agents and Teams",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://akitaonrails.com/en/2026/09/02/ai-memory-2-0-best-memory-system-for-agents-and-teams"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T23:01:19Z",
-      "fetched_at": "2026-09-03T00:17:36.915071Z",
-      "freshness": "6h ago",
-      "id": "8704d69bb7390f38aaf6fdd6",
-      "lang": "en",
-      "published_at": "2026-09-02T23:01:19Z",
-      "source_id": "hnrss-llm",
-      "source_name": "Hacker News - LLM Search Feed",
-      "title": "Ontologies catch untrustworthy LLM claims",
-      "topics": [
-        "community",
-        "llm"
-      ],
-      "url": "https://antithetical-labs.com/blog/the-judge-liked-it-better"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T23:01:00Z",
-      "fetched_at": "2026-09-03T00:17:40.422691Z",
-      "freshness": "6h ago",
-      "id": "fab95efcdf07585c14ce92f7",
-      "lang": "en",
-      "published_at": "2026-09-02T23:01:00Z",
-      "source_id": "techcrunch-ai",
-      "source_name": "TechCrunch AI",
-      "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
-      "topics": [
-        "general-ai",
-        "startup"
-      ],
-      "url": "https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:57:11Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "6h ago",
-      "id": "28b05bcc2ebdd5305d7f51e8",
-      "lang": "en",
-      "published_at": "2026-09-02T22:57:11Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Pacman AI for controlling fusion systems makes key decisions in milliseconds",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://phys.org/news/2026-09-pacman-ai-framework-fusion-safely.html"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:45:39Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "7h ago",
-      "id": "522af7a4b18ae2416461c5e9",
-      "lang": "en",
-      "published_at": "2026-09-02T22:45:39Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Show HN: Every AI agrees with you. This writes your startup's obituary instead",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://theyfell.com/"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:44:56Z",
-      "fetched_at": "2026-09-03T00:17:40.422691Z",
-      "freshness": "7h ago",
-      "id": "3bf46fc618e4c2ae86e6533a",
-      "lang": "en",
-      "published_at": "2026-09-02T22:44:56Z",
-      "source_id": "techcrunch-ai",
-      "source_name": "TechCrunch AI",
-      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
-      "topics": [
-        "general-ai",
-        "startup"
-      ],
-      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:24:09Z",
-      "fetched_at": "2026-09-03T00:17:40.422691Z",
-      "freshness": "7h ago",
-      "id": "70fb737b9a8286a41c263bab",
-      "lang": "en",
-      "published_at": "2026-09-02T22:24:09Z",
-      "source_id": "techcrunch-ai",
-      "source_name": "TechCrunch AI",
-      "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
-      "topics": [
-        "general-ai",
-        "startup"
-      ],
-      "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:22:45Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "7h ago",
-      "id": "5f22d84e61a1a603bb273a34",
-      "lang": "en",
-      "published_at": "2026-09-02T22:22:45Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "US Government worried that AI companies can't innovate without legal theft",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://appleinsider.com/articles/26/09/02/us-government-worried-that-ai-companies-cant-innovate-without-legal-theft"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:08:18Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "7h ago",
-      "id": "01e1e9654e048c25bf5c13ab",
-      "lang": "en",
-      "published_at": "2026-09-02T22:08:18Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Ask HN: How to get taken seriously while using AI?",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://news.ycombinator.com/item?id=49543253"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T22:05:40Z",
-      "fetched_at": "2026-09-03T00:17:36.688621Z",
-      "freshness": "7h ago",
-      "id": "b2a88b1bbb68edc1fb50b74a",
-      "lang": "en",
-      "published_at": "2026-09-02T22:05:40Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T21:45:48Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "9918a97f1ca3fae18956d35e",
-      "lang": "en",
-      "published_at": "2026-09-02T21:45:48Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "NYC Announced Nation's Broadest Generative AI Moratorium in Schools",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T21:25:28Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "d6f7f7e248c27dea08fe794f",
-      "lang": "en",
-      "published_at": "2026-09-02T21:25:28Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Inspect, test, and debug your website with an AI agent connected to Safari",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://developer.apple.com/documentation/safari-developer-tools/connecting-an-ai-agent-to-safari"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T21:23:35Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "21f3ea36b0cd6be074c241bf",
-      "lang": "en",
-      "published_at": "2026-09-02T21:23:35Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Will AI save or ruin democracy?",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://theconversation.com/will-ai-save-or-ruin-democracy-it-depends-on-whether-we-allow-computers-to-stand-in-for-people-289369"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T21:16:20Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "dbeac58efb72b61b7278b3a9",
-      "lang": "en",
-      "published_at": "2026-09-02T21:16:20Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "How Accurate Was Hubert Dreyfus on AI Predictions in \"What Computers Can't Do\"? (2024)",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.brightworkresearch.com/how-accurate-was-dr-hubert-dreyfus-on-ai-predictions-in-his-book-what-computers-cant-do"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T21:10:27Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "9e2ec9a65f66ac363d5eba44",
-      "lang": "en",
-      "published_at": "2026-09-02T21:10:27Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Show HN: I put four persistent AI minds in a room and let them change each other",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://room.pluralmatter.com/e/how-will-the-world-change-when-ai-smarter-than-humans"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T21:06:17Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "b6c2bbc26290050c9eb13fa5",
-      "lang": "en",
-      "published_at": "2026-09-02T21:06:17Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Show HN: The Drudge Report, but for AI",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://theainewsreport.com/"
-    },
-    {
-      "cluster_id": "m2exp-69087df13af25f54",
-      "cluster_rank": 5,
-      "event_at": "2026-09-02T21:00:00Z",
-      "fetched_at": "2026-09-02T21:50:47.012618Z",
-      "freshness": "8h ago",
-      "id": "a4a0601f1f87b20e4be18ed7",
-      "lang": "en",
-      "published_at": "2026-09-02T21:00:00Z",
-      "source_id": "github-ai-blog",
-      "source_name": "GitHub Blog - AI and ML",
-      "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
-      "topics": [
-        "coding",
-        "developer-tools"
-      ],
-      "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T20:58:45Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "5338527431c8cac05c24404d",
-      "lang": "en",
-      "published_at": "2026-09-02T20:58:45Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "AI is changing religion and religions are trying to change AI",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.economist.com/international/2026/08/27/ai-is-changing-religion-and-religions-are-trying-to-change-ai"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T20:57:04Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "e528b34d60566bdf01572653",
-      "lang": "en",
-      "published_at": "2026-09-02T20:57:04Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Mamdani Bans AI in NYC Schools",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://www.nytimes.com/2026/09/01/nyregion/ai-ban-schools-nyc.html"
-    },
-    {
-      "cluster_id": null,
-      "cluster_rank": null,
-      "event_at": "2026-09-02T20:56:11Z",
-      "fetched_at": "2026-09-02T21:50:51.208610Z",
-      "freshness": "8h ago",
-      "id": "58b486217bda46900437836c",
-      "lang": "en",
-      "published_at": "2026-09-02T20:56:11Z",
-      "source_id": "hnrss-ai",
-      "source_name": "Hacker News - AI Search Feed",
-      "title": "Show HN: Dehurdle – Real-Time AI Voice Simulations for High-Stakes Conversations",
-      "topics": [
-        "community",
-        "general-ai"
-      ],
-      "url": "https://dehurdle.com/register"
     }
   ]
 }
