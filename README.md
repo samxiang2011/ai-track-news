@@ -74,6 +74,7 @@ Probe sources are exploratory and excluded from the gate denominator.
 The health report uses the latest clean streak across live manifests. It stays
 `pending` until the streak covers the 72-hour evidence window, returns `fail` if
 the latest live run misses the health gate, and returns `pass` only after the
-window is covered without excessive run gaps. The default run-gap tolerance is 8
-hours to allow for GitHub Actions' best-effort cron scheduling while still
-flagging material collection stalls.
+window is covered without excessive run gaps. The default run-gap tolerance is 14
+hours: the collector is scheduled every six hours and GitHub Actions' cron is
+best-effort, so one late or skipped run is tolerated while two in a row are
+still flagged.

@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST_ROOT = ROOT / "data" / "manifests"
 DEFAULT_WINDOW_HOURS = 72.0
 DEFAULT_MIN_HEALTH = 0.8
-DEFAULT_MAX_GAP_HOURS = 8.0
+DEFAULT_MAX_GAP_HOURS = 14.0
 # Auto-demote: an include source fetches fine but persistently returns 0 items.
 # Suggestion only — never edits sources.yml automatically.
 DEFAULT_DEMOTE_THRESHOLD = 0.5

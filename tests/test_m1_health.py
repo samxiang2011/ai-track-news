@@ -25,7 +25,7 @@ class M1HealthReportTests(unittest.TestCase):
             max_gap_hours=DEFAULT_MAX_GAP_HOURS,
         )
 
-        self.assertEqual(report["criteria"]["max_gap_hours"], 8.0)
+        self.assertEqual(report["criteria"]["max_gap_hours"], 14.0)
         self.assertEqual(report["current_clean_streak"]["max_gap_hours"], 6.92)
         self.assertEqual(report["verdict"]["status"], "pass")
 
@@ -47,7 +47,7 @@ class M1HealthReportTests(unittest.TestCase):
 
     def test_gap_above_default_threshold_still_fails(self) -> None:
         now = _time("2026-06-23T13:54:34Z")
-        runs = _clean_runs(now, hours_before=[80, 71, 62, 53, 44, 35, 26, 17, 8, 0.1])
+        runs = _clean_runs(now, hours_before=[80, 65, 50, 35, 20, 5, 0.1])
 
         report = build_report(
             runs=runs,
@@ -57,9 +57,9 @@ class M1HealthReportTests(unittest.TestCase):
             max_gap_hours=DEFAULT_MAX_GAP_HOURS,
         )
 
-        self.assertEqual(report["current_clean_streak"]["max_gap_hours"], 9.0)
+        self.assertEqual(report["current_clean_streak"]["max_gap_hours"], 15.0)
         self.assertEqual(report["verdict"]["status"], "fail")
-        self.assertIn("exceeds the 8.00h tolerance", report["verdict"]["reason"])
+        self.assertIn("exceeds the 14.00h tolerance", report["verdict"]["reason"])
 
 
 def _clean_runs(now: datetime, hours_before: list[float]) -> list[RunRecord]:
