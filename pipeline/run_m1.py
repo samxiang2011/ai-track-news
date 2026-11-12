@@ -11,7 +11,13 @@ from .config import Source, load_sources
 from .fetch import fetch_source
 from .normalize import Item, dedupe_items, normalize_entry
 from .parse import parse_feed
-from .storage import git_commit_or_none, write_manifest, write_snapshot
+from .storage import (
+    git_commit_or_none,
+    load_seen_item_ids,
+    select_new_items,
+    write_manifest,
+    write_snapshot,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,7 +68,13 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     deduped_items = dedupe_items(items)
-    snapshot_path = write_snapshot(ROOT, run_id, deduped_items, dry_run=args.dry_run)
+    # Live snapshots hold only items no earlier committed snapshot recorded.
+    # Dry runs are synthetic and keep writing the full deduped window.
+    if args.dry_run:
+        snapshot_items = deduped_items
+    else:
+        snapshot_items = select_new_items(deduped_items, load_seen_item_ids(ROOT))
+    snapshot_path = write_snapshot(ROOT, run_id, snapshot_items, dry_run=args.dry_run)
 
     finished = datetime.now(timezone.utc)
     manifest = _build_manifest(
@@ -73,6 +85,11 @@ def main(argv: list[str] | None = None) -> int:
         total_new_items=len(deduped_items),
         output_paths=[_relative(snapshot_path)],
     )
+    # total_new_items keeps its historical meaning (deduped items in this run's
+    # fetch window) because the health report reads it. The two fields below say
+    # what the snapshot file itself contains.
+    manifest["snapshot_mode"] = "full_window" if args.dry_run else "new_items_only"
+    manifest["snapshot_item_count"] = len(snapshot_items)
     manifest["git_commit"] = git_commit_or_none(ROOT)
     manifest_path = write_manifest(ROOT, run_id, manifest, dry_run=args.dry_run)
     manifest["output_paths"].append(_relative(manifest_path))
@@ -172,6 +189,8 @@ def _summary(manifest: dict[str, object]) -> dict[str, object]:
         "run_id": manifest["run_id"],
         "status": manifest["status"],
         "total_new_items": manifest["total_new_items"],
+        "snapshot_mode": manifest["snapshot_mode"],
+        "snapshot_item_count": manifest["snapshot_item_count"],
         "source_health": manifest["source_health"],
         "output_paths": manifest["output_paths"],
     }
