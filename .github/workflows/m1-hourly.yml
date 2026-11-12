@@ -35,19 +35,11 @@ jobs:
       - name: Report M1 health
         run: python -m pipeline.report_m1_health --github-summary
 
-      - name: Run M2 experimental clustering
-        run: python -m pipeline.run_m2_experimental --mode auto --limit-clusters 20
-        env:
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-
-      - name: Render Portal
-        run: python -m pipeline.render_site
-
       - name: Validate bounded publish payload
         shell: bash
         run: |
           set -euo pipefail
-          roots=(data/snapshots data/manifests site)
+          roots=(data/snapshots data/manifests)
           for root in "${roots[@]}"; do
             test -d "$root"
             if ! find "$root" -type f -print -quit | grep -q .; then
@@ -71,7 +63,6 @@ jobs:
           path: |
             data/snapshots
             data/manifests
-            site
           if-no-files-found: error
           retention-days: 1
 
@@ -127,45 +118,39 @@ jobs:
             echo "Artifact staging must remain a real directory."
             exit 1
           fi
-          test -d "$ARTIFACT_STAGING/data/snapshots"
-          test -d "$ARTIFACT_STAGING/data/manifests"
-          test -d "$ARTIFACT_STAGING/site"
-          if find "$ARTIFACT_STAGING" -mindepth 1 -maxdepth 1 ! -name data ! -name site -print -quit | grep -q .; then
+          test -d "$ARTIFACT_STAGING/snapshots"
+          test -d "$ARTIFACT_STAGING/manifests"
+          if find "$ARTIFACT_STAGING" -mindepth 1 -maxdepth 1 ! -name snapshots ! -name manifests -print -quit | grep -q .; then
             echo "Unexpected top-level artifact path."
-            exit 1
-          fi
-          if find "$ARTIFACT_STAGING/data" -mindepth 1 -maxdepth 1 ! -name snapshots ! -name manifests -print -quit | grep -q .; then
-            echo "Unexpected data artifact path."
             exit 1
           fi
           if find "$ARTIFACT_STAGING" -mindepth 1 ! -type d ! -type f -print -quit | grep -q .; then
             echo "Downloaded payload must contain only regular files and directories."
             exit 1
           fi
-          destinations=(data data/snapshots data/manifests site)
+          destinations=(data data/snapshots data/manifests)
           for destination in "${destinations[@]}"; do
             if [ -L "$destination" ] || [ ! -d "$destination" ]; then
               echo "Publish destination roots and ancestors must be real directories."
               exit 1
             fi
           done
-          if find data/snapshots data/manifests site -mindepth 1 ! -type d ! -type f -print -quit | grep -q .; then
+          if find data/snapshots data/manifests -mindepth 1 ! -type d ! -type f -print -quit | grep -q .; then
             echo "Existing publish destinations must contain only regular files and directories."
             exit 1
           fi
-          rsync -r --delete "$ARTIFACT_STAGING/data/snapshots/" data/snapshots/
-          rsync -r --delete "$ARTIFACT_STAGING/data/manifests/" data/manifests/
-          rsync -r --delete "$ARTIFACT_STAGING/site/" site/
+          rsync -r --delete "$ARTIFACT_STAGING/snapshots/" data/snapshots/
+          rsync -r --delete "$ARTIFACT_STAGING/manifests/" data/manifests/
 
-      - name: Commit new data and site
+      - name: Commit new data
         id: commit
         run: |
           echo "created=false" >> "$GITHUB_OUTPUT"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/snapshots data/manifests site
+          git add data/snapshots data/manifests
           if git diff --cached --quiet; then
-            echo "No data or site changes to commit."
+            echo "No data changes to commit."
           else
             git commit -m "data: M1 collection $(date -u +%Y%m%dT%H%M%SZ)"
             echo "created=true" >> "$GITHUB_OUTPUT"
@@ -186,26 +171,3 @@ jobs:
       - name: Push generated commit
         if: ${{ steps.commit.outputs.created == 'true' }}
         run: git push origin HEAD:refs/heads/main
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
-        with:
-          path: site
-
-  deploy-pages:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    needs: publish
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy-pages.outputs.page_url }}
-    steps:
-      - name: Configure Pages
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-
-      - name: Deploy Pages
-        id: deploy-pages
-        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

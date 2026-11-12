@@ -69,10 +69,9 @@ workflow.
 ## GitHub Actions
 
 `.github/workflows/m1-hourly.yml` runs the M1 collector hourly and can also be
-started manually. It writes an M1 health acceptance summary to the Actions run,
-runs the local M2 experimental clustering scaffold, renders the static Portal,
-commits `data/snapshots/`, `data/manifests/`, and `site/` when those outputs
-change, then deploys `site/` to GitHub Pages.
+started manually. It writes an M1 health acceptance summary to the Actions run
+and commits `data/snapshots/` and `data/manifests/` when those outputs change.
+It no longer clusters, renders, or deploys the public Portal.
 
 ## Outputs
 
